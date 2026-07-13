@@ -1,0 +1,206 @@
+.services {
+  width: 100%;
+  background-color: var(--color-bg-gray);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.25em;
+  padding-top: 3.25em;
+  padding-bottom: 3.25em;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5em;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 4.5em; /* 72px */
+  line-height: 1.333; /* 96/72 */
+  color: var(--color-text-black);
+  max-width: 63.3125rem; /* 1013px — rem so it's not multiplied by the 4.5em font-size */
+}
+
+.subhead {
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+  max-width: 37.75em; /* 604px */
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.row {
+  display: flex;
+  gap: 1em;
+}
+
+.imageLeftRow {
+  flex-direction: row-reverse;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2em;
+  width: 48.4375em; /* 775px */
+  flex-shrink: 0;
+  height: 25em; /* 400px */
+  padding: 2em;
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+}
+
+.icon {
+  width: 3.25em;
+  height: auto;
+}
+
+.scanBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875em;
+  background-color: var(--color-blue);
+  border-radius: 0.875em;
+}
+
+.scanBox img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2.25em; /* 36px */
+  line-height: 1.111; /* 40/36 */
+  color: var(--color-text-black);
+}
+
+.subtitle {
+  font-size: 1.25em; /* 20px */
+  line-height: 1.4; /* 28/20 */
+  letter-spacing: -0.16px;
+  color: var(--color-text-secondary);
+}
+
+.imageTile {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 25em;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.imageTile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet: alternating side-by-side layout with the text card and image the
+   SAME width. Grid + minmax(0,1fr) guarantees two exactly-equal columns
+   (flex 1 1 0 wouldn't equalize here — the card content kept it wider). */
+@media (max-width: 991px) {
+  .headline {
+    font-size: 3.5em;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  /* Image-left rows: place the image in column 1, card in column 2 */
+  .imageLeftRow .imageTile {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .imageLeftRow .card {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .card {
+    width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .headline {
+    font-size: 2.75em;
+  }
+
+  /* Let the headline wrap naturally on mobile — the forced break leaves the
+     "&" stranded on its own line, which looks awkward at small widths. */
+  .headline br {
+    display: none;
+  }
+
+  /* Mobile: single column — card first, then image, for every row */
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .imageLeftRow .imageTile,
+  .imageLeftRow .card {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .imageTile {
+    width: 100%;
+    height: 18em;
+  }
+}
+
+@media (max-width: 479px) {
+  .headline {
+    font-size: 2.25em;
+  }
+
+  .title {
+    font-size: 1.875em;
+  }
+
+  .subtitle {
+    font-size: 1.125em;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+}

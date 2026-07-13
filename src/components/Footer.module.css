@@ -1,0 +1,153 @@
+.footer {
+  width: 100%;
+  background-color: var(--color-bg-gray);
+}
+
+.inner {
+  padding-top: 3.25em;
+  padding-bottom: 3.25em;
+}
+
+.card {
+  background-color: var(--color-black);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+  padding: 1.25em 2em;
+  background-color: var(--color-blue);
+  border-radius: var(--radius-lg);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2.25em; /* 36px */
+  line-height: 1.111;
+  color: var(--color-white);
+}
+
+.contactBtn {
+  height: 3.5em;
+  flex-shrink: 0;
+}
+
+.body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 2.5em 2em 3em;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5em;
+  width: 15.9375em; /* 255px */
+  align-self: stretch;
+}
+
+.brandTop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.logo {
+  height: 2.75em;
+  width: auto;
+  object-fit: contain;
+}
+
+.tagline {
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary-white);
+}
+
+.cols {
+  display: flex;
+  gap: 1em;
+  width: 38.5em; /* 616px */
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.colTitle {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25em; /* 20px */
+  line-height: 1.4;
+  color: var(--color-white);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.link {
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary-white);
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-white);
+}
+
+@media (max-width: 991px) {
+  .cols {
+    width: auto;
+    flex: 1 1 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .topbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .body {
+    flex-direction: column;
+    gap: 2.5em;
+  }
+
+  .brand {
+    width: 100%;
+  }
+
+  .cols {
+    width: 100%;
+  }
+}
+
+@media (max-width: 479px) {
+  .heading {
+    font-size: 1.875em;
+  }
+
+  .cols {
+    flex-direction: column;
+    gap: 2em;
+  }
+}

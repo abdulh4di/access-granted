@@ -1,0 +1,279 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  margin-inline: auto;
+  background-color: var(--color-bg-gray);
+  transition:
+    width 0.5s ease,
+    top 0.5s ease,
+    background-color 0.5s ease,
+    border-radius 0.5s ease;
+}
+
+/* Desktop (screens without the menu button): on scroll, condense into a
+   centered floating bar with an 80px gap each side and a solid background. */
+@media (min-width: 992px) {
+  .scrolled {
+    width: 832px; /* locked to the 992px-breakpoint size (992 - 160), centered */
+    top: 0.75em;
+    background-color: rgb(244, 243, 240);
+    border-radius: 9999px;
+    box-shadow: 0 12px 32px rgba(7, 6, 7, 0.14);
+  }
+
+  /* Compact content padding once condensed into the pill */
+  .scrolled .inner {
+    padding: 5px;
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25em;
+  padding-block: 20px;
+  /* horizontal padding + max-width come from the shared `.container` class,
+     so nav content lines up with the site content at every screen size */
+}
+
+.logo {
+  display: block;
+  flex-shrink: 0;
+  width: 174px; /* 174px — Figma nav logo box */
+  height: 44px; /* 44px */
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  margin-right: auto;
+  margin-left: 1.25em;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0.75em;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.429;
+  letter-spacing: -0.07px;
+  color: var(--color-nav-link);
+  opacity: 0.8;
+  transition:
+    color 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.chevron {
+  width: 1.25em;
+  height: 1.25em;
+  opacity: 0.5;
+  transition: transform 0.5s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* Services dropdown */
+.hasDropdown {
+  position: relative;
+}
+
+.dropdownToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.75em);
+  left: 0;
+  z-index: 100;
+  flex-direction: column;
+  gap: 0.125em;
+  padding: 20px;
+  background-color: var(--color-bg-white);
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px rgba(7, 6, 7, 0.14);
+}
+
+.dropdownOpen {
+  display: flex;
+}
+
+.dropdownLink {
+  display: block;
+  padding: 0.625em 0.875em;
+  border-radius: 0.625em;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.07px;
+  color: var(--color-nav-link);
+  white-space: nowrap;
+  opacity: 0.8;
+  transition:
+    color 0.5s ease,
+    opacity 0.5s ease,
+    background-color 0.5s ease;
+}
+
+.dropdownLink:hover {
+  opacity: 1;
+  background-color: var(--color-bg-gray);
+}
+
+.cta {
+  flex-shrink: 0;
+  font-size: 16px; /* pinned — stays 16px at every viewport, does not scale fluidly */
+  height: 3.25em; /* 52px */
+  padding-block: 0;
+  padding-inline: 20px;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+  width: 2.75em;
+  height: 2.75em;
+  padding: 0.6em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-text-black);
+  border-radius: 2px;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+/* Open state — bars morph into an X */
+.burger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(calc(0.3em + 2px)) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(calc(-0.3em - 2px)) rotate(-45deg);
+}
+
+/* Tablet & below — collapse to burger menu */
+@media (max-width: 991px) {
+  /* Only the inner card should read as sticky — make the surrounding
+     full-width band transparent so page content shows around/behind it. */
+  .nav {
+    padding: 0.75em var(--container-padding);
+    background-color: transparent;
+  }
+
+  .burger {
+    display: flex;
+    order: 3;
+  }
+
+  .cta {
+    display: none; /* hidden once the hamburger menu appears */
+  }
+
+  /* Container holding the logo + menu becomes a soft rounded card */
+  .inner {
+    position: relative;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: var(--color-bg-white);
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(7, 6, 7, 0.1); /* keeps the card visible while floating over content */
+    transition: opacity 0.5s ease;
+    opacity: 1;
+  }
+
+  .links {
+    order: 4;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 0.5em);
+    z-index: 50;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 0.5em 1.25em;
+    background-color: var(--color-bg-white);
+    border-radius: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.75em);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease,
+      visibility 0.5s ease;
+  }
+
+  .linksOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    box-shadow: 0 12px 32px #07060724;
+  }
+
+  .link {
+    padding: 0.9em 0.25em;
+    font-size: 1em;
+  }
+
+  /* Services submenu expands inline within the mobile menu */
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0 0 0.5em 0.75em;
+    gap: 0;
+  }
+
+  .dropdownLink {
+    font-size: 1em;
+    padding: 0.7em 0.25em;
+    border-radius: 0;
+    white-space: normal;
+  }
+
+  .dropdownLink:hover {
+    background-color: var(--color-bg-gray);
+  }
+}

@@ -1,0 +1,157 @@
+.areas {
+  width: 100%;
+  background-color: var(--color-bg-gray);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.25em;
+  padding-top: 3.25em;
+  padding-bottom: 3.25em;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5em;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 4.5em; /* 72px */
+  line-height: 1.333;
+  color: var(--color-text-black);
+  max-width: 63.3125em;
+}
+
+.subhead {
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+  max-width: 37.75em;
+}
+
+.table {
+  width: 100%;
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.tableHead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25em;
+  background-color: var(--color-blue);
+  border-radius: var(--radius-lg);
+}
+
+.tableHead span {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2.5em; /* 40px */
+  line-height: 1;
+  color: var(--color-white);
+}
+
+.grid {
+  display: flex;
+  scrollbar-width: none; /* Firefox — hide the horizontal scrollbar */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.grid::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* While click-dragging (mouse): grab cursor, no snap fighting, no text select */
+.grid.dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  border-right: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.column:last-child {
+  border-right: none;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 5.5em; /* 88px */
+  padding: 1.125em 1.625em;
+  font-size: 1.25em; /* 20px */
+  line-height: 1.4;
+  letter-spacing: -0.16px;
+  color: var(--color-text-black);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.cell:last-child {
+  border-bottom: none;
+}
+
+/* Tablet & below: horizontal carousel of columns (max 10 per column) instead
+   of reflowing to fewer/taller columns. Slightly smaller cells. */
+@media (max-width: 991px) {
+  .headline {
+    font-size: 3.5em;
+  }
+
+  .grid {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    cursor: grab;
+    touch-action: pan-x;
+  }
+
+  .column {
+    /* 2 full columns + at least half of the next, so the carousel is obvious */
+    flex: 0 0 40%;
+    scroll-snap-align: start;
+  }
+
+  .cell {
+    font-size: 1.125em;
+    min-height: 5em;
+  }
+}
+
+@media (max-width: 767px) {
+  .headline {
+    font-size: 2.75em;
+  }
+
+  .column {
+    flex-basis: 65%; /* ~1.5 columns — one full plus half of the next */
+  }
+
+  .cell {
+    font-size: 1.0625em;
+  }
+}
+
+@media (max-width: 479px) {
+  .headline {
+    font-size: 2.25em;
+  }
+
+  .column {
+    flex-basis: 70%;
+  }
+}

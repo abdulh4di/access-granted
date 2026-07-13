@@ -1,0 +1,124 @@
+.about {
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.25em;
+  padding-top: 3.25em;
+  padding-bottom: 3.25em;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5em;
+  max-width: 33rem;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 3em; /* 48px */
+  line-height: 1.167; /* 56/48 */
+  color: var(--color-text-black);
+}
+
+/* Stats block sits on the joined blue Union shape */
+.stats {
+  position: relative;
+  width: 30.75em; /* 492px */
+  flex-shrink: 0;
+  aspect-ratio: 492 / 530;
+}
+
+.union {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em; /* 16px */
+  width: 100%;
+  height: 100%;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4em;
+  padding: 2em;
+  border-radius: var(--radius-lg);
+  color: var(--color-white);
+}
+
+.statDesc {
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 3em; /* 48px */
+  line-height: 1.167;
+}
+
+/* Once the layout stacks into a column, center the intro (eyebrow + heading) */
+@media (max-width: 991px) {
+  .inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro {
+    max-width: none;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stats {
+    width: 100%;
+    max-width: 30.75em;
+    align-self: center;
+  }
+
+  .heading{
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .stats {
+    max-width: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .heading {
+    font-size: 2.25em;
+  }
+
+  .stat {
+    padding: 1.25em;
+    gap: 2em;
+  }
+
+  .statValue {
+    font-size: 2.25em;
+  }
+
+  .statDesc {
+    font-size: 0.8125em;
+  }
+}

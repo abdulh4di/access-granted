@@ -1,0 +1,134 @@
+.testimonials {
+  width: 100%;
+  overflow: hidden; /* clip the marquee track at the viewport edges */
+  background-color: var(--color-bg-gray);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75em; /* 60px */
+  padding-top: 4.75em; /* 76px */
+  padding-bottom: 4.75em;
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5em;
+  width: 100%;
+}
+
+.headText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5em;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 3em; /* 48px */
+  line-height: 1.167;
+  color: var(--color-text-black);
+  max-width: 33.625em;
+}
+
+/* Line break after "What Our" only on the smallest screens */
+.mobileBr {
+  display: none;
+}
+
+.reviewsBtn {
+  height: 3.5em;
+  flex-shrink: 0;
+}
+
+/* Auto-scrolling testimonial marquee (cards duplicated in markup for a
+   seamless loop; -50% shifts by exactly one full set). */
+.track {
+  display: flex;
+  width: max-content;
+  animation: ag-marquee 55s linear infinite;
+}
+
+.track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ag-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5em;
+  margin-right: 1.5em;
+  width: 27.875em; /* 446px */
+  flex: 0 0 auto;
+  height: 15.625em; /* 250px */
+  padding: 1.5em;
+  background-color: var(--color-bg-gray);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.02);
+}
+
+.text {
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+  overflow: hidden;
+}
+
+.author {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25em; /* 20px */
+  line-height: 1.4;
+  text-transform: capitalize;
+  color: var(--color-black);
+}
+
+@media (max-width: 767px) {
+  .heading {
+    font-size: 2.5em;
+  }
+
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    width: 20em;
+    height: auto;
+    min-height: 15.625em;
+  }
+}
+
+@media (max-width: 479px) {
+  .card {
+    width: 17em;
+  }
+
+  .mobileBr {
+    display: inline;
+  }
+}

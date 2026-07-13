@@ -1,0 +1,37 @@
+.list {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0.75em;
+  border-radius: var(--radius-circle);
+  transition: background-color var(--transition-fast);
+}
+
+.chip img {
+  width: 1em;
+  height: 1em;
+}
+
+.light .chip {
+  background-color: var(--color-blue-light);
+}
+
+.light .chip:hover {
+  background-color: #97d0f5; /* slightly darker light-blue */
+}
+
+.white .chip {
+  background-color: var(--color-white);
+}
+
+.white .chip:hover {
+  background-color: #e7e6e2; /* slightly darker white */
+}

@@ -1,0 +1,148 @@
+.hero {
+  width: 100%;
+  background-color: var(--color-bg-gray);
+}
+
+.inner {
+  display: flex;
+  align-items: stretch;
+  gap: 1em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3em;
+  width: 50%;
+  min-height: min(40.625em, 600px); /* 650px Figma size — caps upward scaling on wide screens */
+  padding: 2.5em;
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 4em; /* 64px */
+  line-height: 1.125; /* 72/64 */
+  color: var(--color-text-black);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.desc {
+  max-width: 31.375em; /* 502px */
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+}
+
+.pillbar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.5em 0.5em 0.5em 1.5em;
+  background-color: var(--color-white);
+  border-radius: var(--radius-pill);
+}
+
+.getInTouch {
+  height: 3.5em;
+  flex-shrink: 0;
+}
+
+.imageTile {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: min(40.625em, 600px); /* 650px Figma size — caps upward scaling on wide screens */
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.imageTile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30%  /* reveal the full company logo on the van's left side */
+}
+
+/* Once the layout stacks into a column, center all the hero content */
+@media (max-width: 991px) {
+  .inner {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    min-height: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bottom {
+    align-items: center;
+    width: 100%;
+  }
+
+  .desc {
+    max-width: none;
+  }
+
+  .pillbar {
+    justify-content: center;
+  }
+
+  .imageTile {
+    width: 100%;
+    min-height: 22em;
+    height: 22em;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 3em;
+  }
+
+  .card {
+    padding: 1.75em;
+    gap: 1.5em;
+  }
+
+  .bottom {
+    gap: 2em;
+  }
+
+  /* Socials stay in the white pill; the button drops below it, outside the pill */
+  .pillbar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .pillbar > ul {
+    background-color: var(--color-white);
+    border-radius: var(--radius-pill);
+    padding: 0.5em 1.25em;
+  }
+}
+
+@media (max-width: 479px) {
+  .title {
+    font-size: 2.5em;
+  }
+}

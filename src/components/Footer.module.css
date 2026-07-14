@@ -50,7 +50,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 2.5em;
-  width: 15.9375em; /* 255px */
+  width: 18em; /* wide enough for the full email address on one line */
   align-self: stretch;
 }
 

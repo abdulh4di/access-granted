@@ -39,9 +39,8 @@ export default function Footer() {
                   height={44}
                   className={styles.logo}
                 />
-                <p className={styles.tagline}>
-                  Trusted locksmith support across the North East.
-                </p>
+                <p className={styles.tagline}>07777474195</p>
+                <p className={styles.tagline}>help@accessgrantednortheast.co.uk</p>
               </div>
               <SocialLinks variant="white" />
             </div>

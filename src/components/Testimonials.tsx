@@ -1,59 +1,74 @@
 import styles from "./Testimonials.module.css";
+import TestimonialsTrack, { type Testimonial } from "./TestimonialsTrack";
 
-function GoogleLogo() {
-  return (
-    <svg
-      className={styles.googleLogo}
-      viewBox="0 0 48 48"
-      width="20"
-      height="20"
-      role="img"
-      aria-label="Google"
-    >
-      <path
-        fill="#EA4335"
-        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
-      />
-      <path
-        fill="#4285F4"
-        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"
-      />
-      <path
-        fill="#FBBC05"
-        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"
-      />
-      <path
-        fill="#34A853"
-        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
-      />
-    </svg>
-  );
+// Live Google reviews via Featurable. Fetched server-side and cached with ISR
+// (revalidated every 6h), so new reviews appear automatically.
+const FEATURABLE_URL =
+  "https://featurable.com/api/v2/widgets/89c4b9e0-d0ce-4841-b1a6-d507b0df0b5f";
+const MAX_REVIEWS = 8; // show the 8 most recent
+
+interface FeaturableReview {
+  id: string;
+  author: { name: string };
+  text: string;
+  rating: { value: number; max: number };
+  publishedAt: string;
 }
 
-const TESTIMONIALS = [
-  {
-    text: "Really happy with the service. Very friendly, communicated well throughout, and explained everything clearly. He helped fix the issue with my car key quickly and made the process easy. Would definitely recommend. Thanks again!",
-    author: "Lisa akther",
-  },
-  {
-    text: "Just been locked out my car today. Called Roo from Access Granted Northeast and he came down within 25 minutes and had my car sorted. Big shout out to these guys really save my day today. Thanks once again",
-    author: "rihab issa",
-  },
-  {
-    text: "My key got stuck in the lock. Roo came out about an hour later (kept me informed of the time). Changed the lock. Very quick and didn't charge for the call out. Would highly recommend",
-    author: "Angela Desbrow",
-  },
-  {
-    text: "We got our key stuck in the door when our lock broke - lovely guy came round the same night in about an hour, fixed a new lock quicker than we expected, and only charged us for the new lock (no call out fee) as we're local!",
-    author: "Jordyn Saris",
-  },
-  {
-    text: "Called Roo quite late, was no problem. Very friendly, arrived fairly quickly given the time, got me sorted and on my way within 20 mins. Worth every penny having this man's number, especially when you never know!",
-    author: "Dan Daymond",
-  },
-];
+const RTF = new Intl.RelativeTimeFormat("en-GB", { numeric: "always" });
 
-export default function Testimonials() {
+// "3 days ago" / "2 weeks ago" / "1 month ago". Computed at render time, so it
+// refreshes with the ISR revalidation above.
+function relativeDate(iso: string): string {
+  const seconds = Math.floor((Date.now() - new Date(iso).getTime()) / 1000);
+  if (seconds < 60) return "just now";
+
+  const minutes = Math.floor(seconds / 60);
+  if (minutes < 60) return RTF.format(-minutes, "minute");
+
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return RTF.format(-hours, "hour");
+
+  const days = Math.floor(hours / 24);
+  if (days < 7) return RTF.format(-days, "day");
+  if (days < 30) return RTF.format(-Math.floor(days / 7), "week");
+
+  const months = Math.floor(days / 30.44);
+  if (months < 12) return RTF.format(-Math.max(1, months), "month");
+
+  return RTF.format(-Math.max(1, Math.floor(days / 365.25)), "year");
+}
+
+async function getTestimonials(): Promise<Testimonial[]> {
+  try {
+    const res = await fetch(FEATURABLE_URL, { next: { revalidate: 21600 } });
+    if (!res.ok) return [];
+    const data = await res.json();
+    const reviews: FeaturableReview[] = data?.widget?.reviews ?? [];
+
+    return reviews
+      .filter((r) => r?.text)
+      .sort(
+        (a, b) =>
+          new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+      )
+      .slice(0, MAX_REVIEWS)
+      .map((r) => ({
+        text: r.text.replace(/\s+/g, " ").trim(),
+        author: r.author?.name ?? "Anonymous",
+        date: relativeDate(r.publishedAt),
+        rating: r.rating.value,
+      }));
+  } catch {
+    return [];
+  }
+}
+
+export default async function Testimonials() {
+  const testimonials = await getTestimonials();
+
+  if (testimonials.length === 0) return null;
+
   return (
     <section className={styles.testimonials} id="testimonials">
       <div className={`container ${styles.inner}`}>
@@ -64,27 +79,17 @@ export default function Testimonials() {
               What Our <br className={styles.mobileBr} />Customers Say
             </h2>
           </div>
-          <a href="#" className={`btn btn-primary ${styles.reviewsBtn}`}>
+          <a
+            href="https://www.google.com/maps/place/Access+Granted+Northeast/@54.9743522,-1.6508428,17z/data=!4m8!3m7!1s0xa606feb368a12f5f:0x686ec3a6e623bf3a!9m1!1b1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`btn btn-primary ${styles.reviewsBtn}`}
+          >
             View All Google Reviews
           </a>
         </div>
 
-        <ul className={styles.track}>
-          {/* Duplicated set (second half aria-hidden) for a seamless marquee loop */}
-          {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-            <li
-              key={i}
-              className={styles.card}
-              aria-hidden={i >= TESTIMONIALS.length}
-            >
-              <p className={styles.text}>{t.text}</p>
-              <p className={styles.author}>
-                <GoogleLogo />
-                {t.author}
-              </p>
-            </li>
-          ))}
-        </ul>
+        <TestimonialsTrack testimonials={testimonials} />
       </div>
     </section>
   );

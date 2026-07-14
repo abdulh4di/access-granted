@@ -1,8 +1,7 @@
 import styles from "./FloatingWhatsApp.module.css";
 
-// TODO: Replace with the client's real WhatsApp number in international format.
-// UK mobile 07123 456789 becomes 447123456789 — no "+", spaces, or leading 0.
-const WHATSAPP_NUMBER = "447000000000";
+// Client's WhatsApp number in international format (UK 07777 474195 → 447777474195).
+const WHATSAPP_NUMBER = "447777474195";
 const PREFILLED_MESSAGE =
   "Hi, I'd like to enquire about your locksmith services.";
 

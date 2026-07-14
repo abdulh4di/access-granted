@@ -53,10 +53,10 @@ export default function Areas() {
         <header className={styles.head}>
           <span className="eyebrow">Areas Covered</span>
           <h2 className={styles.headline}>
-            Auto Locksmith Covering Newcastle &amp; the North East
+            Locksmith Covering Newcastle &amp; the North East
           </h2>
           <p className={styles.subhead}>
-            Providing trusted auto locksmith, vehicle coding, diagnostics and residential
+            Providing trusted locksmith, vehicle coding, diagnostics and residential
             locksmith services across Newcastle, Gateshead and more than 40 towns and communities
             throughout the North East.
           </p>

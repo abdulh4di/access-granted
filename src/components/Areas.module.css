@@ -93,8 +93,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 5.5em; /* 88px */
-  padding: 1.125em 1.625em;
+  min-height: 60px;
+  padding: 10px 20px;
   font-size: 1.25em; /* 20px */
   line-height: 1.4;
   letter-spacing: -0.16px;
@@ -130,7 +130,6 @@
 
   .cell {
     font-size: 1.125em;
-    min-height: 5em;
   }
 }
 

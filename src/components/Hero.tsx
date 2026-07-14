@@ -7,13 +7,13 @@ export default function Hero() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.card}>
           <h1 className={styles.title}>
-            Auto Locksmith
+            24/7 Locksmith
             <br />
             Newcastle
           </h1>
           <div className={styles.bottom}>
             <p className={styles.desc}>
-              Trusted 24/7 Auto Locksmith services across Newcastle and the surrounding North
+              Trusted 24/7 Locksmith services across Newcastle and the surrounding North
               East, helping with vehicle entry, lost car keys, key coding, diagnostics, vehicle
               coding and emergency lockouts.
             </p>

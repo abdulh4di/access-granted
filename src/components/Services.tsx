@@ -14,7 +14,7 @@ interface Service {
 
 const SERVICES: Service[] = [
   {
-    title: "Auto Locksmith Services",
+    title: "Locksmith Services",
     subtitle:
       "Vehicle lockouts, lost car keys, car key replacement, spare keys, key coding, remote programming and keyless entry support",
     image: "/assets/images/ag-service-locksmith.jpg",
@@ -59,7 +59,7 @@ export default function Services() {
         <header className={styles.head}>
           <span className="eyebrow">Services</span>
           <h2 className={styles.headline}>
-            Auto Locksmith, Coding &amp;{" "}
+            Locksmith, Coding &amp;{" "}
             <br />
             Diagnostic Services
           </h2>

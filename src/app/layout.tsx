@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://accessgrantednortheast.co.uk"),
@@ -46,6 +47,7 @@ export default function RootLayout({
           Skip to content
         </a>
         {children}
+        <FloatingWhatsApp />
       </body>
     </html>
   );

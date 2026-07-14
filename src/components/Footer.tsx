@@ -10,7 +10,7 @@ const PAGES = [
 ];
 
 const SERVICES = [
-  "Auto Locksmith Services",
+  "Locksmith Services",
   "Vehicle Coding & Diagnostics",
   "VAG Specialist Services",
   "Ghost Immobiliser Installation",

@@ -1,0 +1,41 @@
+.fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #24c15e; /* WhatsApp brand green */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fab:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+}
+
+.fab:focus-visible {
+  outline: 3px solid #25d366;
+  outline-offset: 3px;
+}
+
+.fab svg {
+  width: 34px;
+  height: 34px;
+}
+
+@media (max-width: 767px) {
+  .fab {
+    right: 16px;
+    bottom: 40px;
+    width: 54px;
+    height: 54px;
+  }
+
+
+}

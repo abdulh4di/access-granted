@@ -31,18 +31,19 @@ export default function Footer() {
 
           <div className={styles.body}>
             <div className={styles.brand}>
-              <div className={styles.brandTop}>
-                <img
-                  src="/assets/images/ag-logo.png"
-                  alt="Access Granted"
-                  width={174}
-                  height={44}
-                  className={styles.logo}
-                />
+              <img
+                src="/assets/images/ag-logo-northeast.png"
+                alt="Access Granted Northeast"
+                width={245}
+                height={44}
+                className={styles.logo}
+              />
+
+              <div className={styles.brandBottom}>
                 <p className={styles.tagline}>07777474195</p>
                 <p className={styles.tagline}>help@accessgrantednortheast.co.uk</p>
+                <SocialLinks variant="white" />
               </div>
-              <SocialLinks variant="white" />
             </div>
 
             <div className={styles.cols}>

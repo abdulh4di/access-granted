@@ -42,8 +42,9 @@
 .logo {
   display: block;
   flex-shrink: 0;
-  width: 174px; /* 174px — Figma nav logo box */
-  height: 44px; /* 44px */
+  /* 5.56:1 — matches the two-line lockup's ratio exactly, so it fills the box */
+  width: 178px;
+  height: 32px;
 }
 
 .logo img {

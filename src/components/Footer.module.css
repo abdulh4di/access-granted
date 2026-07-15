@@ -54,7 +54,9 @@
   align-self: stretch;
 }
 
-.brandTop {
+/* Contact lines sit directly above the socials at the bottom of the column,
+   so the logo keeps the gap beneath it */
+.brandBottom {
   display: flex;
   flex-direction: column;
   gap: 0.75em;
@@ -63,6 +65,9 @@
 .logo {
   height: 2.75em;
   width: auto;
+  /* stop the column flex parent stretching the box — keeps the logo
+     at its natural width and flush-left with the text below */
+  align-self: flex-start;
   object-fit: contain;
 }
 

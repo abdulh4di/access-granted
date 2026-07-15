@@ -11,7 +11,7 @@ const LINKS = [
 
 // Placeholder hrefs — these will point to dedicated service pages once designed.
 const SERVICE_LINKS = [
-  { label: "Locksmith Services", href: "#" },
+  { label: "Auto Locksmith Services", href: "#" },
   { label: "Vehicle Coding & Diagnostics", href: "#" },
   { label: "VAG Specialist Services", href: "#" },
   { label: "Ghost Immobiliser Installation", href: "#" },
@@ -69,7 +69,12 @@ export default function Navbar() {
           aria-label="Access Granted — home"
           onClick={closeAll}
         >
-          <img src="/assets/images/ag-logo.png" alt="Access Granted" width={174} height={44} />
+          <img
+            src="/assets/images/ag-logo-northeast.png"
+            alt="Access Granted Northeast"
+            width={310}
+            height={56}
+          />
         </a>
 
         <button

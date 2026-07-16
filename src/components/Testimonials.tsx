@@ -80,7 +80,7 @@ export default async function Testimonials() {
             </h2>
           </div>
           <a
-            href="https://www.google.com/maps/place/Access+Granted+Northeast/@54.9743522,-1.6508428,17z/data=!4m8!3m7!1s0xa606feb368a12f5f:0x686ec3a6e623bf3a!9m1!1b1"
+            href="https://www.google.com/maps?cid=7525167148975767354"
             target="_blank"
             rel="noopener noreferrer"
             className={`btn btn-primary ${styles.reviewsBtn}`}

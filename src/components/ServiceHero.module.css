@@ -14,7 +14,7 @@
 
 .header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 3em;
   width: 100%;
@@ -22,19 +22,19 @@
 
 .heading {
   flex: 0 1 auto;
-  max-width: 37.1875em; /* 595px */
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 4em; /* 64px */
+  font-size: 3.5em; /* 56px */
   line-height: 1.125;
   color: var(--color-text-black);
+  white-space: nowrap;
 }
 
 .headerRight {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  width: 28.125em; /* 450px */
+  width: 25em; /* 400px */
   flex-shrink: 0;
 }
 
@@ -126,6 +126,9 @@
 @media (max-width: 991px) {
   .heading {
     font-size: 3.25em;
+    /* allow natural wrapping below desktop so the line never overflows;
+       the <br> still keeps "North East" on its own bottom line */
+    white-space: normal;
   }
 
   .header {
@@ -136,6 +139,7 @@
 
   .headerRight {
     width: 100%;
+    max-width: 30em; /* keep the paragraph from stretching full width on tablet */
   }
 
   .cards {

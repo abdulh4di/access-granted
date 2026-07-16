@@ -19,7 +19,12 @@ export default function Hero() {
             </p>
             <div className={styles.pillbar}>
               <SocialLinks variant="light" />
-              <a href="#footer" className={`btn btn-primary ${styles.getInTouch}`}>
+              <a
+                href="https://wa.me/447777474195"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`btn btn-primary ${styles.getInTouch}`}
+              >
                 Get In Touch
               </a>
             </div>

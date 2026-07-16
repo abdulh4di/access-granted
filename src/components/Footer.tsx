@@ -24,7 +24,7 @@ export default function Footer() {
         <div className={styles.card}>
           <div className={styles.topbar}>
             <h2 className={styles.heading}>Need Urgent Help?</h2>
-            <a href="#" className={`btn btn-dark ${styles.contactBtn}`}>
+            <a href="/contact" className={`btn btn-dark ${styles.contactBtn}`}>
               Contact Now
             </a>
           </div>
@@ -40,8 +40,15 @@ export default function Footer() {
               />
 
               <div className={styles.brandBottom}>
-                <p className={styles.tagline}>07777474195</p>
-                <p className={styles.tagline}>help@accessgrantednortheast.co.uk</p>
+                <a href="tel:+447777474195" className={styles.tagline}>
+                  07777474195
+                </a>
+                <a
+                  href="mailto:help@accessgrantednortheast.co.uk"
+                  className={styles.tagline}
+                >
+                  help@accessgrantednortheast.co.uk
+                </a>
                 <SocialLinks variant="white" />
               </div>
             </div>

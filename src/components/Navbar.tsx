@@ -131,7 +131,7 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <a href="#footer" className={`btn btn-primary ${styles.cta}`}>
+        <a href="tel:+447777474195" className={`btn btn-primary ${styles.cta}`}>
           Emergency Call Out
         </a>
       </div>

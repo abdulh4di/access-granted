@@ -72,10 +72,16 @@
 }
 
 .tagline {
+  width: fit-content;
   font-size: 1em;
   line-height: 1.5;
   letter-spacing: -0.128px;
   color: var(--color-text-secondary-white);
+  transition: color var(--transition-fast);
+}
+
+a.tagline:hover {
+  color: var(--color-white);
 }
 
 .cols {

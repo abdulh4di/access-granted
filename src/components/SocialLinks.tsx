@@ -1,15 +1,30 @@
 import styles from "./SocialLinks.module.css";
 
 const SOCIALS = [
-  { name: "TikTok", href: "#", icon: "/assets/images/ag-social-tiktok.svg" },
-  { name: "Facebook", href: "#", icon: "/assets/images/ag-social-facebook.svg" },
+  {
+    name: "TikTok",
+    href: "https://www.tiktok.com/@accsessgranted_northeast",
+    icon: "/assets/images/ag-social-tiktok.svg",
+    external: true,
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/AccessGrantedNortheast/",
+    icon: "/assets/images/ag-social-facebook.svg",
+    external: true,
+  },
   {
     name: "WhatsApp",
     href: "https://wa.me/447777474195",
     icon: "/assets/images/ag-social-whatsapp.svg",
     external: true,
   },
-  { name: "Instagram", href: "#", icon: "/assets/images/ag-social-instagram.svg" },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/accessgranted_northeast/",
+    icon: "/assets/images/ag-social-instagram.svg",
+    external: true,
+  },
 ];
 
 interface SocialLinksProps {

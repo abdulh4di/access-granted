@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Navbar.module.css";
 
 const LINKS = [
-  { label: "Home", href: "#top" },
+  { label: "Home", href: "/" },
   { label: "Gallery", href: "#testimonials" },
   { label: "Contact", href: "#footer" },
 ];

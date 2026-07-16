@@ -7,9 +7,19 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4em;
+  gap: 3.25em;
   padding-top: 4.5em;
   padding-bottom: 4.5em;
+}
+
+/* eyebrow + heading grouped so the eyebrow→heading gap matches the
+   homepage About Us section (1.5em) */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5em;
+  width: 100%;
 }
 
 .header {

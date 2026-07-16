@@ -11,42 +11,44 @@ export default function ServiceHero() {
   return (
     <section className={styles.hero}>
       <div className={`container ${styles.inner}`}>
-        <span className="eyebrow">Auto Locksmith Services</span>
+        <div className={styles.intro}>
+          <span className="eyebrow">Auto Locksmith Services</span>
 
-        <div className={styles.header}>
-          <h1 className={styles.heading}>
-            Auto Locksmith Newcastle &amp; the
-            <br />
-            North East
-          </h1>
-          <div className={styles.headerRight}>
-            <p className={styles.desc}>
-              Access Granted Northeast provides mobile locksmith services across
-              the North East, including lost car keys, vehicle lockouts, spare
-              keys, key programming and ignition repairs.
-            </p>
-            <a
-              href="tel:+447777474195"
-              className={`btn btn-primary ${styles.cta}`}
-            >
-              Call Now
-              <svg
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-                aria-hidden="true"
-                focusable="false"
+          <div className={styles.header}>
+            <h1 className={styles.heading}>
+              Auto Locksmith Newcastle &amp; the
+              <br />
+              North East
+            </h1>
+            <div className={styles.headerRight}>
+              <p className={styles.desc}>
+                Access Granted Northeast provides mobile locksmith services
+                across the North East, including lost car keys, vehicle
+                lockouts, spare keys, key programming and ignition repairs.
+              </p>
+              <a
+                href="tel:+447777474195"
+                className={`btn btn-primary ${styles.cta}`}
               >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M5 12h14m-6-6 6 6-6 6"
-                />
-              </svg>
-            </a>
+                Call Now
+                <svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 12h14m-6-6 6 6-6 6"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 

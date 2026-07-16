@@ -90,11 +90,32 @@
   height: 1.5em;
 }
 
+/* Slide open/closed by animating the row from 0fr to 1fr */
+.answerWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.answerWrap.open {
+  grid-template-rows: 1fr;
+}
+
+.answerInner {
+  overflow: hidden;
+}
+
 .answer {
-  margin-top: 1.25em;
+  padding-top: 1.25em;
   font-size: 1em;
   line-height: 1.5;
   color: var(--color-white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .answerWrap {
+    transition: none;
+  }
 }
 
 @media (max-width: 767px) {

@@ -38,7 +38,7 @@ export default function ServiceFaq() {
       <div className={`container ${styles.inner}`}>
         <header className={styles.head}>
           <span className="eyebrow">FAQs</span>
-          <h2 className={styles.heading}>Frequently asked questions</h2>
+          <h2 className={styles.heading}>Frequently Asked Questions</h2>
           <p className={styles.subhead}>
             Find answers to common questions about our locksmith, vehicle
             coding, diagnostics and emergency call out services.
@@ -76,7 +76,13 @@ export default function ServiceFaq() {
                     </svg>
                   </span>
                 </button>
-                {isOpen && <p className={styles.answer}>{item.a}</p>}
+                <div
+                  className={`${styles.answerWrap} ${isOpen ? styles.open : ""}`}
+                >
+                  <div className={styles.answerInner}>
+                    <p className={styles.answer}>{item.a}</p>
+                  </div>
+                </div>
               </li>
             );
           })}

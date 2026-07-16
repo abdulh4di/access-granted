@@ -76,9 +76,12 @@
 
 .titleRow {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1em;
+  /* reserve two title lines so every card's description lines up, and keep
+     the arrow at the top on titles that wrap to two lines */
+  min-height: 5em;
 }
 
 .title {
@@ -153,5 +156,10 @@
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  /* single column — no need to reserve a second title line */
+  .titleRow {
+    min-height: 0;
   }
 }

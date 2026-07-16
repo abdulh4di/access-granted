@@ -34,10 +34,9 @@
   flex: 0 1 auto;
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 3.5em; /* 56px */
+  font-size: 4em; /* 64px */
   line-height: 1.125;
   color: var(--color-text-black);
-  white-space: nowrap;
 }
 
 .headerRight {
@@ -136,9 +135,6 @@
 @media (max-width: 991px) {
   .heading {
     font-size: 3.25em;
-    /* allow natural wrapping below desktop so the line never overflows;
-       the <br> still keeps "North East" on its own bottom line */
-    white-space: normal;
   }
 
   .header {

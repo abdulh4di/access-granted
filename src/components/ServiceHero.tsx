@@ -16,7 +16,9 @@ export default function ServiceHero() {
 
           <div className={styles.header}>
             <h1 className={styles.heading}>
-              Auto Locksmith Newcastle &amp; the
+              Auto Locksmith
+              <br />
+              Newcastle &amp; the
               <br />
               North East
             </h1>

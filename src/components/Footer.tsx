@@ -24,7 +24,7 @@ export default function Footer() {
         <div className={styles.card}>
           <div className={styles.topbar}>
             <h2 className={styles.heading}>Need Urgent Help?</h2>
-            <a href="/contact" className={`btn btn-dark ${styles.contactBtn}`}>
+            <a href="#contact" className={`btn btn-dark ${styles.contactBtn}`}>
               Contact Now
             </a>
           </div>

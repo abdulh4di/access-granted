@@ -94,11 +94,11 @@
   background-color: var(--color-black);
   color: var(--color-white);
   border-radius: 0.5em;
-  transition: transform var(--transition-base);
+  transition: transform 0.2s ease;
 }
 
-.card:hover .arrow {
-  transform: translateX(3px);
+.arrow:hover {
+  transform: scale(1.12);
 }
 
 .arrow svg {

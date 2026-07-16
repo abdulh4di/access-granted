@@ -35,6 +35,11 @@
   max-width: 31em;
 }
 
+/* Break after "Explore Our" only on tablet */
+.tabletBr {
+  display: none;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -94,7 +99,7 @@
   background-color: var(--color-black);
   color: var(--color-white);
   border-radius: 0.5em;
-  transition: transform 0.2s ease;
+  transition: transform 300ms ease;
 }
 
 .arrow:hover {
@@ -120,6 +125,18 @@
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet only: break the heading to "Explore Our" / "Auto Locksmith Services"
+   and reduce its width */
+@media (min-width: 768px) and (max-width: 991px) {
+  .tabletBr {
+    display: inline;
+  }
+
+  .heading {
+    max-width: 20em;
   }
 }
 

@@ -45,7 +45,11 @@ export default function ServiceCards() {
       <div className={`container ${styles.inner}`}>
         <header className={styles.head}>
           <span className="eyebrow">Our Services</span>
-          <h2 className={styles.heading}>Explore Our Auto Locksmith Services</h2>
+          <h2 className={styles.heading}>
+            Explore Our{" "}
+            <br className={styles.tabletBr} />
+            Auto Locksmith Services
+          </h2>
           <p className={styles.subhead}>
             Browse our range of auto locksmith services, from lost car keys and
             vehicle lockouts to key programming, spare car keys, broken key

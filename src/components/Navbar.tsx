@@ -11,7 +11,7 @@ const LINKS = [
 
 // Placeholder hrefs — these will point to dedicated service pages once designed.
 const SERVICE_LINKS = [
-  { label: "Auto Locksmith Services", href: "#" },
+  { label: "Auto Locksmith Services", href: "/services/auto-locksmith" },
   { label: "Vehicle Coding & Diagnostics", href: "#" },
   { label: "VAG Specialist Services", href: "#" },
   { label: "Ghost Immobiliser Installation", href: "#" },

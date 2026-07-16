@@ -1,0 +1,140 @@
+.services {
+  width: 100%;
+  background-color: var(--color-bg-gray);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.25em;
+  padding-top: 4.5em;
+  padding-bottom: 4.5em;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 4em; /* 64px */
+  line-height: 1.125;
+  color: var(--color-text-black);
+  max-width: 40.25em;
+}
+
+.subhead {
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+  max-width: 31em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+.cell {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+  color: var(--color-text-black);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 376 / 400;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1em;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2.25em; /* 36px */
+  line-height: 1.111;
+  color: var(--color-text-black);
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: 0.5em;
+  transition: transform var(--transition-base);
+}
+
+.card:hover .arrow {
+  transform: translateX(3px);
+}
+
+.arrow svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.desc {
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 991px) {
+  .heading {
+    font-size: 3.25em;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .heading {
+    font-size: 2.75em;
+  }
+}
+
+@media (max-width: 479px) {
+  .heading {
+    font-size: 2.5em;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

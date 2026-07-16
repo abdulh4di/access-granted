@@ -2,7 +2,7 @@ import styles from "./Footer.module.css";
 import SocialLinks from "./SocialLinks";
 
 const PAGES = [
-  { label: "Home", href: "#top" },
+  { label: "Home", href: "/" },
   { label: "Gallery", href: "#testimonials" },
   { label: "Contact", href: "#footer" },
   { label: "Blog", href: "#" },

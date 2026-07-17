@@ -27,7 +27,9 @@
 /* Mobile Landscape */
 @media screen and (max-width: 767px) {
   :root {
-    --size-container-ideal: 550;
+    /* larger ideal => everything renders ~12% smaller on phones (client felt
+       the mobile layout was too big) */
+    --size-container-ideal: 620;
     --size-container-min: 480px;
     --size-container-max: 767px;
     --container-padding: 1em;
@@ -37,7 +39,7 @@
 /* Mobile Portrait */
 @media screen and (max-width: 479px) {
   :root {
-    --size-container-ideal: 390;
+    --size-container-ideal: 440;
     --size-container-min: 320px;
     --size-container-max: 479px;
     --container-padding: 1em;

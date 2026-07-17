@@ -29,10 +29,12 @@ export default function ServiceHero() {
                 lockouts, spare keys, key programming and ignition repairs.
               </p>
               <a
-                href="tel:+447777474195"
+                href="https://wa.me/447777474195"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`btn btn-primary ${styles.cta}`}
               >
-                Call Now
+                Get In Touch
                 <svg
                   viewBox="0 0 24 24"
                   width="24"

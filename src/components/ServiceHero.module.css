@@ -79,8 +79,9 @@
 
 .cardContent {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* the coloured padding is the frame; the inner black box fills the rest so it
+     stays proportional to the card at any width (matches the Figma) */
+  padding: 1.875em 1.375em; /* 30px / 22px */
   height: 15.75em; /* 252px */
   border-radius: 1em;
 }
@@ -107,8 +108,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.4em;
-  width: 13.8125em; /* 221px */
-  height: 11.9375em; /* 191px */
+  width: 100%;
+  height: 100%;
   padding: 0.75em;
   background-color: var(--color-black);
   border-radius: 1.05em;
@@ -164,13 +165,13 @@
     font-size: 2.5em;
   }
 
-  /* 2x2 instead of one giant card per row so they don't dominate the screen;
-     minmax(0,1fr) lets columns shrink so the value text doesn't force overflow */
   .cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
-  .cardValue {
-    font-size: 2.75em;
+  /* shorter, banner-style cards so they don't dominate the screen */
+  .cardContent {
+    height: 10.5em;
+    padding: 1.25em 1.375em;
   }
 }

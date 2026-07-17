@@ -3,37 +3,37 @@ import styles from "./ServiceCards.module.css";
 const SERVICES = [
   {
     title: "Lost Car Keys",
-    href: "#",
+    href: "/services/auto-locksmith/lost-car-keys",
     image: "/assets/images/service-lost-car-keys.png",
     desc: "Lost your car keys? We provide replacement keys and programming for many vehicle makes and models.",
   },
   {
     title: "Spare Car Keys",
-    href: "#",
+    href: "/services/auto-locksmith/spare-keys",
     image: "/assets/images/service-spare-car-keys.png",
     desc: "Protect against future lockouts with a professionally cut and programmed spare car key.",
   },
   {
     title: "Vehicle Lockouts",
-    href: "#",
+    href: "/services/auto-locksmith/vehicle-lockouts",
     image: "/assets/images/service-vehicle-lockouts.png",
     desc: "Fast, non-destructive vehicle entry when your keys are locked inside your car.",
   },
   {
     title: "Key Programming & Smart Keys",
-    href: "#",
+    href: "/services/auto-locksmith/key-programming",
     image: "/assets/images/service-key-programming.png",
     desc: "Professional key programming, remote coding and smart key solutions for compatible vehicles.",
   },
   {
     title: "Broken Key Extraction",
-    href: "#",
+    href: "/services/auto-locksmith/broken-key-extraction",
     image: "/assets/images/service-broken-key-extraction.png",
     desc: "Safe removal of broken keys from vehicle locks and ignitions without unnecessary damage.",
   },
   {
     title: "Ignition Repair",
-    href: "#",
+    href: "/services/auto-locksmith/ignition-repair",
     image: "/assets/images/service-ignition-repair.png",
     desc: "Ignition repair and replacement services for worn, damaged or faulty ignition systems.",
   },

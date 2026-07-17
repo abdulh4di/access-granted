@@ -3,7 +3,9 @@
 import { useState } from "react";
 import styles from "./ServiceFaq.module.css";
 
-const FAQS = [
+type FaqItem = { q: string; a: string };
+
+const DEFAULT_FAQS: FaqItem[] = [
   {
     q: "Do you offer emergency call outs?",
     a: "Yes. We offer emergency call out services for both vehicle and residential locksmith situations. For urgent issues, it is best to call directly.",
@@ -30,19 +32,27 @@ const FAQS = [
   },
 ];
 
-export default function ServiceFaq() {
+interface ServiceFaqProps {
+  heading?: string;
+  subhead?: string;
+  items?: FaqItem[];
+}
+
+export default function ServiceFaq({
+  heading = "Frequently Asked Questions",
+  subhead = "Find answers to common questions about our locksmith, vehicle coding, diagnostics and emergency call out services.",
+  items = DEFAULT_FAQS,
+}: ServiceFaqProps) {
   const [open, setOpen] = useState(0);
+  const FAQS = items;
 
   return (
     <section className={styles.faq} id="faq">
       <div className={`container ${styles.inner}`}>
         <header className={styles.head}>
           <span className="eyebrow">FAQs</span>
-          <h2 className={styles.heading}>Frequently Asked Questions</h2>
-          <p className={styles.subhead}>
-            Find answers to common questions about our locksmith, vehicle
-            coding, diagnostics and emergency call out services.
-          </p>
+          <h2 className={styles.heading}>{heading}</h2>
+          <p className={styles.subhead}>{subhead}</p>
         </header>
 
         <ul className={styles.list}>

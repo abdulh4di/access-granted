@@ -1,0 +1,197 @@
+.hero {
+  width: 100%;
+  background-color: var(--color-bg-gray);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.25em;
+  padding-top: 1.25em;
+  padding-bottom: 3.25em;
+}
+
+/* Blog card */
+.card {
+  display: flex;
+  gap: 0.75em;
+  align-items: flex-start;
+  width: 100%;
+  padding: 2em;
+  background-color: var(--color-bg-white);
+  border-radius: 1.5em;
+}
+
+.media {
+  flex: 1 0 0;
+  height: 25em; /* 400px */
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  flex: 1 0 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 0.75em;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 3em; /* 48px */
+  line-height: 1.167; /* 56/48 */
+  color: var(--color-text-black);
+}
+
+.desc {
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+}
+
+.actions {
+  display: flex;
+  gap: 1em;
+}
+
+.help {
+  height: 3.5em;
+}
+
+/* "Call Now" — light grey pill from Figma (#e6e6e6) */
+.call {
+  height: 3.5em;
+  background-color: #e6e6e6;
+  color: var(--color-text-black);
+}
+
+.call:hover {
+  background-color: #dadada;
+}
+
+/* Partner-brand strip */
+.logos {
+  width: 100%;
+  padding: 1em;
+  background-color: var(--color-bg-white);
+  border-radius: 1.5em;
+  overflow: hidden;
+}
+
+/* Infinite marquee: the row holds two identical copies of the logo set and
+   slides left by exactly one copy (-50%), so the loop is seamless. */
+.logoTrack {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: logoMarquee 40s linear infinite;
+}
+
+@keyframes logoMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* track holds 4 identical copies → shift exactly one copy */
+    transform: translateX(-25%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logoTrack {
+    animation: none;
+  }
+}
+
+.logoSlot {
+  position: relative;
+  flex-shrink: 0;
+  /* uniform trailing gap on every slot keeps one copy = exactly 50% of the
+     track, so the -50% marquee stays seamless */
+  margin-right: 5em;
+  overflow: hidden;
+  opacity: 0.85;
+}
+
+.logoCover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logoContain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logoCrop {
+  position: absolute;
+  max-width: none;
+}
+
+@media (max-width: 991px) {
+  .title {
+    font-size: 2.75em;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    /* stack with the image below the content */
+    flex-direction: column-reverse;
+    padding: 1em;
+  }
+
+  .media {
+    /* in the stacked (column) card, flex-basis:0 would collapse the box —
+       reset flex so the explicit height holds and the image fills it */
+    flex: none;
+    width: 100%;
+    height: 16em;
+  }
+
+  .content {
+    align-self: stretch;
+    gap: 1.5em;
+  }
+
+  .title {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 479px) {
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .help,
+  .call {
+    width: 100%;
+  }
+}

@@ -5,7 +5,6 @@ const PAGES = [
   { label: "Home", href: "/" },
   { label: "Gallery", href: "#testimonials" },
   { label: "Contact", href: "#footer" },
-  { label: "Blog", href: "#" },
   { label: "Terms & Conditions", href: "#" },
 ];
 

@@ -1,6 +1,13 @@
 import styles from "./ServiceCards.module.css";
 
-const SERVICES = [
+type ServiceCard = {
+  title: string;
+  href: string;
+  image: string;
+  desc: string;
+};
+
+const DEFAULT_SERVICES: ServiceCard[] = [
   {
     title: "Lost Car Keys",
     href: "/services/auto-locksmith/lost-car-keys",
@@ -39,40 +46,65 @@ const SERVICES = [
   },
 ];
 
-export default function ServiceCards() {
+interface ServiceCardsProps {
+  eyebrow?: string;
+  heading?: React.ReactNode;
+  subhead?: React.ReactNode;
+  services?: ServiceCard[];
+}
+
+export default function ServiceCards({
+  eyebrow = "Our Services",
+  heading = (
+    <>
+      Explore Our <br className={styles.tabletBr} />
+      Auto Locksmith Services
+    </>
+  ),
+  subhead = (
+    <>
+      Browse our range of auto locksmith services, from lost car keys and
+      vehicle lockouts to key programming, spare car keys, broken key extraction
+      and ignition repairs. Select a service below to learn more about how we can
+      help.
+    </>
+  ),
+  services = DEFAULT_SERVICES,
+}: ServiceCardsProps) {
+  const SERVICES = services;
   return (
     <section className={styles.services} id="services">
       <div className={`container ${styles.inner}`}>
         <header className={styles.head}>
-          <span className="eyebrow">Our Services</span>
-          <h2 className={styles.heading}>
-            Explore Our{" "}
-            <br className={styles.tabletBr} />
-            Auto Locksmith Services
-          </h2>
-          <p className={styles.subhead}>
-            Browse our range of auto locksmith services, from lost car keys and
-            vehicle lockouts to key programming, spare car keys, broken key
-            extraction and ignition repairs. Select a service below to learn
-            more about how we can help.
-          </p>
+          <span className="eyebrow">{eyebrow}</span>
+          <h2 className={styles.heading}>{heading}</h2>
+          <p className={styles.subhead}>{subhead}</p>
         </header>
 
         <ul className={styles.grid}>
           {SERVICES.map((s) => (
             <li key={s.title} className={styles.cell}>
-              <a href={s.href} className={styles.card}>
-                <span
+              <div className={styles.card}>
+                <a
+                  href={s.href}
                   className={styles.image}
                   style={{ backgroundImage: `url(${s.image})` }}
-                  role="img"
                   aria-label={s.title}
                 />
-                <span className={styles.body}>
-                  <span className={styles.titleRow}>
+                <div className={styles.body}>
+                  <div className={styles.titleRow}>
                     <span className={styles.title}>{s.title}</span>
-                    <span className={styles.arrow} aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="24" height="24">
+                    <a
+                      href={s.href}
+                      className={styles.arrow}
+                      aria-label={`${s.title} — learn more`}
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        aria-hidden="true"
+                      >
                         <path
                           fill="none"
                           stroke="currentColor"
@@ -82,11 +114,11 @@ export default function ServiceCards() {
                           d="M5 12h14m-6-6 6 6-6 6"
                         />
                       </svg>
-                    </span>
-                  </span>
+                    </a>
+                  </div>
                   <span className={styles.desc}>{s.desc}</span>
-                </span>
-              </a>
+                </div>
+              </div>
             </li>
           ))}
         </ul>

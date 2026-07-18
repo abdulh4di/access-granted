@@ -46,6 +46,34 @@
   max-width: 100%;
 }
 
+/* Stacked variant (for 5-6 tabs): tabs in a 2-col grid, panel below at its
+   natural height so the blue card doesn't stretch and leave a big gap. */
+.stacked {
+  flex-direction: column;
+}
+
+.stacked .list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.stacked .item {
+  height: 100%;
+}
+
+.stacked .detail {
+  flex: none;
+  width: 100%;
+  min-height: 0;
+}
+
+.stacked .detailBody {
+  justify-content: flex-start;
+  gap: 1.5em;
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -151,6 +179,13 @@
 .icon svg {
   width: 1.5em;
   height: 1.5em;
+}
+
+/* brand logos rendered as images — contained so any aspect ratio fits */
+.iconImg {
+  width: 2.5em;
+  height: 2.5em;
+  object-fit: contain;
 }
 
 .detailText {

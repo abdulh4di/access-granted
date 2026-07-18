@@ -5,17 +5,26 @@ import styles from "./Navbar.module.css";
 
 const LINKS = [
   { label: "Home", href: "/" },
-  { label: "Gallery", href: "#testimonials" },
-  { label: "Contact", href: "#footer" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
 ];
 
 // Placeholder hrefs — these will point to dedicated service pages once designed.
 const SERVICE_LINKS = [
   { label: "Auto Locksmith Services", href: "/services/auto-locksmith" },
-  { label: "Vehicle Coding & Diagnostics", href: "#" },
-  { label: "VAG Specialist Services", href: "#" },
-  { label: "Ghost Immobiliser Installation", href: "#" },
-  { label: "Residential Locksmith Services", href: "#" },
+  {
+    label: "Vehicle Coding & Diagnostics",
+    href: "/services/vehicle-coding-diagnostics",
+  },
+  { label: "VAG Specialist Services", href: "/services/vag-specialist" },
+  {
+    label: "Ghost Immobiliser Installation",
+    href: "/services/ghost-immobiliser",
+  },
+  {
+    label: "Residential Locksmith Services",
+    href: "/services/residential-locksmith",
+  },
 ];
 
 export default function Navbar() {

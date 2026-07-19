@@ -50,6 +50,15 @@ const SERVICES: Service[] = [
     overlay: true,
     icon: { type: "img", src: "/assets/images/ag-icon-residential.svg", w: 52, h: 54 },
   },
+  {
+    title: "Mileage Correction",
+    subtitle:
+      "Accurate mileage correction and dashboard recalibration following instrument cluster repairs or replacements.",
+    image: "/assets/images/mileage.png",
+    imageAlt: "Vehicle instrument cluster showing odometer and OBD diagnostic tool during mileage correction",
+    imageLeft: false,
+    icon: { type: "scan" },
+  },
 ];
 
 export default function Services() {

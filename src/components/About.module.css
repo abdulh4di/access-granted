@@ -72,6 +72,7 @@
   font-weight: 400;
   font-size: 3em; /* 48px */
   line-height: 1.167;
+  color: #ffb000;
 }
 
 /* Once the layout stacks into a column, center the intro (eyebrow + heading) */

@@ -362,10 +362,12 @@ function hookAssetRefresh() {
 }
 
 /** Runs `build` for desktop and mobile start values; returns a cleanup fn. */
-export function withBreakpoints(build: (starts: Starts) => void) {
+export function withBreakpoints(
+  build: (starts: Starts, isDesktop: boolean) => void
+) {
   hookAssetRefresh();
   const mm = gsap.matchMedia();
-  mm.add("(min-width: 992px)", () => build(DESKTOP_STARTS));
-  mm.add("(max-width: 991px)", () => build(MOBILE_STARTS));
+  mm.add("(min-width: 992px)", () => build(DESKTOP_STARTS, true));
+  mm.add("(max-width: 991px)", () => build(MOBILE_STARTS, false));
   return () => mm.revert();
 }

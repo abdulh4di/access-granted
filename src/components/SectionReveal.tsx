@@ -85,18 +85,47 @@ export default function SectionReveal({
         // Leads the sequence with no delay: the frame settles first, then its
         // contents arrive inside it.
         if (zoomOut.length) {
-          gsap.fromTo(
-            zoomOut,
-            { scale: ZOOM_OUT.scale, opacity: ZOOM_OUT.opacity },
-            {
-              scale: 1,
-              opacity: 1,
-              transformOrigin: ZOOM_OUT.transformOrigin,
-              duration: ZOOM_OUT.duration,
-              ease: ZOOM_OUT.ease,
-              stagger: ZOOM_OUT_STAGGER,
-            }
+          // Same fold split as the blocks below. A frame that sits under the
+          // fold on a tall mobile hero — the logos strip beneath a stacked hero
+          // card — shouldn't spend its zoom off-screen; defer it to a scroll
+          // trigger so it animates when reached.
+          const fold = window.innerHeight;
+          const onLoad = zoomOut.filter(
+            (z) => z.getBoundingClientRect().top < fold
           );
+          const deferred = zoomOut.filter(
+            (z) => z.getBoundingClientRect().top >= fold
+          );
+
+          if (onLoad.length) {
+            gsap.fromTo(
+              onLoad,
+              { scale: ZOOM_OUT.scale, opacity: ZOOM_OUT.opacity },
+              {
+                scale: 1,
+                opacity: 1,
+                transformOrigin: ZOOM_OUT.transformOrigin,
+                duration: ZOOM_OUT.duration,
+                ease: ZOOM_OUT.ease,
+                stagger: ZOOM_OUT_STAGGER,
+              }
+            );
+          }
+
+          deferred.forEach((z) => {
+            gsap.fromTo(
+              z,
+              { scale: ZOOM_OUT.scale, opacity: ZOOM_OUT.opacity },
+              {
+                scale: 1,
+                opacity: 1,
+                transformOrigin: ZOOM_OUT.transformOrigin,
+                duration: ZOOM_OUT.duration,
+                ease: ZOOM_OUT.ease,
+                scrollTrigger: { trigger: z, start: "top 82%", once: true },
+              }
+            );
+          });
         }
         if (eyebrow) {
           gsap.from(eyebrow, {
@@ -217,8 +246,14 @@ export default function SectionReveal({
     // viewport percentages, for a section sitting right beneath a hero.
     const early = root.hasAttribute("data-reveal-early");
 
-    return withBreakpoints((starts: Starts) => {
-      const headStarts = early ? EARLY_STARTS : starts;
+    return withBreakpoints((starts: Starts, isDesktop: boolean) => {
+      // `data-reveal-early` is a desktop convenience: the hero there is about one
+      // screen tall, so the section beneath it should reveal on a short scroll
+      // rather than waiting to climb the viewport. On a phone that same hero
+      // stacks two or three screens tall, so the section is far off-screen at
+      // load and the fixed 10–40px offsets fired it long before it was reached —
+      // fall back to the normal viewport-percentage triggers there.
+      const headStarts = early && isDesktop ? EARLY_STARTS : starts;
 
       // Rows are measured here rather than once outside, because the row shape
       // changes with the breakpoint (3-up → 2-up → 1-up).
@@ -250,7 +285,16 @@ export default function SectionReveal({
           // bring a section's *heading* in after a short scroll; applied to a tall
           // grid it fires every row within the first 40px, long before any of them
           // are on screen.
-          block: byRow ? starts.block : headStarts.block,
+          //
+          // On a phone each card fills most of the screen, so a trigger near the
+          // bottom edge plays the zoom while the card is still mostly below the
+          // fold — it's over by the time you've scrolled it into view. Hold the
+          // rows back on mobile so the motion happens with the card on screen.
+          block: byRow
+            ? isDesktop
+              ? starts.block
+              : "clamp(top 58%)"
+            : headStarts.block,
         }
       );
     });

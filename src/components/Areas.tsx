@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import styles from "./Areas.module.css";
+import AreasReveal from "./AreasReveal";
 
 const AREAS = [
   "Alnwick", "East Denton", "Lemington", "South Shields",
@@ -50,19 +51,21 @@ export default function Areas() {
   return (
     <section className={styles.areas} id="areas">
       <div className={`container ${styles.inner}`}>
-        <header className={styles.head}>
-          <span className="eyebrow">Areas Covered</span>
-          <h2 className={styles.headline}>
+        <header className={styles.head} data-areas-head>
+          <span className="eyebrow" data-areas-eyebrow>
+            Areas Covered
+          </span>
+          <h2 className={styles.headline} data-areas-heading>
             Locksmith Covering Newcastle &amp; the North East
           </h2>
-          <p className={styles.subhead}>
+          <p className={styles.subhead} data-areas-sub>
             Providing trusted locksmith, vehicle coding, diagnostics and residential
             locksmith services across Newcastle, Gateshead and more than 40 towns and communities
             throughout the North East.
           </p>
         </header>
 
-        <div className={styles.table}>
+        <div className={styles.table} data-areas-table>
           <div className={styles.tableHead}>
             <span>Areas</span>
           </div>
@@ -86,6 +89,8 @@ export default function Areas() {
           </div>
         </div>
       </div>
+
+      <AreasReveal />
     </section>
   );
 }

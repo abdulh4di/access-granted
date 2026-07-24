@@ -1,4 +1,5 @@
 import styles from "./ComingSoon.module.css";
+import SectionReveal from "./SectionReveal";
 
 interface ComingSoonProps {
   eyebrow?: string;
@@ -21,9 +22,9 @@ export default function ComingSoon({
     <section className={styles.wrap}>
       <div className={`container ${styles.inner}`}>
         <span className="eyebrow">{eyebrow}</span>
-        <h1 className={styles.heading}>{heading}</h1>
-        <p className={styles.desc}>{description}</p>
-        <div className={styles.actions}>
+        <h1 className={styles.heading} data-reveal-heading>{heading}</h1>
+        <p className={styles.desc} data-reveal-sub>{description}</p>
+        <div className={styles.actions} data-reveal-block>
           <a href="/contact" className={`btn btn-primary ${styles.cta}`}>
             Contact Us
           </a>
@@ -32,6 +33,8 @@ export default function ComingSoon({
           </a>
         </div>
       </div>
+
+      <SectionReveal mode="load" />
     </section>
   );
 }

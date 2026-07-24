@@ -1,7 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
 import styles from "./Navbar.module.css";
+
+// Layout effect before paint on the client (falls back to useEffect on the
+// server to avoid the React warning) so the entrance "from" state is applied
+// without a flash of the settled layout.
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 const LINKS = [
   { label: "Home", href: "/" },
@@ -32,6 +39,56 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const servicesRef = useRef<HTMLLIElement>(null);
+  const navRef = useRef<HTMLElement>(null);
+
+  // Page-load entrance: the nav pill reveals (fade + rise + scale), then its
+  // inner elements stagger in. Ported from the "Plasticity" spec — timings and
+  // easings preserved; markup restyled to reuse this project's tokens.
+  useIsomorphicLayoutEffect(() => {
+    const root = navRef.current;
+    if (!root) return;
+
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReduced) return; // leave everything in its default visible state
+
+    const staggerEls = root.querySelectorAll<HTMLElement>("[data-stagger]");
+    const logo = root.querySelector<HTMLElement>("[data-nav-logo]");
+    const burger = root.querySelector<HTMLElement>("[data-nav-burger]");
+
+    const mm = gsap.matchMedia();
+
+    // Desktop: full pill entrance — reveal, then stagger logo + links + CTA.
+    mm.add("(min-width: 992px)", () => {
+      gsap.set(root, { opacity: 0, y: 24, scale: 0.96 });
+      gsap.set(staggerEls, { opacity: 0, y: 10 });
+
+      const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
+      tl.to(root, { opacity: 1, y: 0, scale: 1, duration: 0.8 }).to(
+        staggerEls,
+        { opacity: 1, y: 0, duration: 0.55, stagger: 0.06, ease: "power3.out" },
+        0.2
+      );
+    });
+
+    // Mobile/tablet: bar entrance — the links live behind the burger, so only
+    // the visible bar elements (logo + burger) stagger in.
+    mm.add("(max-width: 991px)", () => {
+      const barEls = [logo, burger].filter(Boolean) as HTMLElement[];
+      gsap.set(root, { opacity: 0, y: 24, scale: 0.96 });
+      gsap.set(barEls, { opacity: 0, y: 10 });
+
+      const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
+      tl.to(root, { opacity: 1, y: 0, scale: 1, duration: 0.8 }).to(
+        barEls,
+        { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: "power3.out" },
+        0.2
+      );
+    });
+
+    return () => mm.revert();
+  }, []);
 
   useEffect(() => {
     // Hysteresis: condense above 80px, expand below 20px. The wide gap keeps
@@ -70,13 +127,19 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`} aria-label="Primary">
+    <nav
+      ref={navRef}
+      className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}
+      aria-label="Primary"
+    >
       <div className={`container ${styles.inner}`}>
         <a
           href="#top"
           className={styles.logo}
           aria-label="Access Granted — home"
           onClick={closeAll}
+          data-stagger
+          data-nav-logo
         >
           <img
             src="/assets/images/ag-logo-northeast.png"
@@ -90,6 +153,7 @@ export default function Navbar() {
           className={styles.burger}
           aria-expanded={open}
           aria-label="Toggle navigation menu"
+          data-nav-burger
           onClick={() => {
             setOpen((v) => !v);
             setServicesOpen(false);
@@ -102,14 +166,14 @@ export default function Navbar() {
 
         <ul className={`${styles.links} ${open ? styles.linksOpen : ""}`}>
           {LINKS.map((l) => (
-            <li key={l.label}>
+            <li key={l.label} data-stagger>
               <a href={l.href} className={styles.link} onClick={closeAll}>
                 {l.label}
               </a>
             </li>
           ))}
 
-          <li className={styles.hasDropdown} ref={servicesRef}>
+          <li className={styles.hasDropdown} ref={servicesRef} data-stagger>
             <button
               type="button"
               className={`${styles.link} ${styles.dropdownToggle}`}
@@ -140,7 +204,11 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <a href="tel:+447777474195" className={`btn btn-primary ${styles.cta}`}>
+        <a
+          href="tel:+447777474195"
+          className={`btn btn-primary ${styles.cta}`}
+          data-stagger
+        >
           Emergency Call Out
         </a>
       </div>

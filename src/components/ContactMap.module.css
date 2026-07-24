@@ -35,10 +35,12 @@
 }
 
 .frame {
+  position: relative; /* anchors the loading skeleton */
   width: 100%;
   height: 26em; /* ~416px */
   border-radius: 1.5em;
   overflow: hidden;
+  background-color: var(--color-bg-white);
 }
 
 .frame iframe {
@@ -46,6 +48,67 @@
   width: 100%;
   height: 100%;
   border: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Revealed once the embed reports it has loaded */
+.frame iframe.iframeLoaded {
+  opacity: 1;
+}
+
+/* Placeholder shown while the third-party embed loads */
+.skeleton {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--color-bg-white);
+  overflow: hidden;
+}
+
+/* Moving highlight sweep */
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-white),
+    transparent
+  );
+  opacity: 0.75;
+  animation: mapShimmer 1.4s ease-in-out infinite;
+}
+
+/* Faint map-pin silhouette so the placeholder reads as a map */
+.skeletonPin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 2em;
+  margin: -2.25em 0 0 -1em;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background-color: var(--color-bg-gray);
+}
+
+@keyframes mapShimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after {
+    animation: none;
+  }
+
+  .frame iframe {
+    transition: none;
+  }
 }
 
 @media (max-width: 767px) {

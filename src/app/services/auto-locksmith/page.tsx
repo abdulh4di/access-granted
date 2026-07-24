@@ -33,7 +33,9 @@ export default function AutoLocksmithPage() {
         <ServiceHero />
       </header>
       <main id="main">
-        <ServiceCards />
+        {/* earlyReveal: this section sits right under the hero here, so the
+            default trigger needs an awkward amount of scrolling before it shows */}
+        <ServiceCards earlyReveal />
         <HowItWorks />
         <Testimonials />
         <ServiceFaq />

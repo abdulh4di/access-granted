@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./LostKeysBenefits.module.css";
+import SectionReveal from "./SectionReveal";
 
 const ICONS = {
   phone: {
@@ -135,14 +136,21 @@ export default function LostKeysBenefits({
   return (
     <section className={styles.benefits}>
       <div className={`container ${styles.inner}`}>
-        <header className={styles.head}>
+        <header className={styles.head} data-reveal-head>
           <span className="eyebrow">{eyebrow}</span>
-          <h2 className={styles.heading}>{heading}</h2>
-          <p className={styles.subhead}>{subhead}</p>
+          <h2 className={styles.heading} data-reveal-heading>{heading}</h2>
+          <p className={styles.subhead} data-reveal-sub>{subhead}</p>
         </header>
 
         <div className={`${styles.content} ${stacked ? styles.stacked : ""}`}>
-          <ol className={styles.list} role="tablist" aria-label="Our process">
+          {/* Both frames zoom out in DOM order — the step list settles first,
+              then the panel it controls. */}
+          <ol
+            className={styles.list}
+            role="tablist"
+            aria-label="Our process"
+            data-reveal-zoom-out
+          >
             {STEPS.map((s, i) => (
               <li key={s.label}>
                 <button
@@ -165,6 +173,7 @@ export default function LostKeysBenefits({
             className={styles.detail}
             id="benefit-panel"
             role="tabpanel"
+            data-reveal-zoom-out
             aria-labelledby={`benefit-tab-${active}`}
           >
             {/* keyed so the content re-mounts and replays the fade on each change */}
@@ -188,6 +197,8 @@ export default function LostKeysBenefits({
           </div>
         </div>
       </div>
+
+      <SectionReveal />
     </section>
   );
 }

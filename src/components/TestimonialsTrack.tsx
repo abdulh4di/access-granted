@@ -117,7 +117,7 @@ export default function TestimonialsTrack({
 
   return (
     <>
-      <ul className={styles.track}>
+      <ul className={styles.track} data-tst-track>
         {/* Second half is aria-hidden — it exists only for the seamless loop. */}
         {cards.map((t, i) => {
           const isClone = i >= testimonials.length;

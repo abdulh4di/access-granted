@@ -1,0 +1,165 @@
+.sent {
+  width: 100%;
+  background-color: var(--color-bg-gray);
+}
+
+.inner {
+  padding-top: 4.5em;
+  padding-bottom: 4.5em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5em;
+  padding: 4em 2.5em;
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+}
+
+.tick {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 4em; /* 64px */
+  line-height: 1.125;
+  letter-spacing: -1.28px;
+  color: var(--color-text-black);
+}
+
+.desc {
+  max-width: 34em;
+  font-family: var(--font-body);
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+}
+
+/* Numbered "what happens next" strip */
+.steps {
+  display: flex;
+  gap: 1em;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.step {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1.5em;
+  background-color: var(--color-bg-gray);
+  border-radius: var(--radius-sm);
+}
+
+.stepNum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25em; /* 20px */
+  line-height: 1.2;
+  color: var(--color-text-black);
+}
+
+.stepDesc {
+  font-family: var(--font-body);
+  font-size: 0.875em; /* 14px */
+  line-height: 1.429;
+  color: var(--color-text-secondary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+/* Urgent-callout note: a mailto form is the slow path, so point people at the
+   phone when they can't wait. */
+.urgent {
+  font-family: var(--font-body);
+  font-size: 0.875em;
+  line-height: 1.429;
+  color: var(--color-text-secondary);
+}
+
+.urgent a {
+  color: var(--color-text-black);
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .card {
+    padding: 3em 2em;
+  }
+
+  .heading {
+    font-size: 3.25em;
+  }
+
+  .steps {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .card {
+    padding: 2.5em 1.25em;
+  }
+
+  .heading {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 479px) {
+  .heading {
+    font-size: 2em;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-self: stretch;
+  }
+
+  .actions > * {
+    width: 100%;
+  }
+}

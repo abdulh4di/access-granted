@@ -1,4 +1,5 @@
 import styles from "./ServiceCards.module.css";
+import SectionReveal from "./SectionReveal";
 
 type ServiceCard = {
   title: string;
@@ -51,6 +52,12 @@ interface ServiceCardsProps {
   heading?: React.ReactNode;
   subhead?: React.ReactNode;
   services?: ServiceCard[];
+  /**
+   * Reveal on a short fixed scroll rather than the default viewport-percentage
+   * trigger. For pages where this section sits directly under the hero and the
+   * default demands too much scrolling before it appears.
+   */
+  earlyReveal?: boolean;
 }
 
 export default function ServiceCards({
@@ -70,20 +77,28 @@ export default function ServiceCards({
     </>
   ),
   services = DEFAULT_SERVICES,
+  earlyReveal = false,
 }: ServiceCardsProps) {
   const SERVICES = services;
   return (
-    <section className={styles.services} id="services">
+    <section
+      className={styles.services}
+      id="services"
+      // Each row of cards zooms in as one unit, the next row following as you
+      // reach it — rather than six cards each arriving on their own.
+      data-reveal-block-rows
+      {...(earlyReveal ? { "data-reveal-early": "" } : {})}
+    >
       <div className={`container ${styles.inner}`}>
-        <header className={styles.head}>
+        <header className={styles.head} data-reveal-head>
           <span className="eyebrow">{eyebrow}</span>
-          <h2 className={styles.heading}>{heading}</h2>
-          <p className={styles.subhead}>{subhead}</p>
+          <h2 className={styles.heading} data-reveal-heading>{heading}</h2>
+          <p className={styles.subhead} data-reveal-sub>{subhead}</p>
         </header>
 
         <ul className={styles.grid}>
           {SERVICES.map((s) => (
-            <li key={s.title} className={styles.cell}>
+            <li key={s.title} className={styles.cell} data-reveal-block>
               <div className={styles.card}>
                 <a
                   href={s.href}
@@ -123,6 +138,8 @@ export default function ServiceCards({
           ))}
         </ul>
       </div>
+
+      <SectionReveal />
     </section>
   );
 }

@@ -123,6 +123,7 @@ export default function ResidentialLocksmithPage() {
             </>
           }
           services={RESIDENTIAL_SERVICES}
+          earlyReveal
         />
         <HowItWorks />
         <Testimonials />

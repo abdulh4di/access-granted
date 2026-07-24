@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./ServiceFaq.module.css";
+import SectionReveal from "./SectionReveal";
 
 type FaqItem = { q: string; a: string };
 
@@ -49,13 +50,15 @@ export default function ServiceFaq({
   return (
     <section className={styles.faq} id="faq">
       <div className={`container ${styles.inner}`}>
-        <header className={styles.head}>
+        <header className={styles.head} data-reveal-head>
           <span className="eyebrow">FAQs</span>
-          <h2 className={styles.heading}>{heading}</h2>
-          <p className={styles.subhead}>{subhead}</p>
+          <h2 className={styles.heading} data-reveal-heading>{heading}</h2>
+          <p className={styles.subhead} data-reveal-sub>{subhead}</p>
         </header>
 
-        <ul className={styles.list}>
+        {/* The whole list reveals as one block. Marking each item instead made
+            the questions arrive one at a time on the way down the page. */}
+        <ul className={styles.list} data-reveal-block>
           {FAQS.map((item, i) => {
             const isOpen = open === i;
             return (
@@ -98,6 +101,8 @@ export default function ServiceFaq({
           })}
         </ul>
       </div>
+
+      <SectionReveal />
     </section>
   );
 }

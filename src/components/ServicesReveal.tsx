@@ -93,7 +93,7 @@ export default function ServicesReveal() {
     // image), so hold back a little: a trigger right at the bottom edge would
     // play most of the motion off-screen.
     mm.add("(max-width: 991px)", () => {
-      build({ headStart: "top 85%", subStart: "top 82%", rowStart: "top 86%" });
+      build({ headStart: "top 72%", subStart: "top 69%", rowStart: "top 73%" });
     });
 
     return () => mm.revert();

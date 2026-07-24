@@ -109,9 +109,9 @@ export default function AboutReveal() {
     // the stats a little after the heading since they sit below it.
     mm.add("(max-width: 991px)", () => {
       build({
-        intro: { trigger: section, start: "top 88%" },
-        box: { trigger: statsTrigger, start: "top 86%" },
-        text: { trigger: statsTrigger, start: "top 80%" },
+        intro: { trigger: section, start: "top 75%" },
+        box: { trigger: statsTrigger, start: "top 73%" },
+        text: { trigger: statsTrigger, start: "top 67%" },
       });
     });
 

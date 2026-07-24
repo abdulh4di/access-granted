@@ -53,12 +53,15 @@ export const EARLY_STARTS: Starts = {
   block: 40,
 };
 
-// Slightly later than desktop: stacked elements are much taller here, so a
-// trigger right at the bottom edge would play most of the motion off-screen.
+// Fires noticeably later than desktop, on purpose. A phone viewport is short and
+// its stacked sections are tall, so a trigger near the bottom edge plays the
+// whole reveal while the element is still half below the fold — during a scroll
+// flick it's finished before your eye lands on it. Holding until the element is
+// a third of the way up the screen means the motion happens in front of you.
 export const MOBILE_STARTS: Starts = {
-  head: "clamp(top 85%)",
-  sub: "clamp(top 82%)",
-  block: "clamp(top 86%)",
+  head: "clamp(top 72%)",
+  sub: "clamp(top 69%)",
+  block: "clamp(top 73%)",
 };
 
 export function prefersReducedMotion() {

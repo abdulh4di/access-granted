@@ -118,7 +118,7 @@ export default function WhyChooseUsReveal() {
     // Column layout (phones/tablets) — cards stack and are much taller, so hold
     // back a little or most of the motion plays off the bottom edge.
     mm.add("(max-width: 991px)", () => {
-      build({ headStart: "top 85%", descStart: "top 82%", rowStart: "top 86%" });
+      build({ headStart: "top 72%", descStart: "top 69%", rowStart: "top 73%" });
     });
 
     return () => mm.revert();

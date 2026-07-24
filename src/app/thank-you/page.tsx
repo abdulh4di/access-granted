@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import FormSent from "@/components/FormSent";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Thanks for getting in touch | Access Granted Northeast",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <>
+      <ScrollToTop />
       <span id="top" />
       <Navbar />
       <main id="main">

@@ -154,19 +154,48 @@ export default function SectionReveal({
           );
         }
         if (blocks.length) {
-          gsap.fromTo(
-            blocks,
-            { scale: 0.9, opacity: 0 },
-            {
-              scale: 1,
-              opacity: 1,
-              transformOrigin: "50% 50%",
-              duration: 0.8,
-              stagger: 0.12,
-              ease: "power3.out",
-              delay: 0.7,
-            }
+          // Load mode plays immediately, which is only right for what's actually
+          // on screen. A hero that stacks tall on a phone pushes its lower blocks
+          // below the fold — animating those now burns the reveal off-screen, so
+          // they read as "already there" once you scroll down. Split the two:
+          // on-screen blocks play on load; the rest wait for a scroll trigger.
+          const fold = window.innerHeight;
+          const arr = Array.from(blocks);
+          const onLoad = arr.filter((b) => b.getBoundingClientRect().top < fold);
+          const deferred = arr.filter(
+            (b) => b.getBoundingClientRect().top >= fold
           );
+
+          if (onLoad.length) {
+            gsap.fromTo(
+              onLoad,
+              { scale: 0.9, opacity: 0 },
+              {
+                scale: 1,
+                opacity: 1,
+                transformOrigin: "50% 50%",
+                duration: 0.8,
+                stagger: 0.12,
+                ease: "power3.out",
+                delay: 0.7,
+              }
+            );
+          }
+
+          deferred.forEach((b) => {
+            gsap.fromTo(
+              b,
+              { scale: 0.9, opacity: 0 },
+              {
+                scale: 1,
+                opacity: 1,
+                transformOrigin: "50% 50%",
+                duration: 0.8,
+                ease: "power3.out",
+                scrollTrigger: { trigger: b, start: "top 82%", once: true },
+              }
+            );
+          });
         }
       }, root);
       return () => ctx.revert();

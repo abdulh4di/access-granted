@@ -1,5 +1,6 @@
 import styles from "./Testimonials.module.css";
 import TestimonialsTrack, { type Testimonial } from "./TestimonialsTrack";
+import TestimonialsReveal from "./TestimonialsReveal";
 
 // Live Google reviews via Featurable. Fetched server-side and cached with ISR
 // (revalidated every 6h), so new reviews appear automatically.
@@ -72,10 +73,12 @@ export default async function Testimonials() {
   return (
     <section className={styles.testimonials} id="testimonials">
       <div className={`container ${styles.inner}`}>
-        <div className={styles.head}>
+        <div className={styles.head} data-tst-head>
           <div className={styles.headText}>
-            <span className="eyebrow">Testimonials</span>
-            <h2 className={styles.heading}>
+            <span className="eyebrow" data-tst-eyebrow>
+              Testimonials
+            </span>
+            <h2 className={styles.heading} data-tst-heading>
               What Our <br className={styles.mobileBr} />Customers Say
             </h2>
           </div>
@@ -84,6 +87,7 @@ export default async function Testimonials() {
             target="_blank"
             rel="noopener noreferrer"
             className={`btn btn-primary ${styles.reviewsBtn}`}
+            data-tst-btn
           >
             View All Google Reviews
           </a>
@@ -91,6 +95,8 @@ export default async function Testimonials() {
 
         <TestimonialsTrack testimonials={testimonials} />
       </div>
+
+      <TestimonialsReveal />
     </section>
   );
 }

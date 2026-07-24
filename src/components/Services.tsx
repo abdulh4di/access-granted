@@ -1,4 +1,5 @@
 import styles from "./Services.module.css";
+import ServicesReveal from "./ServicesReveal";
 
 interface Service {
   title: string;
@@ -65,14 +66,16 @@ export default function Services() {
   return (
     <section className={styles.services} id="services">
       <div className={`container ${styles.inner}`}>
-        <header className={styles.head}>
-          <span className="eyebrow">Services</span>
-          <h2 className={styles.headline}>
+        <header className={styles.head} data-services-head>
+          <span className="eyebrow" data-services-eyebrow>
+            Services
+          </span>
+          <h2 className={styles.headline} data-services-headline>
             Locksmith, Coding &amp;{" "}
             <br />
             Diagnostic Services
           </h2>
-          <p className={styles.subhead}>
+          <p className={styles.subhead} data-services-sub>
             Supporting drivers and homeowners across Newcastle and the North East with fast,
             practical help for lockouts, lost keys, vehicle faults and access issues.
           </p>
@@ -83,6 +86,7 @@ export default function Services() {
             <div
               key={s.title}
               className={`${styles.row} ${s.imageLeft ? styles.imageLeftRow : ""}`}
+              data-service-row
             >
               <article className={styles.card}>
                 <div className={styles.iconWrap}>
@@ -120,6 +124,8 @@ export default function Services() {
           ))}
         </div>
       </div>
+
+      <ServicesReveal />
     </section>
   );
 }

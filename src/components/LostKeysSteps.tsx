@@ -1,4 +1,5 @@
 import styles from "./LostKeysSteps.module.css";
+import SectionReveal from "./SectionReveal";
 
 type Step = { title: string; desc: string };
 
@@ -32,17 +33,20 @@ export default function LostKeysSteps({
 }: LostKeysStepsProps) {
   const STEPS = steps;
   return (
-    <section className={styles.steps}>
+    // Sits directly under a short hero, so it reveals on a small fixed scroll
+    // rather than waiting to climb the viewport — by the time the default
+    // percentage line was crossed it had been sat on screen for a while.
+    <section className={styles.steps} data-reveal-early>
       <div className={`container ${styles.inner}`}>
-        <header className={styles.head}>
+        <header className={styles.head} data-reveal-head>
           <span className="eyebrow">{eyebrow}</span>
-          <h2 className={styles.heading}>{heading}</h2>
-          <p className={styles.subhead}>{subhead}</p>
+          <h2 className={styles.heading} data-reveal-heading>{heading}</h2>
+          <p className={styles.subhead} data-reveal-sub>{subhead}</p>
         </header>
 
         <ol className={styles.grid}>
           {STEPS.map((step, i) => (
-            <li key={step.title} className={styles.step}>
+            <li key={step.title} className={styles.step} data-reveal-block>
               <div className={styles.markerRow}>
                 <span
                   className={`${styles.line} ${i === 0 ? styles.lineFadeStart : ""}`}
@@ -67,6 +71,8 @@ export default function LostKeysSteps({
           ))}
         </ol>
       </div>
+
+      <SectionReveal />
     </section>
   );
 }

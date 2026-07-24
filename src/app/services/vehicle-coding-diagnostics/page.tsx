@@ -139,6 +139,7 @@ export default function VehicleCodingDiagnosticsPage() {
             </>
           }
           services={CODING_SERVICES}
+          earlyReveal
         />
         <HowItWorks />
         <Testimonials />

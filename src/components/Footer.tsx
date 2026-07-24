@@ -1,26 +1,33 @@
 import styles from "./Footer.module.css";
 import SocialLinks from "./SocialLinks";
+import FooterReveal from "./FooterReveal";
 
 const PAGES = [
   { label: "Home", href: "/" },
   { label: "Gallery", href: "#testimonials" },
   { label: "Contact", href: "#footer" },
-  { label: "Terms & Conditions", href: "#" },
+  { label: "Terms & Conditions", href: "/terms" },
 ];
 
 const SERVICES = [
-  "Locksmith Services",
-  "Vehicle Coding & Diagnostics",
-  "VAG Specialist Services",
-  "Ghost Immobiliser Installation",
-  "Residential Locksmith Services",
+  { label: "Locksmith Services", href: "/services/auto-locksmith" },
+  {
+    label: "Vehicle Coding & Diagnostics",
+    href: "/services/vehicle-coding-diagnostics",
+  },
+  { label: "VAG Specialist Services", href: "/services/vag-specialist" },
+  { label: "Ghost Immobiliser Installation", href: "/services/ghost-immobiliser" },
+  {
+    label: "Residential Locksmith Services",
+    href: "/services/residential-locksmith",
+  },
 ];
 
 export default function Footer() {
   return (
     <footer className={styles.footer} id="footer">
       <div className={`container ${styles.inner}`}>
-        <div className={styles.card}>
+        <div className={styles.card} data-footer-card>
           <div className={styles.topbar}>
             <h2 className={styles.heading}>Need Urgent Help?</h2>
             <a href="#contact" className={`btn btn-dark ${styles.contactBtn}`}>
@@ -70,9 +77,9 @@ export default function Footer() {
                 <h3 className={styles.colTitle}>Services</h3>
                 <ul className={styles.links}>
                   {SERVICES.map((s) => (
-                    <li key={s}>
-                      <a href="#services" className={styles.link}>
-                        {s}
+                    <li key={s.label}>
+                      <a href={s.href} className={styles.link}>
+                        {s.label}
                       </a>
                     </li>
                   ))}
@@ -82,6 +89,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      <FooterReveal />
     </footer>
   );
 }

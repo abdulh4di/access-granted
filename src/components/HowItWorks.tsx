@@ -1,4 +1,5 @@
 import styles from "./HowItWorks.module.css";
+import SectionReveal from "./SectionReveal";
 
 // Exact glyph paths from the Figma icons (node 225:1100), white on the blue tile.
 const ICONS = {
@@ -74,14 +75,14 @@ export default function HowItWorks() {
   return (
     <section className={styles.how}>
       <div className={`container ${styles.inner}`}>
-        <header className={styles.head}>
+        <header className={styles.head} data-reveal-head>
           <span className="eyebrow">How It Works</span>
-          <h2 className={styles.heading}>Getting Help Is Simple</h2>
+          <h2 className={styles.heading} data-reveal-heading>Getting Help Is Simple</h2>
         </header>
 
         <ul className={styles.grid}>
           {STEPS.map((s) => (
-            <li key={s.title} className={styles.card}>
+            <li key={s.title} className={styles.card} data-reveal-block>
               <span className={styles.icon}>
                 <svg
                   viewBox={ICONS[s.icon].viewBox}
@@ -100,6 +101,8 @@ export default function HowItWorks() {
           ))}
         </ul>
       </div>
+
+      <SectionReveal />
     </section>
   );
 }

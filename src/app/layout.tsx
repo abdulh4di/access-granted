@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ScrollRestore from "@/components/ScrollRestore";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://accessgrantednortheast.co.uk"),
@@ -47,6 +48,7 @@ export default function RootLayout({
           Skip to content
         </a>
         {children}
+        <ScrollRestore />
         <FloatingWhatsApp />
       </body>
     </html>

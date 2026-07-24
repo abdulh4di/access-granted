@@ -1,4 +1,5 @@
 import styles from "./BlogHero.module.css";
+import SectionReveal from "./SectionReveal";
 
 // Faded partner-brand strip. Figma reuses 4 exported sprites across 8 slots with
 // per-slot crop transforms — ported verbatim so the framing matches the design.
@@ -76,7 +77,9 @@ export default function BlogHero({
   return (
     <section className={styles.hero}>
       <div className={`container ${styles.inner}`}>
-        <article className={styles.card}>
+        {/* The card settles in from slightly enlarged, framing the content that
+            then arrives inside it. */}
+        <article className={styles.card} data-reveal-zoom-out>
           <div className={styles.media}>
             <img src={image} alt={imageAlt} width={550} height={400} />
           </div>
@@ -84,11 +87,13 @@ export default function BlogHero({
           <div className={styles.content}>
             <div className={styles.details}>
               <span className="eyebrow">{tag}</span>
-              <h1 className={styles.title}>{title}</h1>
-              <p className={styles.desc}>{description}</p>
+              <h1 className={styles.title} data-reveal-heading>{title}</h1>
+              <p className={styles.desc} data-reveal-sub>{description}</p>
             </div>
 
-            <div className={styles.actions}>
+            {/* Zooms in as one unit, the same block reveal the contact page
+                uses — the pair arrives together rather than button by button. */}
+            <div className={styles.actions} data-reveal-block>
               <a
                 href="https://wa.me/447777474195"
                 target="_blank"
@@ -104,10 +109,14 @@ export default function BlogHero({
           </div>
         </article>
 
+        {/* Settles in from enlarged, following the card. Safe on this element:
+            the marquee transform lives on .logoTrack inside, so the two don't
+            fight over the same property. */}
         <div
           className={styles.logos}
           role="img"
           aria-label="Vehicle manufacturers we work with"
+          data-reveal-zoom-out
         >
           {/* 4 copies → seamless infinite marquee that stays full at the -25%
               loop point regardless of container width (see .logoTrack) */}
@@ -146,6 +155,8 @@ export default function BlogHero({
           </div>
         </div>
       </div>
+
+      <SectionReveal mode="load" />
     </section>
   );
 }

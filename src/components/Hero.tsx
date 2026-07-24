@@ -1,29 +1,31 @@
 import styles from "./Hero.module.css";
 import SocialLinks from "./SocialLinks";
+import HeroAnimations from "./HeroAnimations";
 
 export default function Hero() {
   return (
     <section className={styles.hero} id="hero">
       <div className={`container ${styles.inner}`}>
         <div className={styles.card}>
-          <h1 className={styles.title}>
+          <h1 className={styles.title} data-hero-heading>
             24/7 Locksmith
             <br />
             Newcastle
           </h1>
           <div className={styles.bottom}>
-            <p className={styles.desc}>
+            <p className={styles.desc} data-hero-text>
               Trusted 24/7 Locksmith services across Newcastle and the surrounding North
               East, helping with vehicle entry, lost car keys, key coding, diagnostics, vehicle
               coding and emergency lockouts.
             </p>
-            <div className={styles.pillbar}>
+            <div className={styles.pillbar} data-hero-socials>
               <SocialLinks variant="light" />
               <a
                 href="https://wa.me/447777474195"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`btn btn-primary ${styles.getInTouch}`}
+                data-hero-cta
               >
                 Get In Touch
               </a>
@@ -37,9 +39,12 @@ export default function Hero() {
             alt="Access Granted auto locksmith service van"
             width={1774}
             height={887}
+            data-hero-image
           />
         </div>
       </div>
+
+      <HeroAnimations />
     </section>
   );
 }

@@ -76,6 +76,54 @@
   padding: 2em;
   background-color: var(--color-blue);
   border-radius: var(--radius-lg);
+  /* Anchors the sending overlay to the card rather than the page. */
+  position: relative;
+}
+
+.sendingOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Matches the card's own corners so it doesn't square off the rounded edges. */
+  border-radius: var(--radius-lg);
+  background-color: rgb(0 0 0 / 45%);
+  animation: overlay-in 0.2s ease-out;
+}
+
+.spinner {
+  width: 2.75em;
+  height: 2.75em;
+  border: 3px solid rgb(255 255 255 / 35%);
+  /* One contrasting side is what makes the rotation readable. */
+  border-top-color: var(--color-white);
+  border-radius: var(--radius-pill);
+  animation: spinner-rotate 0.7s linear infinite;
+}
+
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Spinning is the one cue that the request is still going, so it keeps running
+   under reduced-motion — slowed right down, with the fade-in dropped. */
+@media (prefers-reduced-motion: reduce) {
+  .sendingOverlay {
+    animation: none;
+  }
+
+  .spinner {
+    animation-duration: 2s;
+  }
 }
 
 .row {
@@ -150,6 +198,20 @@
 
 .submit:hover {
   opacity: 0.9;
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  font-family: var(--font-body);
+  font-size: 0.875em; /* 14px */
+  line-height: 1.429;
+  letter-spacing: -0.128px;
+  color: var(--color-white);
+  text-align: center;
 }
 
 @media (max-width: 991px) {

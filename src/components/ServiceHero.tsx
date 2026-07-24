@@ -1,4 +1,5 @@
 import styles from "./ServiceHero.module.css";
+import SectionReveal from "./SectionReveal";
 
 type TrustCard = {
   value: string;
@@ -51,8 +52,8 @@ export default function ServiceHero({
           <span className="eyebrow">{eyebrow}</span>
 
           <div className={styles.header}>
-            <h1 className={styles.heading}>{title}</h1>
-            <div className={styles.headerRight}>
+            <h1 className={styles.heading} data-reveal-heading>{title}</h1>
+            <div className={styles.headerRight} data-reveal-sub>
               <p className={styles.desc}>{description}</p>
               <a
                 href="https://wa.me/447777474195"
@@ -85,7 +86,7 @@ export default function ServiceHero({
         {showTrust && (
           <ul className={styles.cards}>
             {TRUST.map((c) => (
-              <li key={c.label} className={styles.card}>
+              <li key={c.label} className={styles.card} data-reveal-block>
                 <div className={`${styles.cardContent} ${styles[c.tone]}`}>
                   <div className={styles.cardInner}>
                     <span className={styles.cardValue}>{c.value}</span>
@@ -97,6 +98,8 @@ export default function ServiceHero({
           </ul>
         )}
       </div>
+
+      <SectionReveal mode="load" />
     </section>
   );
 }

@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { gsap } from "gsap";
+import { usePageCurtained } from "./PageLoader";
 import styles from "./Navbar.module.css";
 
 // Layout effect before paint on the client (falls back to useEffect on the
@@ -40,11 +42,19 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const servicesRef = useRef<HTMLLIElement>(null);
   const navRef = useRef<HTMLElement>(null);
+  const curtained = usePageCurtained();
 
   // Page-load entrance: the nav pill reveals (fade + rise + scale), then its
   // inner elements stagger in. Ported from the "Plasticity" spec — timings and
   // easings preserved; markup restyled to reuse this project's tokens.
+  //
+  // Skipped entirely on a page that shows the loading curtain. The nav sits
+  // above that curtain and is supposed to be there the whole time it's up —
+  // fading in from nothing would be the opposite. Only the homepage, which has
+  // no curtain, still gets the intro.
   useIsomorphicLayoutEffect(() => {
+    if (curtained) return;
+
     const root = navRef.current;
     if (!root) return;
 
@@ -88,7 +98,7 @@ export default function Navbar() {
     });
 
     return () => mm.revert();
-  }, []);
+  }, [curtained]);
 
   useEffect(() => {
     // Hysteresis: condense above 80px, expand below 20px. The wide gap keeps
@@ -167,9 +177,9 @@ export default function Navbar() {
         <ul className={`${styles.links} ${open ? styles.linksOpen : ""}`}>
           {LINKS.map((l) => (
             <li key={l.label} data-stagger>
-              <a href={l.href} className={styles.link} onClick={closeAll}>
+              <Link href={l.href} className={styles.link} onClick={closeAll}>
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
 
@@ -195,9 +205,13 @@ export default function Navbar() {
             <ul className={`${styles.dropdown} ${servicesOpen ? styles.dropdownOpen : ""}`}>
               {SERVICE_LINKS.map((s) => (
                 <li key={s.label}>
-                  <a href={s.href} className={styles.dropdownLink} onClick={closeAll}>
+                  <Link
+                    href={s.href}
+                    className={styles.dropdownLink}
+                    onClick={closeAll}
+                  >
                     {s.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

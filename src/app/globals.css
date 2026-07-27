@@ -128,6 +128,56 @@ svg {
   height: auto;
 }
 
+/* Skeleton placeholder for images still in flight.
+   `ImageSkeletons` puts this attribute on every <img> that hasn't loaded yet
+   and takes it off the moment it does, so the shimmer is painted in the
+   image's own box — no wrapper element, no layout change either way.
+
+   The 0.15s delay is what keeps it from becoming a nuisance: an image served
+   from cache or over a fast connection resolves inside that window and never
+   flashes a placeholder, so only genuinely slow loads ever show one. */
+img[data-skeleton] {
+  background-color: var(--color-bg-gray);
+  background-image: linear-gradient(
+    90deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 80%
+  );
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  border-radius: inherit;
+  animation:
+    ag-skeleton-in 0.2s ease 0.15s both,
+    ag-skeleton-shimmer 1.3s linear 0.15s infinite;
+}
+
+@keyframes ag-skeleton-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ag-skeleton-shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+
+/* No travelling highlight — just a flat tint holding the space. */
+@media (prefers-reduced-motion: reduce) {
+  img[data-skeleton] {
+    background-image: none;
+    animation: ag-skeleton-in 0.2s ease 0.15s both;
+  }
+}
+
 input,
 button,
 textarea,

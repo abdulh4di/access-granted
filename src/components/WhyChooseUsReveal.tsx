@@ -1,12 +1,19 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { countUp, revealHeading, revealTrigger } from "./revealCore";
+import { usePageReady } from "./PageLoader";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
+
+// Applies each element's "from" state before paint. As a plain effect it ran
+// after the browser had drawn the settled layout, so the section flashed
+// complete for a frame and then snapped back to animate.
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 /**
  * Scroll-triggered reveal for the "Why Choose Us" section — same language as the
@@ -22,7 +29,13 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
  * `prefers-reduced-motion` skips it entirely.
  */
 export default function WhyChooseUsReveal() {
-  useEffect(() => {
+  // Nothing is measured while the loader is up — a document that is still
+  // settling gives ScrollTrigger the wrong positions.
+  const ready = usePageReady();
+
+  useIsomorphicLayoutEffect(() => {
+    if (!ready) return;
+
     const section = document.getElementById("why-choose-us");
     if (!section) return;
 
@@ -122,7 +135,7 @@ export default function WhyChooseUsReveal() {
     });
 
     return () => mm.revert();
-  }, []);
+  }, [ready]);
 
   return null;
 }

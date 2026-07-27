@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./ServiceCards.module.css";
 import SectionReveal from "./SectionReveal";
 
@@ -100,7 +101,7 @@ export default function ServiceCards({
           {SERVICES.map((s) => (
             <li key={s.title} className={styles.cell} data-reveal-block>
               <div className={styles.card}>
-                <a
+                <Link
                   href={s.href}
                   className={styles.image}
                   style={{ backgroundImage: `url(${s.image})` }}
@@ -109,7 +110,7 @@ export default function ServiceCards({
                 <div className={styles.body}>
                   <div className={styles.titleRow}>
                     <span className={styles.title}>{s.title}</span>
-                    <a
+                    <Link
                       href={s.href}
                       className={styles.arrow}
                       aria-label={`${s.title} — learn more`}
@@ -129,7 +130,7 @@ export default function ServiceCards({
                           d="M5 12h14m-6-6 6 6-6 6"
                         />
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                   <span className={styles.desc}>{s.desc}</span>
                 </div>

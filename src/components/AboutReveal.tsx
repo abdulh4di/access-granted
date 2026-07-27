@@ -1,12 +1,19 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { revealHeading, revealTrigger } from "./revealCore";
+import { usePageReady } from "./PageLoader";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
+
+// Applies each element's "from" state before paint. As a plain effect it ran
+// after the browser had drawn the settled layout, so the section flashed
+// complete for a frame and then snapped back to animate.
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 type TriggerCfg = { trigger: Element; start: number | string };
 type BuildCfg = { intro: TriggerCfg; box: TriggerCfg; text: TriggerCfg };
@@ -26,7 +33,13 @@ type BuildCfg = { intro: TriggerCfg; box: TriggerCfg; text: TriggerCfg };
  * `prefers-reduced-motion` skips all of it.
  */
 export default function AboutReveal() {
-  useEffect(() => {
+  // Nothing is measured while the loader is up — a document that is still
+  // settling gives ScrollTrigger the wrong positions.
+  const ready = usePageReady();
+
+  useIsomorphicLayoutEffect(() => {
+    if (!ready) return;
+
     const section = document.getElementById("about");
     if (!section) return;
 
@@ -116,7 +129,7 @@ export default function AboutReveal() {
     });
 
     return () => mm.revert();
-  }, []);
+  }, [ready]);
 
   return null;
 }

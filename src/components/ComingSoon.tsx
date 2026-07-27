@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./ComingSoon.module.css";
 import SectionReveal from "./SectionReveal";
 
@@ -25,9 +26,9 @@ export default function ComingSoon({
         <h1 className={styles.heading} data-reveal-heading>{heading}</h1>
         <p className={styles.desc} data-reveal-sub>{description}</p>
         <div className={styles.actions} data-reveal-block>
-          <a href="/contact" className={`btn btn-primary ${styles.cta}`}>
+          <Link href="/contact" className={`btn btn-primary ${styles.cta}`}>
             Contact Us
-          </a>
+          </Link>
           <a href="tel:+447777474195" className={`btn ${styles.call}`}>
             Call Now
           </a>

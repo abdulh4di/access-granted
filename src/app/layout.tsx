@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ImageSkeletons from "@/components/ImageSkeletons";
+import PageLoader from "@/components/PageLoader";
 import ScrollRestore from "@/components/ScrollRestore";
 
 export const metadata: Metadata = {
@@ -47,7 +49,8 @@ export default function RootLayout({
         <a href="#main" className="sr-only">
           Skip to content
         </a>
-        {children}
+        <PageLoader>{children}</PageLoader>
+        <ImageSkeletons />
         <ScrollRestore />
         <FloatingWhatsApp />
       </body>

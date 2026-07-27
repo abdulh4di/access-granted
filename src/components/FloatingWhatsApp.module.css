@@ -2,7 +2,9 @@
   position: fixed;
   right: 24px;
   bottom: 24px;
-  z-index: 1000;
+  /* Under the page loader's curtain (900) — unlike the navbar and footer, the
+     button isn't structural chrome and shouldn't float over a loading screen. */
+  z-index: 800;
   display: flex;
   align-items: center;
   justify-content: center;

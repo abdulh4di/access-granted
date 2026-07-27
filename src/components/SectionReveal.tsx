@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
+import { usePageReady } from "./PageLoader";
 import {
   buildReveal,
   prefersReducedMotion,
@@ -12,6 +13,13 @@ import {
   ZOOM_OUT_STAGGER,
   type Starts,
 } from "./revealCore";
+
+// Setting the "from" state before paint is the point: as a plain effect it ran
+// *after* the browser had already drawn the finished layout, so every section
+// flashed complete for a frame and then snapped back to animate. Falls back to
+// useEffect during SSR, where layout effects don't run.
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 /**
  * Groups grid cells into the rows they visually form.
@@ -55,8 +63,14 @@ export default function SectionReveal({
   mode?: "scroll" | "load";
 }) {
   const markerRef = useRef<HTMLSpanElement>(null);
+  // Nothing is measured or revealed while the loader is up: a scroll trigger
+  // built against a half-loaded document has the wrong positions, and a
+  // `mode="load"` reveal would finish behind the overlay.
+  const ready = usePageReady();
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
+    if (!ready) return;
+
     const root = markerRef.current?.closest<HTMLElement>(
       "section, footer, header, [data-reveal-root]"
     );
@@ -298,7 +312,7 @@ export default function SectionReveal({
         }
       );
     });
-  }, [mode]);
+  }, [mode, ready]);
 
   return <span ref={markerRef} aria-hidden="true" style={{ display: "none" }} />;
 }

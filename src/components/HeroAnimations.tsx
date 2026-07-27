@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
+import { usePageReady } from "./PageLoader";
 
 // Run layout effects before paint on the client to set each element's "from"
 // state, avoiding a flash of the final layout. Falls back to useEffect during
@@ -19,7 +20,14 @@ const useIsomorphicLayoutEffect =
  * Renders nothing — it only drives the animation of already-rendered elements.
  */
 export default function HeroAnimations() {
+  // Held until the loader lifts, so the entrance isn't played out of sight
+  // behind the overlay. Running as a layout effect keeps the "from" state
+  // applied in the same commit the overlay begins fading.
+  const ready = usePageReady();
+
   useIsomorphicLayoutEffect(() => {
+    if (!ready) return;
+
     const root = document.getElementById("hero");
     if (!root) return;
 
@@ -92,7 +100,7 @@ export default function HeroAnimations() {
 
     // Revert on unmount/HMR — clears all inline styles gsap added.
     return () => ctx.revert();
-  }, []);
+  }, [ready]);
 
   return null;
 }

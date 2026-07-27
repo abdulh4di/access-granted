@@ -1,11 +1,12 @@
+import Link from "next/link";
 import styles from "./Footer.module.css";
 import SocialLinks from "./SocialLinks";
 import FooterReveal from "./FooterReveal";
 
 const PAGES = [
   { label: "Home", href: "/" },
-  { label: "Gallery", href: "#testimonials" },
-  { label: "Contact", href: "#footer" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
   { label: "Terms & Conditions", href: "/terms" },
 ];
 
@@ -65,9 +66,9 @@ export default function Footer() {
                 <ul className={styles.links}>
                   {PAGES.map((p) => (
                     <li key={p.label}>
-                      <a href={p.href} className={styles.link}>
+                      <Link href={p.href} className={styles.link}>
                         {p.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -78,9 +79,9 @@ export default function Footer() {
                 <ul className={styles.links}>
                   {SERVICES.map((s) => (
                     <li key={s.label}>
-                      <a href={s.href} className={styles.link}>
+                      <Link href={s.href} className={styles.link}>
                         {s.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

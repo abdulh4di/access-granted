@@ -1,4 +1,8 @@
 .footer {
+  position: relative;
+  /* Above the page loader's curtain (900) so the footer stays visible while a
+     page loads, but below the navbar (1000) and the review modal (1100). */
+  z-index: 950;
   width: 100%;
   background-color: var(--color-bg-gray);
 }

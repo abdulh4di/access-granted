@@ -31,8 +31,14 @@
 }
 
 /* The homepage never shows the curtain. Keyed off markup the server renders, so
-   it applies on the first paint rather than waiting for hydration. */
-:global(body:has(#top[data-route-home])) .overlay {
+   it applies on the first paint rather than waiting for hydration.
+
+   A plain sibling combinator rather than :has() — the marker and the curtain are
+   both direct children of <body>, so this needs no modern-selector support and
+   works in every browser that reaches the site. With :has(), anything older than
+   Firefox 121 would have ignored the rule and flashed the curtain on the
+   homepage until hydration caught up. */
+:global(#top[data-route-home]) ~ .overlay {
   display: none;
 }
 

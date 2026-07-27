@@ -44,6 +44,11 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500&display=swap"
           rel="stylesheet"
         />
+        {/* With scripting off nothing can ever lift the curtain, so it must
+            not be drawn in the first place. */}
+        <noscript>
+          <style>{`[data-page-curtain]{display:none!important}`}</style>
+        </noscript>
       </head>
       <body>
         <a href="#main" className="sr-only">

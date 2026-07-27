@@ -13,6 +13,27 @@
   padding-top: 12em;
   background-color: var(--color-bg-gray);
   transition: opacity 0.3s ease;
+
+  /* Failsafe. Everything above assumes React is alive to add `.hidden`; if it
+     never hydrates — a chunk fails to load, a script throws — the curtain would
+     otherwise sit there permanently and take the whole site with it. This lifts
+     it regardless, with no JavaScript involved. Set far beyond MAX_MS (3s) so
+     it only ever bites when the normal path is already dead. */
+  animation: ag-curtain-failsafe 0.3s ease 8s forwards;
+}
+
+@keyframes ag-curtain-failsafe {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+/* The homepage never shows the curtain. Keyed off markup the server renders, so
+   it applies on the first paint rather than waiting for hydration. */
+:global(body:has(#top[data-route-home])) .overlay {
+  display: none;
 }
 
 /* `visibility` is delayed until the fade finishes so the overlay stops catching

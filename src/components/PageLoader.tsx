@@ -139,16 +139,26 @@ export default function PageLoader({
   return (
     <PageLoadContext.Provider value={state}>
       {children}
-      {!exempt && (
-        <div
-          className={`${styles.overlay} ${ready ? styles.hidden : ""}`}
-          role="status"
-          aria-live="polite"
-          aria-label={ready ? "" : "Loading"}
-        >
-          <span className={styles.spinner} aria-hidden="true" />
-        </div>
-      )}
+      {/*
+        Rendered unconditionally, and deliberately so. Gating this on `exempt`
+        made the markup depend on `usePathname()`, which does not always agree
+        between the prerender and the browser — when it disagreed on the
+        homepage the server sent a curtain the client did not render, the
+        hydration mismatch left that curtain stranded in the DOM with no React
+        state behind it to ever hide it, and the page was lost behind a spinner
+        that could not lift. Identical markup on both sides makes that
+        impossible. Which routes actually *show* it is decided in CSS instead,
+        off the server-rendered `data-route-home` marker.
+      */}
+      <div
+        data-page-curtain
+        className={`${styles.overlay} ${ready ? styles.hidden : ""}`}
+        role="status"
+        aria-live="polite"
+        aria-label={ready ? "" : "Loading"}
+      >
+        <span className={styles.spinner} aria-hidden="true" />
+      </div>
     </PageLoadContext.Provider>
   );
 }

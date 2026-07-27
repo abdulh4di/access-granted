@@ -10,7 +10,11 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <span id="top" />
+      {/* Server-rendered marker: the page loader's curtain is hidden by CSS
+          wherever this is present. The homepage is the one route that must
+          never show it, and keying that off real markup means the decision
+          holds on the very first paint, with no JavaScript involved. */}
+      <span id="top" data-route-home />
       <Navbar />
       <header>
         <Hero />

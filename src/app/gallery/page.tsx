@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
-import ComingSoon from "@/components/ComingSoon";
+import ServiceHero from "@/components/ServiceHero";
+import GalleryGrid from "@/components/GalleryGrid";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Gallery — Coming Soon | Access Granted Northeast",
+  title: "Gallery | Access Granted Northeast",
   description:
-    "Our gallery is coming soon — photos of recent auto and home locksmith work across Newcastle & the North East.",
+    "See our auto and home locksmith work across Newcastle & the North East — vehicle lockouts, key programming, lock repairs and more.",
   alternates: { canonical: "/gallery" },
   openGraph: {
     type: "website",
     url: "/gallery",
     siteName: "Access Granted Northeast",
-    title: "Gallery — Coming Soon",
+    title: "Gallery",
     description:
-      "Our gallery is coming soon — recent auto and home locksmith work across Newcastle & the North East.",
+      "See our auto and home locksmith work across Newcastle & the North East.",
   },
 };
 
@@ -23,18 +24,28 @@ export default function GalleryPage() {
     <>
       <span id="top" />
       <Navbar />
-      <main id="main">
-        <ComingSoon
+      <header>
+        <ServiceHero
           eyebrow="Gallery"
-          heading="Coming Soon"
-          description={
+          title={
             <>
-              Our gallery is on its way. We&rsquo;re putting together photos of
-              recent auto and home locksmith work across Newcastle &amp; the North
-              East. In the meantime, get in touch or explore our services.
+              See Our Work
+              <br />
+              in Action
             </>
           }
+          description={
+            <>
+              Locked out in Newcastle? Local auto and home locksmith covering
+              the North East, from lost car keys to lock upgrades. Call for a
+              fast call-out.
+            </>
+          }
+          showTrust={false}
         />
+      </header>
+      <main id="main">
+        <GalleryGrid />
       </main>
       <Footer />
     </>

@@ -5,7 +5,7 @@ import TestimonialsReveal from "./TestimonialsReveal";
 // Live Google reviews via Featurable. Fetched server-side and cached with ISR
 // (revalidated every 6h), so new reviews appear automatically.
 const FEATURABLE_URL =
-  "https://featurable.com/api/v2/widgets/89c4b9e0-d0ce-4841-b1a6-d507b0df0b5f";
+  "https://featurable.com/api/v2/widgets/d6340c66-76da-4a4a-bcdc-15203baebac3";
 const MAX_REVIEWS = 8; // show the 8 most recent
 
 interface FeaturableReview {

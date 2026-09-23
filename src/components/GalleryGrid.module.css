@@ -68,11 +68,12 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(7, 6, 7, 0.72) 0%,
-    rgba(7, 6, 7, 0) 45%
-  );
+  /* Flat tint across the whole photo keeps the caption legible even on
+     light/washed-out shots (screenshots, white backgrounds), on top of the
+     stronger gradient right behind the caption text itself. */
+  background:
+    linear-gradient(to top, rgba(7, 6, 7, 0.72) 0%, rgba(7, 6, 7, 0) 45%),
+    rgba(7, 6, 7, 0.18);
 }
 
 .caption {

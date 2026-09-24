@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysBenefits from "@/components/LostKeysBenefits";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/vag-specialist",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "VAG Specialist Services Newcastle",
     description:
       "Mobile VAG specialist coding, retrofitting and troubleshooting for Audi, Volkswagen, SEAT and Škoda across Newcastle & the North East.",

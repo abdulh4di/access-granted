@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysSteps from "@/components/LostKeysSteps";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/ghost-immobiliser",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Ghost Immobiliser Installation Newcastle",
     description:
       "Mobile Ghost immobiliser installation across Newcastle & the North East — stop key cloning and theft with a hidden, PIN-based immobiliser.",

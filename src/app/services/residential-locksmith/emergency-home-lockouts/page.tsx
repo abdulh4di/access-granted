@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysSteps from "@/components/LostKeysSteps";
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/residential-locksmith/emergency-home-lockouts",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Emergency Home Lockouts Newcastle",
     description:
       "Fast, non-destructive home entry across Newcastle & the North East when you're locked out.",

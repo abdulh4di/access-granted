@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import FormSent from "@/components/FormSent";
 import Footer from "@/components/Footer";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/thank-you",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Thanks for getting in touch | Access Granted Northeast",
     description:
       "Your enquiry is on its way to Access Granted Northeast. We'll get back to you shortly.",

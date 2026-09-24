@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import ServiceHero from "@/components/ServiceHero";
 import TermsContent from "@/components/TermsContent";
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/terms",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Terms & Conditions | Access Granted Northeast",
     description:
       "The terms and conditions covering services provided by Access Granted Northeast across Newcastle & the North East.",

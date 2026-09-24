@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysSteps from "@/components/LostKeysSteps";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/residential-locksmith/lock-repairs",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Lock Repairs Newcastle",
     description:
       "Mobile door lock repairs across Newcastle & the North East — fix sticking, seized and faulty locks.",

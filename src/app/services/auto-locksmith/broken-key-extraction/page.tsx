@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysSteps from "@/components/LostKeysSteps";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/auto-locksmith/broken-key-extraction",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Broken Key Extraction Newcastle",
     description:
       "Careful broken-key removal and a fresh key cut on-site across Newcastle & the North East — door, boot or ignition.",

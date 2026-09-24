@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import ServiceHero from "@/components/ServiceHero";
 import ContactSection from "@/components/ContactSection";
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/contact",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Contact Access Granted Northeast",
     description:
       "Open 24/7 for emergency auto and home locksmith call-outs across Newcastle & the North East.",

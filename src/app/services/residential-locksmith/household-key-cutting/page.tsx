@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysSteps from "@/components/LostKeysSteps";
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/residential-locksmith/household-key-cutting",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Household Key Cutting Newcastle",
     description:
       "Accurate spare and replacement house keys cut on-site across Newcastle & the North East.",

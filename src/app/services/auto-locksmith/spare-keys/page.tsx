@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysSteps from "@/components/LostKeysSteps";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/auto-locksmith/spare-keys",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Spare Car Keys Newcastle",
     description:
       "Mobile auto locksmith in Newcastle & the North East cutting and programming spare car keys — cheaper now than a lost-key emergency later.",

@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Anton, Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { OG_IMAGE, SITE_URL } from "@/lib/site";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ImageSkeletons from "@/components/ImageSkeletons";
 import PageLoader from "@/components/PageLoader";
@@ -28,7 +29,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://accessgrantednortheast.co.uk"),
+  metadataBase: new URL(SITE_URL),
   title: "Access Granted Northeast — Auto Locksmith Newcastle & North East",
   description:
     "Trusted 24/7 auto locksmith in Newcastle & the North East. Vehicle entry, lost car keys, key coding, diagnostics, Ghost immobiliser installation and residential locksmith services.",
@@ -45,10 +46,12 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Access Granted Northeast — Auto Locksmith Newcastle & North East",
     description:
       "Trusted 24/7 auto locksmith in Newcastle & the North East. Vehicle entry, lost car keys, key coding, diagnostics and residential locksmith services.",
   },
+  twitter: { card: "summary_large_image", images: [OG_IMAGE.url] },
   icons: { icon: "/favicon.svg" },
 };
 

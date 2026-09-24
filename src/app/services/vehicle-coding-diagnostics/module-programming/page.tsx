@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysSteps from "@/components/LostKeysSteps";
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/vehicle-coding-diagnostics/module-programming",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Module Programming Newcastle",
     description:
       "Mobile control module programming and coding across Newcastle & the North East.",

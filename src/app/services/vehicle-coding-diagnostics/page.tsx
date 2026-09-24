@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import ServiceHero from "@/components/ServiceHero";
 import ServiceCards from "@/components/ServiceCards";
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/vehicle-coding-diagnostics",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Vehicle Coding & Diagnostics Newcastle & the North East",
     description:
       "Mobile vehicle coding and diagnostics across Newcastle & the North East — diagnostics, ECU/gearbox coding, module programming and Apple CarPlay activation.",

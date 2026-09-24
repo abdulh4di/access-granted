@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import ServiceHero from "@/components/ServiceHero";
 import GalleryGrid from "@/components/GalleryGrid";
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/gallery",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Gallery",
     description:
       "See our auto and home locksmith work across Newcastle & the North East.",

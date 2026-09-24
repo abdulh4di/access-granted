@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysSteps from "@/components/LostKeysSteps";
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/vehicle-coding-diagnostics/gearbox-coding",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Gearbox Coding Newcastle",
     description:
       "Mobile gearbox coding and adaptation across Newcastle & the North East.",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysSteps from "@/components/LostKeysSteps";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/vehicle-coding-diagnostics/ecu-coding",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "ECU Coding Newcastle",
     description:
       "Mobile ECU coding and reprogramming across Newcastle & the North East.",

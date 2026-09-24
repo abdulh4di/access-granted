@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysSteps from "@/components/LostKeysSteps";
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/vehicle-coding-diagnostics/apple-carplay-activation",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Apple CarPlay Activation Newcastle",
     description:
       "Mobile Apple CarPlay activation across Newcastle & the North East for compatible vehicles.",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
 import LostKeysSteps from "@/components/LostKeysSteps";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/services/auto-locksmith/key-programming",
     siteName: "Access Granted Northeast",
+    images: [OG_IMAGE],
     title: "Key Programming & Smart Keys Newcastle",
     description:
       "Mobile key programming across Newcastle & the North East — transponder keys, remotes and keyless smart keys coded on-site.",

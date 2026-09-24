@@ -99,7 +99,7 @@ export default function VehicleLockoutsPage() {
       <header>
         <BlogHero
           title="Vehicle Lockouts Newcastle"
-          image="/assets/images/service-vehicle-lockouts.png"
+          image="/assets/images/service-vehicle-lockouts.webp"
           imageAlt="Auto locksmith opening a locked car door"
           description={
             <>

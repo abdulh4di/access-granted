@@ -102,7 +102,7 @@ export default function AdvancedDiagnosticsPage() {
         <BlogHero
           tag="Vehicle Coding & Diagnostics"
           title="Advanced Vehicle Diagnostics"
-          image="/assets/images/vehdiag.png"
+          image="/assets/images/vehdiag.webp"
           imageAlt="Technician running vehicle diagnostics"
           description={
             <>

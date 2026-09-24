@@ -100,7 +100,7 @@ export default function LockRepairsPage() {
         <BlogHero
           tag="Residential Locksmith"
           title="Lock Repairs"
-          image="/assets/images/lockrepair.png"
+          image="/assets/images/lockrepair.webp"
           imageAlt="Locksmith repairing a door lock"
           description={
             <>

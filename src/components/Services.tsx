@@ -27,7 +27,7 @@ const SERVICES: Service[] = [
     title: "Vehicle Coding & Diagnostics",
     subtitle:
       "Advanced vehicle diagnostics, fault code reading, ECU coding, module programming and electronic fault finding.",
-    image: "/assets/images/ag-service-coding.png",
+    image: "/assets/images/ag-service-coding.webp",
     imageAlt: "Vehicle diagnostics equipment",
     imageLeft: true,
     icon: { type: "scan" },
@@ -36,7 +36,7 @@ const SERVICES: Service[] = [
     title: "Ghost Immobiliser Installation",
     subtitle:
       "Ghost Immobiliser installation designed to protect your vehicle against key cloning, relay theft and unauthorised use.",
-    image: "/assets/images/ag-service-immobiliser.png",
+    image: "/assets/images/ag-service-immobiliser.webp",
     imageAlt: "Ghost immobiliser installation",
     imageLeft: false,
     icon: { type: "img", src: "/assets/images/ag-icon-immobiliser.svg", w: 54, h: 56 },
@@ -45,7 +45,7 @@ const SERVICES: Service[] = [
     title: "Residential Locksmith Services",
     subtitle:
       "Household lock repairs, lock replacements, key cutting and emergency home lockout assistance.",
-    image: "/assets/images/ag-service-residential.png",
+    image: "/assets/images/ag-service-residential.webp",
     imageAlt: "Residential locksmith repairing a door lock",
     imageLeft: true,
     overlay: true,
@@ -55,7 +55,7 @@ const SERVICES: Service[] = [
     title: "Mileage Correction",
     subtitle:
       "Accurate mileage correction and dashboard recalibration following instrument cluster repairs or replacements.",
-    image: "/assets/images/mileage.png",
+    image: "/assets/images/mileage.webp",
     imageAlt: "Vehicle instrument cluster showing odometer and OBD diagnostic tool during mileage correction",
     imageLeft: false,
     icon: { type: "scan" },

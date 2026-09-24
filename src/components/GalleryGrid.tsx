@@ -13,12 +13,12 @@ type GalleryItem = {
 const GALLERY: GalleryItem[] = [
   {
     title: "BCM Fault Repair",
-    image: "/assets/images/gallery-bcm-fault-repair.jpg",
+    image: "/assets/images/gallery-bcm-fault-repair.webp",
     alt: "Honda Civic key handover after a body control module communication fault repair",
   },
   {
     title: "Key Programming Tools",
-    image: "/assets/images/gallery-key-programming-tools.jpg",
+    image: "/assets/images/gallery-key-programming-tools.webp",
     alt: "Professional car key programming and repair tools used on-site",
   },
   {
@@ -33,12 +33,12 @@ const GALLERY: GalleryItem[] = [
   },
   {
     title: "Key Coding & Matching",
-    image: "/assets/images/gallery-key-coding-matching.jpg",
+    image: "/assets/images/gallery-key-coding-matching.webp",
     alt: "Diagnostic tablet coding and matching a replacement car key",
   },
   {
     title: "Mercedes Key Decoding",
-    image: "/assets/images/gallery-mercedes-key-decoding.jpg",
+    image: "/assets/images/gallery-mercedes-key-decoding.webp",
     alt: "Decoding a Mercedes key blank by eye using specialist equipment",
   },
   {
@@ -48,27 +48,27 @@ const GALLERY: GalleryItem[] = [
   },
   {
     title: "Our Workshop",
-    image: "/assets/images/gallery-workshop.jpg",
+    image: "/assets/images/gallery-workshop.webp",
     alt: "Access Granted Northeast workshop bench with lock pick sets and diagnostic equipment",
   },
   {
     title: "Land Rover KVM Repair",
-    image: "/assets/images/gallery-land-rover-kvm-repair.jpg",
+    image: "/assets/images/gallery-land-rover-kvm-repair.webp",
     alt: "Land Rover KVM module label during a non-start key fault repair",
   },
   {
     title: "VAG Diagnostics",
-    image: "/assets/images/gallery-vag-diagnostics.jpg",
+    image: "/assets/images/gallery-vag-diagnostics.webp",
     alt: "Diagnostic tool identifying a Volkswagen Group vehicle for key programming",
   },
   {
     title: "Mercedes EIS Programming",
-    image: "/assets/images/gallery-mercedes-eis-programming.jpg",
+    image: "/assets/images/gallery-mercedes-eis-programming.webp",
     alt: "Mercedes-Benz EIS programming software showing key and ignition data",
   },
   {
     title: "Vehicle Lock Picking",
-    image: "/assets/images/gallery-lock-picking.jpg",
+    image: "/assets/images/gallery-lock-picking.webp",
     alt: "Non-destructive lock picking and decoding of a vehicle door lock",
   },
 ];

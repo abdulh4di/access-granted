@@ -99,7 +99,7 @@ export default function IgnitionRepairPage() {
       <header>
         <BlogHero
           title="Ignition Repair Newcastle"
-          image="/assets/images/service-ignition-repair.png"
+          image="/assets/images/service-ignition-repair.webp"
           imageAlt="Auto locksmith repairing a car ignition"
           description={
             <>

@@ -35,13 +35,13 @@ const RESIDENTIAL_SERVICES = [
   {
     title: "Emergency Home Lockouts",
     href: "/services/residential-locksmith/emergency-home-lockouts",
-    image: "/assets/images/ag-service-residential.png",
+    image: "/assets/images/ag-service-residential.webp",
     desc: "Locked out of your home? We reach you fast and get you back inside without unnecessary damage.",
   },
   {
     title: "Lock Repairs",
     href: "/services/residential-locksmith/lock-repairs",
-    image: "/assets/images/lockrepair.png",
+    image: "/assets/images/lockrepair.webp",
     desc: "Sticking, seized or faulty locks repaired so your doors lock and unlock smoothly again.",
   },
   {

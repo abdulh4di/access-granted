@@ -99,7 +99,7 @@ export default function BrokenKeyExtractionPage() {
       <header>
         <BlogHero
           title="Broken Key Extraction"
-          image="/assets/images/service-broken-key-extraction.png"
+          image="/assets/images/service-broken-key-extraction.webp"
           imageAlt="Auto locksmith extracting a broken car key"
           description={
             <>

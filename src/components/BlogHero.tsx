@@ -14,7 +14,7 @@ const LOGOS: {
   flipY?: boolean;
   img?: Crop;
 }[] = [
-  { w: 3.125, h: 3.125, src: "ag-partner-vw.png", alt: "Volkswagen", cover: true },
+  { w: 3.125, h: 3.125, src: "ag-partner-vw.webp", alt: "Volkswagen", cover: true },
   {
     w: 3.125,
     h: 3.25,
@@ -71,7 +71,7 @@ export default function BlogHero({
       back on the road quickly.
     </>
   ),
-  image = "/assets/images/lost-keys-hero.png",
+  image = "/assets/images/lost-keys-hero.webp",
   imageAlt = "Auto locksmith handing over a freshly cut car key",
 }: BlogHeroProps) {
   return (

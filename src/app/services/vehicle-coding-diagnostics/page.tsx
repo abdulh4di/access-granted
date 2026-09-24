@@ -35,7 +35,7 @@ const CODING_SERVICES = [
   {
     title: "Advanced Vehicle Diagnostics",
     href: "/services/vehicle-coding-diagnostics/advanced-diagnostics",
-    image: "/assets/images/vehdiag.png",
+    image: "/assets/images/vehdiag.webp",
     desc: "Dealer-level diagnostic scans to pinpoint electrical, engine and system faults across your vehicle.",
   },
   {

@@ -35,10 +35,11 @@ export default function Hero() {
 
         <div className={styles.imageTile}>
           <img
-            src="/assets/images/ag-hero.png"
+            src="/assets/images/ag-hero.webp"
             alt="Access Granted auto locksmith service van"
-            width={1774}
-            height={887}
+            width={1200}
+            height={600}
+            fetchPriority="high"
             data-hero-image
           />
         </div>

@@ -114,7 +114,7 @@ export default function VagSpecialistPage() {
         <BlogHero
           tag="VAG Specialist Services"
           title="VAG Specialist Coding Northeast"
-          image="/assets/images/ag-service-coding.png"
+          image="/assets/images/ag-service-coding.webp"
           imageAlt="VAG specialist coding and diagnostics"
           description={
             <>

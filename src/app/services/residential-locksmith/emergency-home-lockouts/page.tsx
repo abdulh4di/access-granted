@@ -102,7 +102,7 @@ export default function EmergencyHomeLockoutsPage() {
         <BlogHero
           tag="Residential Locksmith"
           title="Emergency Home Lockouts"
-          image="/assets/images/ag-service-residential.png"
+          image="/assets/images/ag-service-residential.webp"
           imageAlt="Locksmith opening a locked house door"
           description={
             <>

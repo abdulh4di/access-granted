@@ -99,7 +99,7 @@ export default function KeyProgrammingPage() {
       <header>
         <BlogHero
           title="Key Programming & Smart Keys"
-          image="/assets/images/service-key-programming.png"
+          image="/assets/images/service-key-programming.webp"
           imageAlt="Auto locksmith programming a car smart key"
           description={
             <>

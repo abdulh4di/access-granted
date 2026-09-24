@@ -100,7 +100,7 @@ export default function GhostImmobiliserPage() {
         <BlogHero
           tag="Ghost Immobiliser"
           title="Ghost Immobiliser Installation"
-          image="/assets/images/ag-service-immobiliser.png"
+          image="/assets/images/ag-service-immobiliser.webp"
           imageAlt="Ghost immobiliser installation in a vehicle"
           description={
             <>

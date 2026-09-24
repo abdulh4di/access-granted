@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 import SocialLinks from "./SocialLinks";
 import FooterReveal from "./FooterReveal";
+import ContactNowLink from "./ContactNowLink";
 
 const PAGES = [
   { label: "Home", href: "/" },
@@ -31,9 +32,9 @@ export default function Footer() {
         <div className={styles.card} data-footer-card>
           <div className={styles.topbar}>
             <h2 className={styles.heading}>Need Urgent Help?</h2>
-            <a href="#contact" className={`btn btn-dark ${styles.contactBtn}`}>
+            <ContactNowLink className={`btn btn-dark ${styles.contactBtn}`}>
               Contact Now
-            </a>
+            </ContactNowLink>
           </div>
 
           <div className={styles.body}>

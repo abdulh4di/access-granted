@@ -53,6 +53,8 @@ interface ServiceCardsProps {
   heading?: React.ReactNode;
   subhead?: React.ReactNode;
   services?: ServiceCard[];
+  /** Anchor id for the section. Override when a page renders more than one. */
+  id?: string;
   /**
    * Reveal on a short fixed scroll rather than the default viewport-percentage
    * trigger. For pages where this section sits directly under the hero and the
@@ -78,13 +80,14 @@ export default function ServiceCards({
     </>
   ),
   services = DEFAULT_SERVICES,
+  id = "services",
   earlyReveal = false,
 }: ServiceCardsProps) {
   const SERVICES = services;
   return (
     <section
       className={styles.services}
-      id="services"
+      id={id}
       // Each row of cards zooms in as one unit, the next row following as you
       // reach it — rather than six cards each arriving on their own.
       data-reveal-block-rows

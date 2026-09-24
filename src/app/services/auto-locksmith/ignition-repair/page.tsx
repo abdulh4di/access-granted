@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedServices from "@/components/RelatedServices";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
@@ -145,6 +146,7 @@ export default function IgnitionRepairPage() {
           subhead="Answers to common questions about ignition repair — faults we fix, keys and timings."
           items={FAQS}
         />
+        <RelatedServices path="/services/auto-locksmith/ignition-repair" />
         <ContactSection />
       </main>
       <Footer />

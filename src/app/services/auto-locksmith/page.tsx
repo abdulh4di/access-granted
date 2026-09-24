@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedServices from "@/components/RelatedServices";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
@@ -52,6 +53,7 @@ export default function AutoLocksmithPage() {
         <HowItWorks />
         <Testimonials />
         <ServiceFaq />
+        <RelatedServices path="/services/auto-locksmith" />
         <ContactSection />
       </main>
       <Footer />

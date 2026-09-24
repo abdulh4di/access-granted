@@ -35,6 +35,17 @@
   max-width: 31em;
 }
 
+/* An inline link inside the subhead (used by the "Related services" block). */
+.subhead a {
+  color: var(--color-blue);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.subhead a:hover {
+  text-decoration-thickness: 2px;
+}
+
 /* Break after "Explore Our" only on tablet */
 .tabletBr {
   display: none;

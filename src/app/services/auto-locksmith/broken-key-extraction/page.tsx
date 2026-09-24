@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedServices from "@/components/RelatedServices";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
@@ -146,6 +147,7 @@ export default function BrokenKeyExtractionPage() {
           subhead="Answers to common questions about broken key extraction — lock safety, replacements and timings."
           items={FAQS}
         />
+        <RelatedServices path="/services/auto-locksmith/broken-key-extraction" />
         <ContactSection />
       </main>
       <Footer />

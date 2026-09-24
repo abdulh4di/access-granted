@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedServices from "@/components/RelatedServices";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
@@ -144,6 +145,7 @@ export default function ResidentialLocksmithPage() {
           subhead="Answers to common questions about our residential locksmith services."
           items={FAQS}
         />
+        <RelatedServices path="/services/residential-locksmith" />
         <ContactSection />
       </main>
       <Footer />

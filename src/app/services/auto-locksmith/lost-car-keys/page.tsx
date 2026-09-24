@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedServices from "@/components/RelatedServices";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
@@ -74,6 +75,7 @@ export default function LostCarKeysPage() {
           subhead="Answers to common questions about replacing lost car keys — what we can do, how long it takes and what to expect."
           items={LOST_KEYS_FAQS}
         />
+        <RelatedServices path="/services/auto-locksmith/lost-car-keys" />
         <ContactSection />
       </main>
       <Footer />

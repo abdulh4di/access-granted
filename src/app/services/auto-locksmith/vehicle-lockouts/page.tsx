@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedServices from "@/components/RelatedServices";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
@@ -145,6 +146,7 @@ export default function VehicleLockoutsPage() {
           subhead="Answers to common questions about vehicle lockouts — timings, non-destructive entry and what to expect."
           items={FAQS}
         />
+        <RelatedServices path="/services/auto-locksmith/vehicle-lockouts" />
         <ContactSection />
       </main>
       <Footer />

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedServices from "@/components/RelatedServices";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
@@ -148,6 +149,7 @@ export default function ModuleProgrammingPage() {
           subhead="Answers to common questions about module programming and coding."
           items={FAQS}
         />
+        <RelatedServices path="/services/vehicle-coding-diagnostics/module-programming" />
         <ContactSection />
       </main>
       <Footer />

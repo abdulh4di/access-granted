@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedServices from "@/components/RelatedServices";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
@@ -146,6 +147,7 @@ export default function KeyProgrammingPage() {
           subhead="Answers to common questions about key programming — key types, keyless entry and timings."
           items={FAQS}
         />
+        <RelatedServices path="/services/auto-locksmith/key-programming" />
         <ContactSection />
       </main>
       <Footer />

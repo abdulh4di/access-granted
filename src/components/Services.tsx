@@ -1,8 +1,11 @@
+import Link from "next/link";
 import styles from "./Services.module.css";
 import ServicesReveal from "./ServicesReveal";
 
 interface Service {
   title: string;
+  /** Page this row links to. Left off where there is no matching page. */
+  href?: string;
   subtitle: string;
   image: string;
   imageAlt: string;
@@ -16,6 +19,7 @@ interface Service {
 const SERVICES: Service[] = [
   {
     title: "Locksmith Services",
+    href: "/services/auto-locksmith",
     subtitle:
       "Vehicle lockouts, lost car keys, car key replacement, spare keys, key coding, remote programming and keyless entry support",
     image: "/assets/images/ag-service-locksmith.jpg",
@@ -25,6 +29,7 @@ const SERVICES: Service[] = [
   },
   {
     title: "Vehicle Coding & Diagnostics",
+    href: "/services/vehicle-coding-diagnostics",
     subtitle:
       "Advanced vehicle diagnostics, fault code reading, ECU coding, module programming and electronic fault finding.",
     image: "/assets/images/ag-service-coding.webp",
@@ -34,6 +39,7 @@ const SERVICES: Service[] = [
   },
   {
     title: "Ghost Immobiliser Installation",
+    href: "/services/ghost-immobiliser",
     subtitle:
       "Ghost Immobiliser installation designed to protect your vehicle against key cloning, relay theft and unauthorised use.",
     image: "/assets/images/ag-service-immobiliser.webp",
@@ -43,6 +49,7 @@ const SERVICES: Service[] = [
   },
   {
     title: "Residential Locksmith Services",
+    href: "/services/residential-locksmith",
     subtitle:
       "Household lock repairs, lock replacements, key cutting and emergency home lockout assistance.",
     image: "/assets/images/ag-service-residential.webp",
@@ -112,7 +119,15 @@ export default function Services() {
                   )}
                 </div>
                 <div className={styles.text}>
-                  <h3 className={styles.title}>{s.title}</h3>
+                  <h3 className={styles.title}>
+                    {s.href ? (
+                      <Link href={s.href} className={styles.titleLink}>
+                        {s.title}
+                      </Link>
+                    ) : (
+                      s.title
+                    )}
+                  </h3>
                   <p className={styles.subtitle}>{s.subtitle}</p>
                 </div>
               </article>

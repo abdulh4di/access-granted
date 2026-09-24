@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedServices from "@/components/RelatedServices";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
@@ -148,6 +149,7 @@ export default function HouseholdKeyCuttingPage() {
           subhead="Answers to common questions about household key cutting — key types, spares and what to expect."
           items={FAQS}
         />
+        <RelatedServices path="/services/residential-locksmith/household-key-cutting" />
         <ContactSection />
       </main>
       <Footer />

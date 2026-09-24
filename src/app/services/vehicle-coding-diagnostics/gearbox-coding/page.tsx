@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedServices from "@/components/RelatedServices";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
@@ -149,6 +150,7 @@ export default function GearboxCodingPage() {
           subhead="Answers to common questions about gearbox coding and adaptation."
           items={FAQS}
         />
+        <RelatedServices path="/services/vehicle-coding-diagnostics/gearbox-coding" />
         <ContactSection />
       </main>
       <Footer />

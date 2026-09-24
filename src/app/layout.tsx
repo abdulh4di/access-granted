@@ -1,9 +1,31 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Anton, Inter, Plus_Jakarta_Sans } from "next/font/google";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ImageSkeletons from "@/components/ImageSkeletons";
 import PageLoader from "@/components/PageLoader";
 import ScrollRestore from "@/components/ScrollRestore";
+
+// Self-hosted through next/font: the files are served from our own domain and
+// preloaded, so there's no render-blocking request to fonts.googleapis.com.
+const anton = Anton({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-anton",
+});
+const inter = Inter({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+const jakarta = Plus_Jakarta_Sans({
+  weight: "500",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-jakarta",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://accessgrantednortheast.co.uk"),
@@ -36,14 +58,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${anton.variable} ${inter.variable} ${jakarta.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500&display=swap"
-          rel="stylesheet"
-        />
         {/* With scripting off nothing can ever lift the curtain, so it must
             not be drawn in the first place. */}
         <noscript>

@@ -87,7 +87,7 @@
   /* em is relative to the tag's own font-size (13.66px): 9.116/13.66 = 0.667,
      18.215/13.66 = 1.333 — matches the Figma tag padding */
   padding: 0.667em 1.333em;
-  font-family: "Plus Jakarta Sans", var(--font-body);
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", var(--font-body);
   font-weight: 500;
   font-size: 0.854em; /* ~13.66px */
   line-height: normal;

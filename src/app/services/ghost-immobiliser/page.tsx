@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
@@ -97,6 +99,16 @@ export default function GhostImmobiliserPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd
+        data={[
+          serviceJsonLd(
+            "/services/ghost-immobiliser",
+            "Ghost Immobiliser Installation Newcastle",
+            String(metadata.description),
+          ),
+          breadcrumbJsonLd("/services/ghost-immobiliser", "Ghost Immobiliser Installation Newcastle"),
+        ]}
+      />
       <Navbar />
       <header>
         <BlogHero

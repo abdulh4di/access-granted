@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, businessJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import ServiceHero from "@/components/ServiceHero";
@@ -26,6 +28,7 @@ export default function ContactPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd data={[businessJsonLd(), breadcrumbJsonLd("/contact", "Contact")]} />
       <Navbar />
       <header>
         <ServiceHero

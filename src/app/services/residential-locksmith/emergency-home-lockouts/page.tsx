@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
@@ -99,6 +101,16 @@ export default function EmergencyHomeLockoutsPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd
+        data={[
+          serviceJsonLd(
+            "/services/residential-locksmith/emergency-home-lockouts",
+            "Emergency Home Lockouts Newcastle",
+            String(metadata.description),
+          ),
+          breadcrumbJsonLd("/services/residential-locksmith/emergency-home-lockouts", "Emergency Home Lockouts Newcastle"),
+        ]}
+      />
       <Navbar />
       <header>
         <BlogHero

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
@@ -97,6 +99,16 @@ export default function EcuCodingPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd
+        data={[
+          serviceJsonLd(
+            "/services/vehicle-coding-diagnostics/ecu-coding",
+            "ECU Coding Newcastle",
+            String(metadata.description),
+          ),
+          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/ecu-coding", "ECU Coding Newcastle"),
+        ]}
+      />
       <Navbar />
       <header>
         <BlogHero

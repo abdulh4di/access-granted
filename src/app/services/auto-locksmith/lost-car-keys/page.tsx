@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
@@ -51,6 +53,16 @@ export default function LostCarKeysPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd
+        data={[
+          serviceJsonLd(
+            "/services/auto-locksmith/lost-car-keys",
+            "Lost Car Keys Newcastle",
+            String(metadata.description),
+          ),
+          breadcrumbJsonLd("/services/auto-locksmith/lost-car-keys", "Lost Car Keys Newcastle"),
+        ]}
+      />
       <Navbar />
       <header>
         <BlogHero />

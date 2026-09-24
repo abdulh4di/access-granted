@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import ServiceHero from "@/components/ServiceHero";
@@ -25,6 +27,7 @@ export default function TermsPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd data={breadcrumbJsonLd("/terms", "Terms & Conditions")} />
       <Navbar />
       <header>
         <ServiceHero

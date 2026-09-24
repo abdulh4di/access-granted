@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
@@ -111,6 +113,16 @@ export default function VagSpecialistPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd
+        data={[
+          serviceJsonLd(
+            "/services/vag-specialist",
+            "VAG Specialist Services Newcastle",
+            String(metadata.description),
+          ),
+          breadcrumbJsonLd("/services/vag-specialist", "VAG Specialist Services Newcastle"),
+        ]}
+      />
       <Navbar />
       <header>
         <BlogHero

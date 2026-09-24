@@ -3,6 +3,8 @@
 import { useState } from "react";
 import styles from "./ServiceFaq.module.css";
 import SectionReveal from "./SectionReveal";
+import JsonLd from "./JsonLd";
+import { faqJsonLd } from "@/lib/schema";
 
 type FaqItem = { q: string; a: string };
 
@@ -49,6 +51,7 @@ export default function ServiceFaq({
 
   return (
     <section className={styles.faq} id="faq">
+      <JsonLd data={faqJsonLd(FAQS)} />
       <div className={`container ${styles.inner}`}>
         <header className={styles.head} data-reveal-head>
           <span className="eyebrow">FAQs</span>

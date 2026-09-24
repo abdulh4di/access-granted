@@ -3,19 +3,7 @@
 import { useRef } from "react";
 import styles from "./Areas.module.css";
 import AreasReveal from "./AreasReveal";
-
-const AREAS = [
-  "Alnwick", "East Denton", "Lemington", "South Shields",
-  "Bensham", "Felling", "Low Fell", "Sunderland",
-  "Benwell", "Fenham", "Low Top", "Swalwell",
-  "Byker", "Gateshead", "Morpeth", "Throckley",
-  "Chapel House", "Hazlerigg", "Newcastle upon Tyne", "Wallsend",
-  "Chapel Park", "Heaton", "North Shields", "Washington",
-  "Chester-le-Street", "Hexham", "Rowlands Gill", "West Denton",
-  "Choppington", "High Heaton", "Sandyford", "Westerhope",
-  "Dunston", "Houghton-le-Spring", "Scotswood", "Whickham",
-  "Durham", "Jesmond", "Seaham", "Whitley Bay",
-];
+import { AREAS } from "@/lib/areas";
 
 const COLUMN_COUNT = 4;
 // Split the row-ordered list into 4 columns of (max) 10, keeping each column

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
@@ -99,6 +101,16 @@ export default function FaultCodeReadingPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd
+        data={[
+          serviceJsonLd(
+            "/services/vehicle-coding-diagnostics/fault-code-reading",
+            "Fault Code Reading & Clearing Newcastle",
+            String(metadata.description),
+          ),
+          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/fault-code-reading", "Fault Code Reading & Clearing Newcastle"),
+        ]}
+      />
       <Navbar />
       <header>
         <BlogHero

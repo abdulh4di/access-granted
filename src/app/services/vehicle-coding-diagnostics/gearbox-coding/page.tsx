@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
@@ -99,6 +101,16 @@ export default function GearboxCodingPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd
+        data={[
+          serviceJsonLd(
+            "/services/vehicle-coding-diagnostics/gearbox-coding",
+            "Gearbox Coding Newcastle",
+            String(metadata.description),
+          ),
+          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/gearbox-coding", "Gearbox Coding Newcastle"),
+        ]}
+      />
       <Navbar />
       <header>
         <BlogHero

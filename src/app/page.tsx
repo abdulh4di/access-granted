@@ -1,4 +1,6 @@
 import Navbar from "@/components/Navbar";
+import JsonLd from "@/components/JsonLd";
+import { businessJsonLd } from "@/lib/schema";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
@@ -15,6 +17,7 @@ export default function Home() {
           never show it, and keying that off real markup means the decision
           holds on the very first paint, with no JavaScript involved. */}
       <span id="top" data-route-home />
+      <JsonLd data={businessJsonLd()} />
       <Navbar />
       <header>
         <Hero />

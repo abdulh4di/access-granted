@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
@@ -97,6 +99,16 @@ export default function IgnitionRepairPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd
+        data={[
+          serviceJsonLd(
+            "/services/auto-locksmith/ignition-repair",
+            "Ignition Repair Newcastle",
+            String(metadata.description),
+          ),
+          breadcrumbJsonLd("/services/auto-locksmith/ignition-repair", "Ignition Repair Newcastle"),
+        ]}
+      />
       <Navbar />
       <header>
         <BlogHero

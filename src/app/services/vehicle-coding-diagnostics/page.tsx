@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import ServiceHero from "@/components/ServiceHero";
@@ -99,6 +101,16 @@ export default function VehicleCodingDiagnosticsPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd
+        data={[
+          serviceJsonLd(
+            "/services/vehicle-coding-diagnostics",
+            "Vehicle Coding & Diagnostics Newcastle & the North East",
+            String(metadata.description),
+          ),
+          breadcrumbJsonLd("/services/vehicle-coding-diagnostics", "Vehicle Coding & Diagnostics Newcastle & the North East"),
+        ]}
+      />
       <Navbar />
       <header>
         <ServiceHero

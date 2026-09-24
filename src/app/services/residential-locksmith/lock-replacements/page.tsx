@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import BlogHero from "@/components/BlogHero";
@@ -97,6 +99,16 @@ export default function LockReplacementsPage() {
   return (
     <>
       <span id="top" />
+      <JsonLd
+        data={[
+          serviceJsonLd(
+            "/services/residential-locksmith/lock-replacements",
+            "Lock Replacements Newcastle",
+            String(metadata.description),
+          ),
+          breadcrumbJsonLd("/services/residential-locksmith/lock-replacements", "Lock Replacements Newcastle"),
+        ]}
+      />
       <Navbar />
       <header>
         <BlogHero

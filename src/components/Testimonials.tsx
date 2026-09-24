@@ -18,7 +18,7 @@ interface FeaturableReview {
 
 const RTF = new Intl.RelativeTimeFormat("en-GB", { numeric: "always" });
 
-// "3 days ago" / "2 weeks ago" / "1 month ago". Computed at render time, so it
+// "3 days ago" / "12 days ago" / "1 month ago". Computed at render time, so it
 // refreshes with the ISR revalidation above.
 function relativeDate(iso: string): string {
   const seconds = Math.floor((Date.now() - new Date(iso).getTime()) / 1000);
@@ -31,8 +31,7 @@ function relativeDate(iso: string): string {
   if (hours < 24) return RTF.format(-hours, "hour");
 
   const days = Math.floor(hours / 24);
-  if (days < 7) return RTF.format(-days, "day");
-  if (days < 30) return RTF.format(-Math.floor(days / 7), "week");
+  if (days < 30) return RTF.format(-days, "day");
 
   const months = Math.floor(days / 30.44);
   if (months < 12) return RTF.format(-Math.max(1, months), "month");

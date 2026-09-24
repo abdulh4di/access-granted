@@ -8,18 +8,18 @@ import TermsContent from "@/components/TermsContent";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Access Granted Northeast",
+  title: "Terms & Conditions | Access Granted",
   description:
-    "The terms and conditions covering locksmith, vehicle coding, diagnostics and related services provided by Access Granted Northeast across Newcastle & the North East.",
+    "The terms and conditions for locksmith, vehicle coding and diagnostics services provided by Access Granted Northeast across Newcastle & the North East.",
   alternates: { canonical: "/terms" },
   openGraph: {
     type: "website",
     url: "/terms",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Terms & Conditions | Access Granted Northeast",
+    title: "Terms & Conditions",
     description:
-      "The terms and conditions covering services provided by Access Granted Northeast across Newcastle & the North East.",
+      "The terms and conditions for locksmith, vehicle coding and diagnostics services provided by Access Granted Northeast across Newcastle & the North East.",
   },
 };
 

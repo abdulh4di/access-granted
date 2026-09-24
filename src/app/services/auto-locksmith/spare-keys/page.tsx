@@ -11,18 +11,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Spare Car Keys Newcastle | Access Granted Northeast",
+  title: "Spare Car Keys Newcastle, Cut On-Site | Access Granted",
   description:
-    "Get a spare car key cut and programmed in Newcastle & the North East. A cheap, mobile backup that saves you from an expensive lost-key call-out later.",
+    "Get a spare car key cut and programmed on-site in Newcastle & the North East. A cheap backup that avoids an expensive lost-key call-out later.",
   alternates: { canonical: "/services/auto-locksmith/spare-keys" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith/spare-keys",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Spare Car Keys Newcastle",
+    title: "Spare Car Keys Newcastle, Cut On-Site",
     description:
-      "Mobile auto locksmith in Newcastle & the North East cutting and programming spare car keys — cheaper now than a lost-key emergency later.",
+      "Get a spare car key cut and programmed on-site in Newcastle & the North East. A cheap backup that avoids an expensive lost-key call-out later.",
   },
 };
 

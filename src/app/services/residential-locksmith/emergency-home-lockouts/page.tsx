@@ -11,9 +11,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Emergency Home Lockouts Newcastle | Access Granted Northeast",
+  title: "Emergency Home Lockouts Newcastle 24/7 | Access Granted",
   description:
-    "Locked out of your home in Newcastle & the North East? Our mobile locksmith reaches you fast and gets you back inside without unnecessary damage — 24/7.",
+    "Locked out of your home in Newcastle & the North East? We reach you fast and get you back inside without unnecessary damage. Call 07777 474195.",
   alternates: {
     canonical: "/services/residential-locksmith/emergency-home-lockouts",
   },
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     url: "/services/residential-locksmith/emergency-home-lockouts",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Emergency Home Lockouts Newcastle",
+    title: "Emergency Home Lockouts Newcastle 24/7",
     description:
-      "Fast, non-destructive home entry across Newcastle & the North East when you're locked out.",
+      "Locked out of your home in Newcastle & the North East? We reach you fast and get you back inside without unnecessary damage. Call 07777 474195.",
   },
 };
 

@@ -11,18 +11,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Lock Replacements Newcastle | Access Granted Northeast",
+  title: "Lock Replacement Newcastle, Anti-Snap Locks | Access Granted",
   description:
-    "Mobile lock replacements across Newcastle & the North East — new locks supplied and fitted, including anti-snap cylinders and insurance-approved British Standard locks.",
+    "New locks supplied and fitted across Newcastle & the North East, including anti-snap cylinders and British Standard locks. Call 07777 474195.",
   alternates: { canonical: "/services/residential-locksmith/lock-replacements" },
   openGraph: {
     type: "website",
     url: "/services/residential-locksmith/lock-replacements",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Lock Replacements Newcastle",
+    title: "Lock Replacement Newcastle, Anti-Snap Locks",
     description:
-      "New locks supplied and fitted across Newcastle & the North East — anti-snap and insurance-approved options.",
+      "New locks supplied and fitted across Newcastle & the North East, including anti-snap cylinders and British Standard locks. Call 07777 474195.",
   },
 };
 

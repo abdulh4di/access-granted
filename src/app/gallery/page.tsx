@@ -8,18 +8,18 @@ import GalleryGrid from "@/components/GalleryGrid";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Gallery | Access Granted Northeast",
+  title: "Locksmith Work Gallery Newcastle | Access Granted",
   description:
-    "See our auto and home locksmith work across Newcastle & the North East — vehicle lockouts, key programming, lock repairs and more.",
+    "See recent auto and home locksmith jobs from Access Granted: car key programming, coding, diagnostics and lock repairs across Newcastle & the North East.",
   alternates: { canonical: "/gallery" },
   openGraph: {
     type: "website",
     url: "/gallery",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Gallery",
+    title: "Locksmith Work Gallery Newcastle",
     description:
-      "See our auto and home locksmith work across Newcastle & the North East.",
+      "See recent auto and home locksmith jobs from Access Granted: car key programming, coding, diagnostics and lock repairs across Newcastle & the North East.",
   },
 };
 

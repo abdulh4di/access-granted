@@ -11,18 +11,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "VAG Specialist Services Newcastle | Access Granted Northeast",
+  title: "VAG Specialist Coding Newcastle | Access Granted",
   description:
-    "Mobile VAG specialist coding across Newcastle & the North East — Audi, Volkswagen, SEAT and Škoda coding, retrofitting and troubleshooting.",
+    "Mobile VAG specialist coding for Audi, Volkswagen, SEAT and Škoda across Newcastle & the North East: coding, retrofits and troubleshooting. Call 07777 474195.",
   alternates: { canonical: "/services/vag-specialist" },
   openGraph: {
     type: "website",
     url: "/services/vag-specialist",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "VAG Specialist Services Newcastle",
+    title: "VAG Specialist Coding Newcastle",
     description:
-      "Mobile VAG specialist coding, retrofitting and troubleshooting for Audi, Volkswagen, SEAT and Škoda across Newcastle & the North East.",
+      "Mobile VAG specialist coding for Audi, Volkswagen, SEAT and Škoda across Newcastle & the North East: coding, retrofits and troubleshooting. Call 07777 474195.",
   },
 };
 

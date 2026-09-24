@@ -11,18 +11,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Ignition Repair Newcastle | Access Granted Northeast",
+  title: "Car Ignition Repair & Replacement Newcastle | Access Granted",
   description:
-    "Key won’t turn or ignition jammed? Our mobile auto locksmith diagnoses and repairs or replaces faulty ignition barrels across Newcastle & the North East.",
+    "Key won't turn or ignition jammed? We diagnose and repair or replace faulty ignition barrels on-site across Newcastle & the North East. Call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith/ignition-repair" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith/ignition-repair",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Ignition Repair Newcastle",
+    title: "Car Ignition Repair & Replacement Newcastle",
     description:
-      "Mobile ignition repair and barrel replacement across Newcastle & the North East — get your car starting reliably again.",
+      "Key won't turn or ignition jammed? We diagnose and repair or replace faulty ignition barrels on-site across Newcastle & the North East. Call 07777 474195.",
   },
 };
 

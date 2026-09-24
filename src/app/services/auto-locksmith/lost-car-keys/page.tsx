@@ -11,18 +11,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Lost Car Keys Newcastle | Access Granted Northeast",
+  title: "Lost Car Keys Newcastle, No Spare Needed | Access Granted",
   description:
-    "Lost your only car key? Our mobile auto locksmith in Newcastle & the North East can cut a new key, program it to your vehicle and get you back on the road — even with no spare.",
+    "Lost your only car key? We cut and program a new one at your location in Newcastle & the North East, even with no spare. 24/7, call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith/lost-car-keys" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith/lost-car-keys",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Lost Car Keys Newcastle",
+    title: "Lost Car Keys Newcastle, No Spare Needed",
     description:
-      "Mobile auto locksmith in Newcastle & the North East for lost car keys — new keys cut, programmed on-site and lost keys disabled for security.",
+      "Lost your only car key? We cut and program a new one at your location in Newcastle & the North East, even with no spare. 24/7, call 07777 474195.",
   },
 };
 

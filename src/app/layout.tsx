@@ -30,9 +30,9 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Access Granted Northeast — Auto Locksmith Newcastle & North East",
+  title: "24/7 Auto Locksmith Newcastle | Access Granted Northeast",
   description:
-    "Trusted 24/7 auto locksmith in Newcastle & the North East. Vehicle entry, lost car keys, key coding, diagnostics, Ghost immobiliser installation and residential locksmith services.",
+    "24/7 mobile auto locksmith in Newcastle & the North East. Lost car keys, lockouts, key programming, vehicle coding and home locksmith. Call 07777 474195.",
   keywords: [
     "auto locksmith Newcastle",
     "car key replacement North East",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Access Granted Northeast — Auto Locksmith Newcastle & North East",
+    title: "24/7 Auto Locksmith Newcastle",
     description:
-      "Trusted 24/7 auto locksmith in Newcastle & the North East. Vehicle entry, lost car keys, key coding, diagnostics and residential locksmith services.",
+      "24/7 mobile auto locksmith in Newcastle & the North East. Lost car keys, lockouts, key programming, vehicle coding and home locksmith. Call 07777 474195.",
   },
   twitter: { card: "summary_large_image", images: [OG_IMAGE.url] },
   icons: { icon: "/favicon.svg" },

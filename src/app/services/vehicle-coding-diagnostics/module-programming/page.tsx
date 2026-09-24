@@ -11,9 +11,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Module Programming Newcastle | Access Granted Northeast",
+  title: "Module Programming & Coding Newcastle | Access Granted",
   description:
-    "Mobile control module programming and coding across Newcastle & the North East — code added, replaced or retrofitted modules so they work with your vehicle.",
+    "Mobile control module programming and coding across Newcastle & the North East. We code added, replaced or retrofitted modules to suit your vehicle.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/module-programming",
   },
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     url: "/services/vehicle-coding-diagnostics/module-programming",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Module Programming Newcastle",
+    title: "Module Programming & Coding Newcastle",
     description:
-      "Mobile control module programming and coding across Newcastle & the North East.",
+      "Mobile control module programming and coding across Newcastle & the North East. We code added, replaced or retrofitted modules to suit your vehicle.",
   },
 };
 

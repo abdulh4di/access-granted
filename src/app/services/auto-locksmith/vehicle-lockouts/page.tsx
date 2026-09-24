@@ -11,18 +11,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Vehicle Lockouts Newcastle | Access Granted Northeast",
+  title: "Vehicle Lockouts Newcastle, 24/7 Car Entry | Access Granted",
   description:
-    "Locked out of your car in Newcastle & the North East? Our mobile auto locksmith reaches you fast and opens your vehicle without damage — keys locked in or lost.",
+    "Locked out of your car in Newcastle? We reach you fast and open your vehicle without damage, whether keys are locked in or lost. Call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith/vehicle-lockouts" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith/vehicle-lockouts",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Vehicle Lockouts Newcastle",
+    title: "Vehicle Lockouts Newcastle, 24/7 Car Entry",
     description:
-      "Fast, non-destructive vehicle entry across Newcastle & the North East — keys locked in, in the boot, or lost.",
+      "Locked out of your car in Newcastle? We reach you fast and open your vehicle without damage, whether keys are locked in or lost. Call 07777 474195.",
   },
 };
 

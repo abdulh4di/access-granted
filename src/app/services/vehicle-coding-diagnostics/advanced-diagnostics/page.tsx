@@ -11,9 +11,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Advanced Vehicle Diagnostics Newcastle | Access Granted Northeast",
+  title: "Mobile Vehicle Diagnostics Newcastle | Access Granted",
   description:
-    "Dealer-level mobile vehicle diagnostics across Newcastle & the North East — pinpoint electrical, engine and system faults quickly and accurately.",
+    "Dealer-level mobile vehicle diagnostics across Newcastle & the North East. We pinpoint electrical, engine and system faults quickly and accurately.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/advanced-diagnostics",
   },
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     url: "/services/vehicle-coding-diagnostics/advanced-diagnostics",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Advanced Vehicle Diagnostics Newcastle",
+    title: "Mobile Vehicle Diagnostics Newcastle",
     description:
-      "Mobile dealer-level diagnostics across Newcastle & the North East — find the real fault fast.",
+      "Dealer-level mobile vehicle diagnostics across Newcastle & the North East. We pinpoint electrical, engine and system faults quickly and accurately.",
   },
 };
 

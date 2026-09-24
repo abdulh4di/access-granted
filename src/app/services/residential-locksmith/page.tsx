@@ -12,19 +12,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title:
-    "Residential Locksmith Newcastle & the North East | Access Granted Northeast",
+  title: "Home & Residential Locksmith Newcastle | Access Granted",
   description:
-    "Mobile residential locksmith in Newcastle & the North East — emergency home lockouts, lock repairs, lock replacements and household key cutting. 24/7.",
+    "Mobile home locksmith in Newcastle & the North East: emergency lockouts, lock repairs, lock replacements and key cutting. 24/7, call 07777 474195.",
   alternates: { canonical: "/services/residential-locksmith" },
   openGraph: {
     type: "website",
     url: "/services/residential-locksmith",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Residential Locksmith Newcastle & the North East",
+    title: "Home & Residential Locksmith Newcastle",
     description:
-      "Mobile residential locksmith across Newcastle & the North East — emergency home lockouts, lock repairs, replacements and key cutting.",
+      "Mobile home locksmith in Newcastle & the North East: emergency lockouts, lock repairs, lock replacements and key cutting. 24/7, call 07777 474195.",
   },
 };
 

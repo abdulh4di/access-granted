@@ -11,9 +11,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Household Key Cutting Newcastle | Access Granted Northeast",
+  title: "House Key Cutting Newcastle, Mobile Service | Access Granted",
   description:
-    "Mobile household key cutting across Newcastle & the North East — accurate spare and replacement house keys cut on-site for family, tenants and lodgers.",
+    "Mobile house key cutting across Newcastle & the North East: accurate spare and replacement keys cut on-site for family, tenants and lodgers.",
   alternates: {
     canonical: "/services/residential-locksmith/household-key-cutting",
   },
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     url: "/services/residential-locksmith/household-key-cutting",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Household Key Cutting Newcastle",
+    title: "House Key Cutting Newcastle, Mobile Service",
     description:
-      "Accurate spare and replacement house keys cut on-site across Newcastle & the North East.",
+      "Mobile house key cutting across Newcastle & the North East: accurate spare and replacement keys cut on-site for family, tenants and lodgers.",
   },
 };
 

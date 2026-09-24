@@ -11,18 +11,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Broken Key Extraction Newcastle | Access Granted Northeast",
+  title: "Broken Car Key Extraction Newcastle | Access Granted",
   description:
-    "Snapped your key in the door, boot or ignition? Our mobile auto locksmith carefully removes the broken piece and cuts a fresh key across Newcastle & the North East.",
+    "Key snapped in the door, boot or ignition? We remove the broken piece and cut a new key on-site across Newcastle & the North East. Call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith/broken-key-extraction" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith/broken-key-extraction",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Broken Key Extraction Newcastle",
+    title: "Broken Car Key Extraction Newcastle",
     description:
-      "Careful broken-key removal and a fresh key cut on-site across Newcastle & the North East — door, boot or ignition.",
+      "Key snapped in the door, boot or ignition? We remove the broken piece and cut a new key on-site across Newcastle & the North East. Call 07777 474195.",
   },
 };
 

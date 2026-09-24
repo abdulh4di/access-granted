@@ -11,18 +11,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "ECU Coding Newcastle | Access Granted Northeast",
+  title: "ECU Coding & Reprogramming Newcastle | Access Granted",
   description:
-    "Mobile ECU coding and reprogramming across Newcastle & the North East — code new or replacement engine control units and adapt them to your vehicle.",
+    "Mobile ECU coding and reprogramming across Newcastle & the North East. We code new or replacement engine control units and adapt them to your vehicle.",
   alternates: { canonical: "/services/vehicle-coding-diagnostics/ecu-coding" },
   openGraph: {
     type: "website",
     url: "/services/vehicle-coding-diagnostics/ecu-coding",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "ECU Coding Newcastle",
+    title: "ECU Coding & Reprogramming Newcastle",
     description:
-      "Mobile ECU coding and reprogramming across Newcastle & the North East.",
+      "Mobile ECU coding and reprogramming across Newcastle & the North East. We code new or replacement engine control units and adapt them to your vehicle.",
   },
 };
 

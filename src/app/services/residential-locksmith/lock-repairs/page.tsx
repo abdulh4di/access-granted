@@ -11,18 +11,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Lock Repairs Newcastle | Access Granted Northeast",
+  title: "Mobile Door Lock Repairs Newcastle | Access Granted",
   description:
-    "Mobile lock repairs across Newcastle & the North East — sticking, seized or faulty door locks repaired so they work smoothly and securely again.",
+    "Sticking, seized or faulty door lock? We repair it on-site across Newcastle & the North East so it works smoothly and securely again. Call 07777 474195.",
   alternates: { canonical: "/services/residential-locksmith/lock-repairs" },
   openGraph: {
     type: "website",
     url: "/services/residential-locksmith/lock-repairs",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Lock Repairs Newcastle",
+    title: "Mobile Door Lock Repairs Newcastle",
     description:
-      "Mobile door lock repairs across Newcastle & the North East — fix sticking, seized and faulty locks.",
+      "Sticking, seized or faulty door lock? We repair it on-site across Newcastle & the North East so it works smoothly and securely again. Call 07777 474195.",
   },
 };
 

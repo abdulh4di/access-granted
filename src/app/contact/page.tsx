@@ -9,18 +9,18 @@ import ContactMap from "@/components/ContactMap";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Contact Access Granted Northeast | Auto & Home Locksmith Newcastle",
+  title: "Contact a 24/7 Locksmith in Newcastle | Access Granted",
   description:
-    "Contact Access Granted Northeast — open 24/7 for emergency auto and home locksmith call-outs across Newcastle & the North East. Call, message or send an enquiry.",
+    "Locked out or need a quote? Call or message Access Granted 24/7 for emergency car and home locksmith call-outs across Newcastle & the North East.",
   alternates: { canonical: "/contact" },
   openGraph: {
     type: "website",
     url: "/contact",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Contact Access Granted Northeast",
+    title: "Contact a 24/7 Locksmith in Newcastle",
     description:
-      "Open 24/7 for emergency auto and home locksmith call-outs across Newcastle & the North East.",
+      "Locked out or need a quote? Call or message Access Granted 24/7 for emergency car and home locksmith call-outs across Newcastle & the North East.",
   },
 };
 

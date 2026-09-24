@@ -11,18 +11,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Key Programming & Smart Keys Newcastle | Access Granted Northeast",
+  title: "Car Key Programming & Smart Keys Newcastle | Access Granted",
   description:
-    "Transponder keys, remote fobs and keyless smart keys programmed to your car on-site across Newcastle & the North East — often cheaper than a main dealer.",
+    "Transponder keys, remote fobs and smart keys programmed to your car on-site across Newcastle & the North East, often cheaper than a main dealer.",
   alternates: { canonical: "/services/auto-locksmith/key-programming" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith/key-programming",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Key Programming & Smart Keys Newcastle",
+    title: "Car Key Programming & Smart Keys Newcastle",
     description:
-      "Mobile key programming across Newcastle & the North East — transponder keys, remotes and keyless smart keys coded on-site.",
+      "Transponder keys, remote fobs and smart keys programmed to your car on-site across Newcastle & the North East, often cheaper than a main dealer.",
   },
 };
 

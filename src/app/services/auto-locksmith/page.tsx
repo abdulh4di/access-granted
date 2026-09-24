@@ -12,19 +12,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title:
-    "Auto Locksmith Newcastle & the North East | Access Granted Northeast",
+  title: "Auto Locksmith Newcastle & North East | Access Granted",
   description:
-    "Mobile auto locksmith in Newcastle & the North East. Lost car keys, vehicle lockouts, spare keys, key programming, broken key extraction and ignition repair — 24/7.",
+    "Mobile auto locksmith in Newcastle & the North East: lost car keys, lockouts, spare keys, key programming and ignition repair. 24/7, call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Auto Locksmith Newcastle & the North East",
+    title: "Auto Locksmith Newcastle & North East",
     description:
-      "Mobile auto locksmith in Newcastle & the North East. Lost car keys, vehicle lockouts, spare keys, key programming and ignition repair — 24/7.",
+      "Mobile auto locksmith in Newcastle & the North East: lost car keys, lockouts, spare keys, key programming and ignition repair. 24/7, call 07777 474195.",
   },
 };
 

@@ -12,19 +12,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title:
-    "Vehicle Coding & Diagnostics Newcastle & the North East | Access Granted Northeast",
+  title: "Vehicle Coding & Diagnostics Newcastle | Access Granted",
   description:
-    "Mobile vehicle coding and diagnostics across Newcastle & the North East — advanced diagnostics, fault code reading, ECU and gearbox coding, module programming and Apple CarPlay activation.",
+    "Mobile vehicle coding and diagnostics in Newcastle & the North East: fault codes, ECU and gearbox coding, module programming and Apple CarPlay activation.",
   alternates: { canonical: "/services/vehicle-coding-diagnostics" },
   openGraph: {
     type: "website",
     url: "/services/vehicle-coding-diagnostics",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Vehicle Coding & Diagnostics Newcastle & the North East",
+    title: "Vehicle Coding & Diagnostics Newcastle",
     description:
-      "Mobile vehicle coding and diagnostics across Newcastle & the North East — diagnostics, ECU/gearbox coding, module programming and Apple CarPlay activation.",
+      "Mobile vehicle coding and diagnostics in Newcastle & the North East: fault codes, ECU and gearbox coding, module programming and Apple CarPlay activation.",
   },
 };
 

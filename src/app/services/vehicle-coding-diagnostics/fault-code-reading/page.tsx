@@ -11,9 +11,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Fault Code Reading & Clearing Newcastle | Access Granted Northeast",
+  title: "Fault Code Reading & Clearing Newcastle | Access Granted",
   description:
-    "Mobile fault code reading and clearing across Newcastle & the North East — read, interpret and clear stored trouble codes so you know exactly what to fix.",
+    "Mobile fault code reading and clearing across Newcastle & the North East. We read, interpret and clear trouble codes so you know exactly what to fix.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/fault-code-reading",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Fault Code Reading & Clearing Newcastle",
     description:
-      "Mobile fault code reading and clearing across Newcastle & the North East.",
+      "Mobile fault code reading and clearing across Newcastle & the North East. We read, interpret and clear trouble codes so you know exactly what to fix.",
   },
 };
 

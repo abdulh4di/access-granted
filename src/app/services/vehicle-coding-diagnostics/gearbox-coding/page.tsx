@@ -11,9 +11,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Gearbox Coding Newcastle | Access Granted Northeast",
+  title: "Gearbox (TCU) Coding Newcastle | Access Granted",
   description:
-    "Mobile gearbox (transmission) coding and adaptation across Newcastle & the North East — code TCUs for smooth, correct gear changes.",
+    "Mobile gearbox (transmission) coding and adaptation across Newcastle & the North East. We code TCUs for smooth, correct gear changes. Call 07777 474195.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/gearbox-coding",
   },
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     url: "/services/vehicle-coding-diagnostics/gearbox-coding",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Gearbox Coding Newcastle",
+    title: "Gearbox (TCU) Coding Newcastle",
     description:
-      "Mobile gearbox coding and adaptation across Newcastle & the North East.",
+      "Mobile gearbox (transmission) coding and adaptation across Newcastle & the North East. We code TCUs for smooth, correct gear changes. Call 07777 474195.",
   },
 };
 

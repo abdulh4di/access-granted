@@ -130,7 +130,7 @@ export default function EmergencyHomeLockoutsPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Home Lockouts"
+          heading="How Do We Get You Back Into Your Home?"
           subhead="Reach you fast, open the door, secure it"
           steps={STEPS}
         />

@@ -128,7 +128,7 @@ export default function SpareKeysPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Spare Keys"
+          heading="How Do We Cut a Spare Car Key?"
           subhead="Cut, program, and keep you covered"
           steps={SPARE_KEYS_STEPS}
         />

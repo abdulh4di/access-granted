@@ -14,9 +14,10 @@ export default function Hero() {
           </h1>
           <div className={styles.bottom}>
             <p className={styles.desc} data-hero-text>
-              Trusted 24/7 Locksmith services across Newcastle and the surrounding North
-              East, helping with vehicle entry, lost car keys, key coding, diagnostics, vehicle
-              coding and emergency lockouts.
+              Access Granted Northeast is a mobile auto and home locksmith covering
+              Newcastle and the North East, 24/7, with a free call-out. We help with
+              lost car keys, lockouts, key programming, vehicle coding and
+              diagnostics.
             </p>
             <div className={styles.pillbar} data-hero-socials>
               <SocialLinks variant="light" />

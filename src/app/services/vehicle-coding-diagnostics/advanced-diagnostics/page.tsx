@@ -130,7 +130,7 @@ export default function AdvancedDiagnosticsPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Diagnostics"
+          heading="How Do We Diagnose Vehicle Faults?"
           subhead="Scan, interpret, and recommend"
           steps={STEPS}
         />

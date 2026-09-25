@@ -121,16 +121,16 @@ export default function AppleCarPlayActivationPage() {
           imageAlt="Apple CarPlay running on a car display"
           description={
             <>
-              Want Apple CarPlay on your car&rsquo;s screen? On compatible
-              vehicles we activate and code CarPlay on-site, unlocking a feature
-              that&rsquo;s often already built into your system.
+              We activate Apple CarPlay on compatible vehicles by coding it on-site,
+              unlocking a feature that is often already built into your system. We
+              are mobile across Newcastle and the North East, with a free call-out.
             </>
           }
         />
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For CarPlay"
+          heading="How Is Apple CarPlay Activated?"
           subhead="Check, activate, and test"
           steps={STEPS}
         />

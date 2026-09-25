@@ -133,10 +133,10 @@ export default function VagSpecialistPage() {
           imageAlt="VAG specialist coding and diagnostics"
           description={
             <>
-              Access Granted Northeast provides mobile VAG specialist services
-              across the North East — Audi, Volkswagen, SEAT and Škoda coding,
-              feature retrofitting and troubleshooting for the whole Volkswagen
-              Audi Group.
+              Access Granted Northeast is a mobile VAG specialist, coding Audi,
+              Volkswagen, SEAT and Škoda vehicles across Newcastle and the North
+              East. That includes feature coding, retrofits and troubleshooting,
+              with a free call-out.
             </>
           }
         />
@@ -156,7 +156,7 @@ export default function VagSpecialistPage() {
           stacked
         />
         <LostKeysSteps
-          heading="How VAG Coding Works"
+          heading="How Does VAG Coding Work?"
           subhead="Diagnose, code or retrofit, and test"
           steps={STEPS}
         />

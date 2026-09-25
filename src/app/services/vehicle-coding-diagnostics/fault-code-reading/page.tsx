@@ -130,7 +130,7 @@ export default function FaultCodeReadingPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Fault Codes"
+          heading="How Do We Read and Clear Fault Codes?"
           subhead="Read, explain, and clear"
           steps={STEPS}
         />

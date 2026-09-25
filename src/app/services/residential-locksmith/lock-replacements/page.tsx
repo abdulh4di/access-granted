@@ -128,7 +128,7 @@ export default function LockReplacementsPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Lock Replacements"
+          heading="How Do We Replace a Lock?"
           subhead="Advise, supply and fit, and test"
           steps={STEPS}
         />

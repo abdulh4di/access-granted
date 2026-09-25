@@ -118,16 +118,17 @@ export default function VehicleLockoutsPage() {
           imageAlt="Auto locksmith opening a locked car door"
           description={
             <>
-              Locked out of your car? Keys shut inside, snapped in the door, or a
-              fault you can&rsquo;t get past? We reach you fast and open your
-              vehicle without damage, so you&rsquo;re back on the road quickly.
+              Locked out of your car? We open your vehicle using non-destructive
+              entry techniques, wherever you are in Newcastle and the North East,
+              and we aim to reach local emergencies within around 30 minutes. The
+              call-out is free, 24/7.
             </>
           }
         />
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Lockouts"
+          heading="How Do We Open a Locked Car?"
           subhead="Reach you fast, open your car, no damage"
           steps={STEPS}
         />

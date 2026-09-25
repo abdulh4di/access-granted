@@ -129,16 +129,16 @@ export default function CarKeyReplacementPage() {
           imageAlt="Locksmith handing over a replacement car key"
           description={
             <>
-              Lost, stolen, broken or worn out? We cut and program a replacement
-              car key to your vehicle at your location, for all makes and models.
-              No dealer trip and no tow, just a working key.
+              We replace lost, stolen, broken or worn out car keys for all makes and
+              models, cutting and programming the new key at your location. Most
+              jobs take around 20 to 60 minutes, and the call-out is free.
             </>
           }
         />
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="How Car Key Replacement Works"
+          heading="How Does Car Key Replacement Work?"
           subhead="Cut, program and test on-site"
           steps={REPLACEMENT_STEPS}
         />

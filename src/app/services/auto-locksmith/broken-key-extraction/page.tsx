@@ -127,7 +127,7 @@ export default function BrokenKeyExtractionPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Broken Keys"
+          heading="How Do We Remove a Broken Key?"
           subhead="Remove the break, check the lock, cut a new key"
           steps={STEPS}
         />

@@ -36,9 +36,10 @@ export default function ServiceHero({
   ),
   description = (
     <>
-      Access Granted Northeast provides mobile locksmith services across the
-      North East, including lost car keys, vehicle lockouts, spare keys, key
-      programming and ignition repairs.
+      Access Granted Northeast is a mobile auto locksmith serving Newcastle
+      and the North East 24/7, with a free call-out. We replace and program
+      lost car keys, open locked vehicles without damage, cut spare keys and
+      repair ignitions.
     </>
   ),
   trust = DEFAULT_TRUST,

@@ -154,7 +154,7 @@ export default function KeyProgrammingPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Key Programming"
+          heading="How Is a Car Key Programmed?"
           subhead="Diagnose, code, and test your key"
           steps={STEPS}
         />

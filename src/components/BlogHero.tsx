@@ -66,9 +66,10 @@ export default function BlogHero({
   title = "Lost Car Keys Newcastle",
   description = (
     <>
-      Lost your only car key? Don&rsquo;t panic. Even if you don&rsquo;t have a
-      spare, we can create a new key, program it to your vehicle, and get you
-      back on the road quickly.
+      Lost your only car key? We can cut and program a new one at your
+      location, even with no spare. Most lost key jobs take around 20 to 60
+      minutes, the call-out is free, and we cover Newcastle and the North
+      East 24/7.
     </>
   ),
   image = "/assets/images/lost-keys-hero.webp",

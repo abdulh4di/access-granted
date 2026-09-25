@@ -128,7 +128,7 @@ export default function LockRepairsPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Lock Repairs"
+          heading="How Do We Repair a Door Lock?"
           subhead="Diagnose, repair, and test"
           steps={STEPS}
         />

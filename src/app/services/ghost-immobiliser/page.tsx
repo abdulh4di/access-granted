@@ -119,17 +119,17 @@ export default function GhostImmobiliserPage() {
           imageAlt="Ghost immobiliser installation in a vehicle"
           description={
             <>
-              Protect your car from key cloning and theft with a Ghost
-              immobiliser. This silent, PIN-based device stops your vehicle from
-              starting unless your unique sequence is entered — installed at your
-              location.
+              A Ghost immobiliser is a silent, PIN-based anti-theft device that
+              stops your car starting unless you enter your unique sequence,
+              protecting against key cloning and relay theft. We fit it at your
+              location, with a free call-out.
             </>
           }
         />
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Ghost Immobilisers"
+          heading="How Does a Ghost Immobiliser Work?"
           subhead="Fit it, set your sequence, drive protected"
           steps={STEPS}
         />

@@ -27,7 +27,7 @@ interface LostKeysStepsProps {
 
 export default function LostKeysSteps({
   eyebrow = "Steps",
-  heading = "What We Do For Lost Keys",
+  heading = "How Do We Replace Lost Car Keys?",
   subhead = "Cut, program, and secure your car",
   steps = DEFAULT_STEPS,
 }: LostKeysStepsProps) {

@@ -119,16 +119,17 @@ export default function EcuCodingPage() {
           imageAlt="ECU coding on a vehicle"
           description={
             <>
-              Fitted or repaired an engine control unit? We code and adapt ECUs
-              to your exact vehicle on-site, so your car runs correctly without a
-              costly trip to the main dealer.
+              ECU coding adapts a new or repaired engine control unit to your exact
+              vehicle so it runs correctly. We code ECUs on-site across Newcastle
+              and the North East, usually for considerably less than a main dealer,
+              with a free call-out.
             </>
           }
         />
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For ECU Coding"
+          heading="What Is ECU Coding?"
           subhead="Read, code, and confirm"
           steps={STEPS}
         />

@@ -127,7 +127,7 @@ export default function IgnitionRepairPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Ignitions"
+          heading="How Do We Repair a Car Ignition?"
           subhead="Diagnose, repair or replace, and match your key"
           steps={STEPS}
         />

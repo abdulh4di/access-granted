@@ -130,7 +130,7 @@ export default function ModuleProgrammingPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Module Programming"
+          heading="What Is Module Programming?"
           subhead="Identify, program, and confirm"
           steps={STEPS}
         />

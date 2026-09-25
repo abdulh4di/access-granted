@@ -130,7 +130,7 @@ export default function GearboxCodingPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Gearbox Coding"
+          heading="What Is Gearbox Coding?"
           subhead="Read, code, and road-ready"
           steps={STEPS}
         />

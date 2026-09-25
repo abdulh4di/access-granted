@@ -130,7 +130,7 @@ export default function HouseholdKeyCuttingPage() {
       </header>
       <main id="main">
         <LostKeysSteps
-          heading="What We Do For Key Cutting"
+          heading="How Do We Cut House Keys?"
           subhead="Match, cut, and test"
           steps={STEPS}
         />

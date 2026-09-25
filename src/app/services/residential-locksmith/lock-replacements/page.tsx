@@ -12,18 +12,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Lock Replacement Newcastle, Anti-Snap Locks | Access Granted",
+  title: "Lock Replacement Newcastle upon Tyne | Access Granted",
   description:
-    "New locks supplied and fitted across Newcastle & the North East, including anti-snap cylinders and British Standard locks. Call 07777 474195.",
+    "New locks supplied and fitted across Newcastle upon Tyne & the North East, including anti-snap cylinders and British Standard locks. Call 07777 474195.",
   alternates: { canonical: "/services/residential-locksmith/lock-replacements" },
   openGraph: {
     type: "website",
     url: "/services/residential-locksmith/lock-replacements",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Lock Replacement Newcastle, Anti-Snap Locks",
+    title: "Lock Replacement Newcastle upon Tyne",
     description:
-      "New locks supplied and fitted across Newcastle & the North East, including anti-snap cylinders and British Standard locks. Call 07777 474195.",
+      "New locks supplied and fitted across Newcastle upon Tyne & the North East, including anti-snap cylinders and British Standard locks. Call 07777 474195.",
   },
 };
 
@@ -104,10 +104,10 @@ export default function LockReplacementsPage() {
         data={[
           serviceJsonLd(
             "/services/residential-locksmith/lock-replacements",
-            "Lock Replacements Newcastle",
+            "Lock Replacements Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/residential-locksmith/lock-replacements", "Lock Replacements Newcastle"),
+          breadcrumbJsonLd("/services/residential-locksmith/lock-replacements", "Lock Replacements Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

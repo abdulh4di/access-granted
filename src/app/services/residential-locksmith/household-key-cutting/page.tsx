@@ -12,9 +12,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "House Key Cutting Newcastle, Mobile Service | Access Granted",
+  title: "House Key Cutting Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile house key cutting across Newcastle & the North East: accurate spare and replacement keys cut on-site for family, tenants and lodgers.",
+    "Mobile house key cutting across Newcastle upon Tyne & the North East: accurate spare and replacement keys cut on-site for family, tenants and lodgers.",
   alternates: {
     canonical: "/services/residential-locksmith/household-key-cutting",
   },
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     url: "/services/residential-locksmith/household-key-cutting",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "House Key Cutting Newcastle, Mobile Service",
+    title: "House Key Cutting Newcastle upon Tyne",
     description:
-      "Mobile house key cutting across Newcastle & the North East: accurate spare and replacement keys cut on-site for family, tenants and lodgers.",
+      "Mobile house key cutting across Newcastle upon Tyne & the North East: accurate spare and replacement keys cut on-site for family, tenants and lodgers.",
   },
 };
 
@@ -106,10 +106,10 @@ export default function HouseholdKeyCuttingPage() {
         data={[
           serviceJsonLd(
             "/services/residential-locksmith/household-key-cutting",
-            "Household Key Cutting Newcastle",
+            "Household Key Cutting Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/residential-locksmith/household-key-cutting", "Household Key Cutting Newcastle"),
+          breadcrumbJsonLd("/services/residential-locksmith/household-key-cutting", "Household Key Cutting Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

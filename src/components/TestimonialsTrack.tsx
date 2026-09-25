@@ -10,7 +10,7 @@ export interface Testimonial {
   rating: number;
 }
 
-function GoogleLogo() {
+export function GoogleLogo() {
   return (
     <svg
       className={styles.googleLogo}
@@ -38,7 +38,7 @@ function GoogleLogo() {
   );
 }
 
-function StarRating({ rating }: { rating: number }) {
+export function StarRating({ rating }: { rating: number }) {
   return (
     <div
       className={styles.stars}

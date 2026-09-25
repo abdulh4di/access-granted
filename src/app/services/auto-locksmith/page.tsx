@@ -13,7 +13,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Auto Locksmith Newcastle & North East | Access Granted",
+  title: "Auto Locksmith Newcastle upon Tyne | Access Granted",
   description:
     "Mobile auto locksmith in Newcastle & the North East: lost car keys, lockouts, spare keys, key programming and ignition repair. 24/7, call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith" },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "/services/auto-locksmith",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Auto Locksmith Newcastle & North East",
+    title: "Auto Locksmith Newcastle upon Tyne",
     description:
       "Mobile auto locksmith in Newcastle & the North East: lost car keys, lockouts, spare keys, key programming and ignition repair. 24/7, call 07777 474195.",
   },
@@ -36,10 +36,10 @@ export default function AutoLocksmithPage() {
         data={[
           serviceJsonLd(
             "/services/auto-locksmith",
-            "Auto Locksmith Newcastle & the North East",
+            "Auto Locksmith Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/auto-locksmith", "Auto Locksmith Newcastle & the North East"),
+          breadcrumbJsonLd("/services/auto-locksmith", "Auto Locksmith Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

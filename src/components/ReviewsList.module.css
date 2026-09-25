@@ -1,0 +1,121 @@
+.reviews {
+  width: 100%;
+  background-color: var(--color-bg-gray);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.25em;
+  padding-top: 4.5em;
+  padding-bottom: 4.5em;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+  padding: 2em;
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.scoreValue {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 4em;
+  line-height: 1;
+  color: var(--color-text-black);
+}
+
+.scoreMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.scoreText {
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1.5em;
+  background-color: var(--color-bg-white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.text {
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-top: auto; /* pins the author to the bottom so cards line up */
+}
+
+.authorMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.authorName {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.4;
+  text-transform: capitalize;
+  color: var(--color-black);
+}
+
+.authorDate {
+  font-size: 0.875em;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 479px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

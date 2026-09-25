@@ -12,18 +12,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "ECU Coding & Reprogramming Newcastle | Access Granted",
+  title: "ECU Coding Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile ECU coding and reprogramming across Newcastle & the North East. We code new or replacement engine control units and adapt them to your vehicle.",
+    "Mobile ECU coding and reprogramming across Newcastle upon Tyne & the North East. We code new or replacement engine control units and adapt them to your vehicle.",
   alternates: { canonical: "/services/vehicle-coding-diagnostics/ecu-coding" },
   openGraph: {
     type: "website",
     url: "/services/vehicle-coding-diagnostics/ecu-coding",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "ECU Coding & Reprogramming Newcastle",
+    title: "ECU Coding Newcastle upon Tyne",
     description:
-      "Mobile ECU coding and reprogramming across Newcastle & the North East. We code new or replacement engine control units and adapt them to your vehicle.",
+      "Mobile ECU coding and reprogramming across Newcastle upon Tyne & the North East. We code new or replacement engine control units and adapt them to your vehicle.",
   },
 };
 
@@ -104,10 +104,10 @@ export default function EcuCodingPage() {
         data={[
           serviceJsonLd(
             "/services/vehicle-coding-diagnostics/ecu-coding",
-            "ECU Coding Newcastle",
+            "ECU Coding Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/ecu-coding", "ECU Coding Newcastle"),
+          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/ecu-coding", "ECU Coding Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

@@ -7,6 +7,7 @@ import ContactNowLink from "./ContactNowLink";
 const PAGES = [
   { label: "Home", href: "/" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Reviews", href: "/reviews" },
   { label: "Contact", href: "/contact" },
   { label: "Terms & Conditions", href: "/terms" },
 ];

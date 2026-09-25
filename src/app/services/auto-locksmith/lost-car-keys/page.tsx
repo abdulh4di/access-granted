@@ -12,18 +12,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Lost Car Keys Newcastle, No Spare Needed | Access Granted",
+  title: "Lost Car Keys Newcastle upon Tyne | Access Granted",
   description:
-    "Lost your only car key? We cut and program a new one at your location in Newcastle & the North East, even with no spare. 24/7, call 07777 474195.",
+    "Lost your only car key? We cut and program a new one at your location in Newcastle upon Tyne & the North East, even with no spare. 24/7, call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith/lost-car-keys" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith/lost-car-keys",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Lost Car Keys Newcastle, No Spare Needed",
+    title: "Lost Car Keys Newcastle upon Tyne",
     description:
-      "Lost your only car key? We cut and program a new one at your location in Newcastle & the North East, even with no spare. 24/7, call 07777 474195.",
+      "Lost your only car key? We cut and program a new one at your location in Newcastle upon Tyne & the North East, even with no spare. 24/7, call 07777 474195.",
   },
 };
 
@@ -58,10 +58,10 @@ export default function LostCarKeysPage() {
         data={[
           serviceJsonLd(
             "/services/auto-locksmith/lost-car-keys",
-            "Lost Car Keys Newcastle",
+            "Lost Car Keys Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/auto-locksmith/lost-car-keys", "Lost Car Keys Newcastle"),
+          breadcrumbJsonLd("/services/auto-locksmith/lost-car-keys", "Lost Car Keys Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

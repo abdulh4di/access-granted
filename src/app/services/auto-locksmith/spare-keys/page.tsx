@@ -12,18 +12,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Spare Car Keys Newcastle, Cut On-Site | Access Granted",
+  title: "Spare Car Keys Newcastle upon Tyne | Access Granted",
   description:
-    "Get a spare car key cut and programmed on-site in Newcastle & the North East. A cheap backup that avoids an expensive lost-key call-out later.",
+    "Get a spare car key cut and programmed on-site in Newcastle upon Tyne & the North East. A cheap backup that avoids an expensive lost-key call-out later.",
   alternates: { canonical: "/services/auto-locksmith/spare-keys" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith/spare-keys",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Spare Car Keys Newcastle, Cut On-Site",
+    title: "Spare Car Keys Newcastle upon Tyne",
     description:
-      "Get a spare car key cut and programmed on-site in Newcastle & the North East. A cheap backup that avoids an expensive lost-key call-out later.",
+      "Get a spare car key cut and programmed on-site in Newcastle upon Tyne & the North East. A cheap backup that avoids an expensive lost-key call-out later.",
   },
 };
 
@@ -104,10 +104,10 @@ export default function SpareKeysPage() {
         data={[
           serviceJsonLd(
             "/services/auto-locksmith/spare-keys",
-            "Spare Car Keys Newcastle",
+            "Spare Car Keys Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/auto-locksmith/spare-keys", "Spare Car Keys Newcastle"),
+          breadcrumbJsonLd("/services/auto-locksmith/spare-keys", "Spare Car Keys Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

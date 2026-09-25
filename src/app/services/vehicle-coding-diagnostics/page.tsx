@@ -13,7 +13,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Vehicle Coding & Diagnostics Newcastle | Access Granted",
+  title: "Vehicle Coding Newcastle upon Tyne | Access Granted",
   description:
     "Mobile vehicle coding and diagnostics in Newcastle & the North East: fault codes, ECU and gearbox coding, module programming and Apple CarPlay activation.",
   alternates: { canonical: "/services/vehicle-coding-diagnostics" },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "/services/vehicle-coding-diagnostics",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Vehicle Coding & Diagnostics Newcastle",
+    title: "Vehicle Coding Newcastle upon Tyne",
     description:
       "Mobile vehicle coding and diagnostics in Newcastle & the North East: fault codes, ECU and gearbox coding, module programming and Apple CarPlay activation.",
   },
@@ -105,10 +105,10 @@ export default function VehicleCodingDiagnosticsPage() {
         data={[
           serviceJsonLd(
             "/services/vehicle-coding-diagnostics",
-            "Vehicle Coding & Diagnostics Newcastle & the North East",
+            "Vehicle Coding Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/vehicle-coding-diagnostics", "Vehicle Coding & Diagnostics Newcastle & the North East"),
+          breadcrumbJsonLd("/services/vehicle-coding-diagnostics", "Vehicle Coding Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

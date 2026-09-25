@@ -12,18 +12,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Ghost Immobiliser Installation Newcastle | Access Granted",
+  title: "Ghost Immobiliser Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile Ghost immobiliser installation in Newcastle & the North East. Stop key cloning and theft with a PIN-based immobiliser fitted at your location.",
+    "Mobile Ghost immobiliser installation in Newcastle upon Tyne & the North East. Stop key cloning and theft with a PIN-based immobiliser fitted at your location.",
   alternates: { canonical: "/services/ghost-immobiliser" },
   openGraph: {
     type: "website",
     url: "/services/ghost-immobiliser",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Ghost Immobiliser Installation Newcastle",
+    title: "Ghost Immobiliser Newcastle upon Tyne",
     description:
-      "Mobile Ghost immobiliser installation in Newcastle & the North East. Stop key cloning and theft with a PIN-based immobiliser fitted at your location.",
+      "Mobile Ghost immobiliser installation in Newcastle upon Tyne & the North East. Stop key cloning and theft with a PIN-based immobiliser fitted at your location.",
   },
 };
 
@@ -104,10 +104,10 @@ export default function GhostImmobiliserPage() {
         data={[
           serviceJsonLd(
             "/services/ghost-immobiliser",
-            "Ghost Immobiliser Installation Newcastle",
+            "Ghost Immobiliser Installation Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/ghost-immobiliser", "Ghost Immobiliser Installation Newcastle"),
+          breadcrumbJsonLd("/services/ghost-immobiliser", "Ghost Immobiliser Installation Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

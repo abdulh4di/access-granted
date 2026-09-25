@@ -12,7 +12,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Car Ignition Repair & Replacement Newcastle | Access Granted",
+  title: "Car Ignition Repair Newcastle upon Tyne | Access Granted",
   description:
     "Key won't turn or ignition jammed? We diagnose and repair or replace faulty ignition barrels on-site across Newcastle & the North East. Call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith/ignition-repair" },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "/services/auto-locksmith/ignition-repair",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Car Ignition Repair & Replacement Newcastle",
+    title: "Car Ignition Repair Newcastle upon Tyne",
     description:
       "Key won't turn or ignition jammed? We diagnose and repair or replace faulty ignition barrels on-site across Newcastle & the North East. Call 07777 474195.",
   },
@@ -104,10 +104,10 @@ export default function IgnitionRepairPage() {
         data={[
           serviceJsonLd(
             "/services/auto-locksmith/ignition-repair",
-            "Ignition Repair Newcastle",
+            "Ignition Repair Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/auto-locksmith/ignition-repair", "Ignition Repair Newcastle"),
+          breadcrumbJsonLd("/services/auto-locksmith/ignition-repair", "Ignition Repair Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

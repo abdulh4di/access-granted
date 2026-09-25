@@ -12,9 +12,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Emergency Home Lockouts Newcastle 24/7 | Access Granted",
+  title: "Emergency Home Lockouts Newcastle upon Tyne | Access Granted",
   description:
-    "Locked out of your home in Newcastle & the North East? We reach you fast and get you back inside without unnecessary damage. Call 07777 474195.",
+    "Locked out of your home in Newcastle upon Tyne & the North East? We reach you fast and get you back inside without unnecessary damage. Call 07777 474195.",
   alternates: {
     canonical: "/services/residential-locksmith/emergency-home-lockouts",
   },
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     url: "/services/residential-locksmith/emergency-home-lockouts",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Emergency Home Lockouts Newcastle 24/7",
+    title: "Emergency Home Lockouts Newcastle upon Tyne",
     description:
-      "Locked out of your home in Newcastle & the North East? We reach you fast and get you back inside without unnecessary damage. Call 07777 474195.",
+      "Locked out of your home in Newcastle upon Tyne & the North East? We reach you fast and get you back inside without unnecessary damage. Call 07777 474195.",
   },
 };
 
@@ -106,10 +106,10 @@ export default function EmergencyHomeLockoutsPage() {
         data={[
           serviceJsonLd(
             "/services/residential-locksmith/emergency-home-lockouts",
-            "Emergency Home Lockouts Newcastle",
+            "Emergency Home Lockouts Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/residential-locksmith/emergency-home-lockouts", "Emergency Home Lockouts Newcastle"),
+          breadcrumbJsonLd("/services/residential-locksmith/emergency-home-lockouts", "Emergency Home Lockouts Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

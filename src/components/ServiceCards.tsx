@@ -17,6 +17,12 @@ const DEFAULT_SERVICES: ServiceCard[] = [
     desc: "Lost your car keys? We provide replacement keys and programming for many vehicle makes and models.",
   },
   {
+    title: "Car Key Replacement",
+    href: "/services/auto-locksmith/car-key-replacement",
+    image: "/assets/images/keycutting.jpg",
+    desc: "Replacement car keys cut and programmed on-site for all makes and models, whether lost, stolen, broken or worn.",
+  },
+  {
     title: "Spare Car Keys",
     href: "/services/auto-locksmith/spare-keys",
     image: "/assets/images/service-spare-car-keys.png",

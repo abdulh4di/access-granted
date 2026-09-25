@@ -12,9 +12,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Apple CarPlay Activation Newcastle | Access Granted",
+  title: "Apple CarPlay Activation Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile Apple CarPlay activation and retrofit coding across Newcastle & the North East. Unlock CarPlay and hidden features on compatible vehicles.",
+    "Mobile Apple CarPlay activation and retrofit coding across Newcastle upon Tyne & the North East. Unlock CarPlay and hidden features on compatible vehicles.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/apple-carplay-activation",
   },
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     url: "/services/vehicle-coding-diagnostics/apple-carplay-activation",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Apple CarPlay Activation Newcastle",
+    title: "Apple CarPlay Activation Newcastle upon Tyne",
     description:
-      "Mobile Apple CarPlay activation and retrofit coding across Newcastle & the North East. Unlock CarPlay and hidden features on compatible vehicles.",
+      "Mobile Apple CarPlay activation and retrofit coding across Newcastle upon Tyne & the North East. Unlock CarPlay and hidden features on compatible vehicles.",
   },
 };
 
@@ -106,10 +106,10 @@ export default function AppleCarPlayActivationPage() {
         data={[
           serviceJsonLd(
             "/services/vehicle-coding-diagnostics/apple-carplay-activation",
-            "Apple CarPlay Activation Newcastle",
+            "Apple CarPlay Activation Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/apple-carplay-activation", "Apple CarPlay Activation Newcastle"),
+          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/apple-carplay-activation", "Apple CarPlay Activation Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

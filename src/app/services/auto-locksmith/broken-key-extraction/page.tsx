@@ -12,18 +12,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Broken Car Key Extraction Newcastle | Access Granted",
+  title: "Broken Key Extraction Newcastle upon Tyne | Access Granted",
   description:
-    "Key snapped in the door, boot or ignition? We remove the broken piece and cut a new key on-site across Newcastle & the North East. Call 07777 474195.",
+    "Key snapped in the door, boot or ignition? We remove the broken piece and cut a new key on-site across Newcastle upon Tyne & the North East. Call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith/broken-key-extraction" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith/broken-key-extraction",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Broken Car Key Extraction Newcastle",
+    title: "Broken Key Extraction Newcastle upon Tyne",
     description:
-      "Key snapped in the door, boot or ignition? We remove the broken piece and cut a new key on-site across Newcastle & the North East. Call 07777 474195.",
+      "Key snapped in the door, boot or ignition? We remove the broken piece and cut a new key on-site across Newcastle upon Tyne & the North East. Call 07777 474195.",
   },
 };
 
@@ -104,10 +104,10 @@ export default function BrokenKeyExtractionPage() {
         data={[
           serviceJsonLd(
             "/services/auto-locksmith/broken-key-extraction",
-            "Broken Key Extraction Newcastle",
+            "Broken Key Extraction Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/auto-locksmith/broken-key-extraction", "Broken Key Extraction Newcastle"),
+          breadcrumbJsonLd("/services/auto-locksmith/broken-key-extraction", "Broken Key Extraction Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

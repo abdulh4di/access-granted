@@ -12,7 +12,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "VAG Specialist Coding Newcastle | Access Granted",
+  title: "VAG Coding Specialist Newcastle upon Tyne | Access Granted",
   description:
     "Mobile VAG specialist coding for Audi, Volkswagen, SEAT and Škoda across Newcastle & the North East: coding, retrofits and troubleshooting. Call 07777 474195.",
   alternates: { canonical: "/services/vag-specialist" },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "/services/vag-specialist",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "VAG Specialist Coding Newcastle",
+    title: "VAG Coding Specialist Newcastle upon Tyne",
     description:
       "Mobile VAG specialist coding for Audi, Volkswagen, SEAT and Škoda across Newcastle & the North East: coding, retrofits and troubleshooting. Call 07777 474195.",
   },
@@ -118,10 +118,10 @@ export default function VagSpecialistPage() {
         data={[
           serviceJsonLd(
             "/services/vag-specialist",
-            "VAG Specialist Services Newcastle",
+            "VAG Specialist Coding Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/vag-specialist", "VAG Specialist Services Newcastle"),
+          breadcrumbJsonLd("/services/vag-specialist", "VAG Specialist Coding Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

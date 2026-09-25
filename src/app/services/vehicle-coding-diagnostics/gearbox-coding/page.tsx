@@ -12,7 +12,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Gearbox (TCU) Coding Newcastle | Access Granted",
+  title: "Gearbox Coding Newcastle upon Tyne | Access Granted",
   description:
     "Mobile gearbox (transmission) coding and adaptation across Newcastle & the North East. We code TCUs for smooth, correct gear changes. Call 07777 474195.",
   alternates: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "/services/vehicle-coding-diagnostics/gearbox-coding",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Gearbox (TCU) Coding Newcastle",
+    title: "Gearbox Coding Newcastle upon Tyne",
     description:
       "Mobile gearbox (transmission) coding and adaptation across Newcastle & the North East. We code TCUs for smooth, correct gear changes. Call 07777 474195.",
   },
@@ -106,10 +106,10 @@ export default function GearboxCodingPage() {
         data={[
           serviceJsonLd(
             "/services/vehicle-coding-diagnostics/gearbox-coding",
-            "Gearbox Coding Newcastle",
+            "Gearbox Coding Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/gearbox-coding", "Gearbox Coding Newcastle"),
+          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/gearbox-coding", "Gearbox Coding Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

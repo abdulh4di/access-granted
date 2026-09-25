@@ -13,18 +13,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Home & Residential Locksmith Newcastle | Access Granted",
+  title: "Home Locksmith Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile home locksmith in Newcastle & the North East: emergency lockouts, lock repairs, lock replacements and key cutting. 24/7, call 07777 474195.",
+    "Mobile home locksmith in Newcastle upon Tyne & the North East: emergency lockouts, lock repairs, lock replacements and key cutting. 24/7, call 07777 474195.",
   alternates: { canonical: "/services/residential-locksmith" },
   openGraph: {
     type: "website",
     url: "/services/residential-locksmith",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Home & Residential Locksmith Newcastle",
+    title: "Home Locksmith Newcastle upon Tyne",
     description:
-      "Mobile home locksmith in Newcastle & the North East: emergency lockouts, lock repairs, lock replacements and key cutting. 24/7, call 07777 474195.",
+      "Mobile home locksmith in Newcastle upon Tyne & the North East: emergency lockouts, lock repairs, lock replacements and key cutting. 24/7, call 07777 474195.",
   },
 };
 
@@ -93,10 +93,10 @@ export default function ResidentialLocksmithPage() {
         data={[
           serviceJsonLd(
             "/services/residential-locksmith",
-            "Residential Locksmith Newcastle & the North East",
+            "Home Locksmith Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/residential-locksmith", "Residential Locksmith Newcastle & the North East"),
+          breadcrumbJsonLd("/services/residential-locksmith", "Home Locksmith Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

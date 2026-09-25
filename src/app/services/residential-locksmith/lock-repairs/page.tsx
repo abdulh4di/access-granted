@@ -12,7 +12,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Mobile Door Lock Repairs Newcastle | Access Granted",
+  title: "Door Lock Repairs Newcastle upon Tyne | Access Granted",
   description:
     "Sticking, seized or faulty door lock? We repair it on-site across Newcastle & the North East so it works smoothly and securely again. Call 07777 474195.",
   alternates: { canonical: "/services/residential-locksmith/lock-repairs" },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "/services/residential-locksmith/lock-repairs",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Mobile Door Lock Repairs Newcastle",
+    title: "Door Lock Repairs Newcastle upon Tyne",
     description:
       "Sticking, seized or faulty door lock? We repair it on-site across Newcastle & the North East so it works smoothly and securely again. Call 07777 474195.",
   },
@@ -104,10 +104,10 @@ export default function LockRepairsPage() {
         data={[
           serviceJsonLd(
             "/services/residential-locksmith/lock-repairs",
-            "Lock Repairs Newcastle",
+            "Lock Repairs Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/residential-locksmith/lock-repairs", "Lock Repairs Newcastle"),
+          breadcrumbJsonLd("/services/residential-locksmith/lock-repairs", "Lock Repairs Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

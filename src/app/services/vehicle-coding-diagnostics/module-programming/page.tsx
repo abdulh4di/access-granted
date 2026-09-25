@@ -12,9 +12,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Module Programming & Coding Newcastle | Access Granted",
+  title: "Module Programming Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile control module programming and coding across Newcastle & the North East. We code added, replaced or retrofitted modules to suit your vehicle.",
+    "Mobile control module programming and coding across Newcastle upon Tyne & the North East. We code added, replaced or retrofitted modules to suit your vehicle.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/module-programming",
   },
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     url: "/services/vehicle-coding-diagnostics/module-programming",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Module Programming & Coding Newcastle",
+    title: "Module Programming Newcastle upon Tyne",
     description:
-      "Mobile control module programming and coding across Newcastle & the North East. We code added, replaced or retrofitted modules to suit your vehicle.",
+      "Mobile control module programming and coding across Newcastle upon Tyne & the North East. We code added, replaced or retrofitted modules to suit your vehicle.",
   },
 };
 
@@ -106,10 +106,10 @@ export default function ModuleProgrammingPage() {
         data={[
           serviceJsonLd(
             "/services/vehicle-coding-diagnostics/module-programming",
-            "Module Programming Newcastle",
+            "Module Programming Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/module-programming", "Module Programming Newcastle"),
+          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/module-programming", "Module Programming Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

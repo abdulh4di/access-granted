@@ -12,9 +12,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Fault Code Reading & Clearing Newcastle | Access Granted",
+  title: "Fault Code Reading Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile fault code reading and clearing across Newcastle & the North East. We read, interpret and clear trouble codes so you know exactly what to fix.",
+    "Mobile fault code reading and clearing across Newcastle upon Tyne & the North East. We read, interpret and clear trouble codes so you know exactly what to fix.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/fault-code-reading",
   },
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     url: "/services/vehicle-coding-diagnostics/fault-code-reading",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Fault Code Reading & Clearing Newcastle",
+    title: "Fault Code Reading Newcastle upon Tyne",
     description:
-      "Mobile fault code reading and clearing across Newcastle & the North East. We read, interpret and clear trouble codes so you know exactly what to fix.",
+      "Mobile fault code reading and clearing across Newcastle upon Tyne & the North East. We read, interpret and clear trouble codes so you know exactly what to fix.",
   },
 };
 
@@ -106,10 +106,10 @@ export default function FaultCodeReadingPage() {
         data={[
           serviceJsonLd(
             "/services/vehicle-coding-diagnostics/fault-code-reading",
-            "Fault Code Reading & Clearing Newcastle",
+            "Fault Code Reading & Clearing Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/fault-code-reading", "Fault Code Reading & Clearing Newcastle"),
+          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/fault-code-reading", "Fault Code Reading & Clearing Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

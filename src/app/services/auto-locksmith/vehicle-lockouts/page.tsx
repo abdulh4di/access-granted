@@ -12,7 +12,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Vehicle Lockouts Newcastle, 24/7 Car Entry | Access Granted",
+  title: "Vehicle Lockouts Newcastle upon Tyne | Access Granted",
   description:
     "Locked out of your car in Newcastle? We reach you fast and open your vehicle without damage, whether keys are locked in or lost. Call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith/vehicle-lockouts" },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "/services/auto-locksmith/vehicle-lockouts",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Vehicle Lockouts Newcastle, 24/7 Car Entry",
+    title: "Vehicle Lockouts Newcastle upon Tyne",
     description:
       "Locked out of your car in Newcastle? We reach you fast and open your vehicle without damage, whether keys are locked in or lost. Call 07777 474195.",
   },
@@ -104,10 +104,10 @@ export default function VehicleLockoutsPage() {
         data={[
           serviceJsonLd(
             "/services/auto-locksmith/vehicle-lockouts",
-            "Vehicle Lockouts Newcastle",
+            "Vehicle Lockouts Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/auto-locksmith/vehicle-lockouts", "Vehicle Lockouts Newcastle"),
+          breadcrumbJsonLd("/services/auto-locksmith/vehicle-lockouts", "Vehicle Lockouts Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

@@ -12,18 +12,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Car Key Programming & Smart Keys Newcastle | Access Granted",
+  title: "Car Key Programming Newcastle upon Tyne | Access Granted",
   description:
-    "Transponder keys, remote fobs and smart keys programmed to your car on-site across Newcastle & the North East, often cheaper than a main dealer.",
+    "Transponder keys, remote fobs and smart keys programmed to your car on-site across Newcastle upon Tyne & the North East, often cheaper than a main dealer.",
   alternates: { canonical: "/services/auto-locksmith/key-programming" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith/key-programming",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Car Key Programming & Smart Keys Newcastle",
+    title: "Car Key Programming Newcastle upon Tyne",
     description:
-      "Transponder keys, remote fobs and smart keys programmed to your car on-site across Newcastle & the North East, often cheaper than a main dealer.",
+      "Transponder keys, remote fobs and smart keys programmed to your car on-site across Newcastle upon Tyne & the North East, often cheaper than a main dealer.",
   },
 };
 
@@ -104,10 +104,10 @@ export default function KeyProgrammingPage() {
         data={[
           serviceJsonLd(
             "/services/auto-locksmith/key-programming",
-            "Key Programming & Smart Keys Newcastle",
+            "Key Programming & Smart Keys Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/auto-locksmith/key-programming", "Key Programming & Smart Keys Newcastle"),
+          breadcrumbJsonLd("/services/auto-locksmith/key-programming", "Key Programming & Smart Keys Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

@@ -12,11 +12,12 @@ const CODING = "/services/vehicle-coding-diagnostics";
 export const RELATED: Record<string, [string, string, string]> = {
   // Auto locksmith
   [AUTO]: ["/services/ghost-immobiliser", CODING, RESI],
-  [`${AUTO}/lost-car-keys`]: [`${AUTO}/spare-keys`, `${AUTO}/key-programming`, `${AUTO}/vehicle-lockouts`],
-  [`${AUTO}/spare-keys`]: [`${AUTO}/lost-car-keys`, `${AUTO}/key-programming`, `${RESI}/household-key-cutting`],
+  [`${AUTO}/car-key-replacement`]: [`${AUTO}/lost-car-keys`, `${AUTO}/spare-keys`, `${AUTO}/key-programming`],
+  [`${AUTO}/lost-car-keys`]: [`${AUTO}/car-key-replacement`, `${AUTO}/key-programming`, `${AUTO}/spare-keys`],
+  [`${AUTO}/spare-keys`]: [`${AUTO}/lost-car-keys`, `${AUTO}/car-key-replacement`, `${RESI}/household-key-cutting`],
   [`${AUTO}/vehicle-lockouts`]: [`${AUTO}/lost-car-keys`, `${AUTO}/broken-key-extraction`, `${RESI}/emergency-home-lockouts`],
-  [`${AUTO}/key-programming`]: [`${AUTO}/lost-car-keys`, `${AUTO}/spare-keys`, `${AUTO}/ignition-repair`],
-  [`${AUTO}/broken-key-extraction`]: [`${AUTO}/ignition-repair`, `${AUTO}/lost-car-keys`, `${AUTO}/vehicle-lockouts`],
+  [`${AUTO}/key-programming`]: [`${AUTO}/lost-car-keys`, `${AUTO}/car-key-replacement`, `${AUTO}/ignition-repair`],
+  [`${AUTO}/broken-key-extraction`]: [`${AUTO}/ignition-repair`, `${AUTO}/car-key-replacement`, `${AUTO}/vehicle-lockouts`],
   [`${AUTO}/ignition-repair`]: [`${AUTO}/broken-key-extraction`, `${AUTO}/key-programming`, `${AUTO}/lost-car-keys`],
   // Home locksmith
   [RESI]: [AUTO, "/services/ghost-immobiliser", CODING],
@@ -34,7 +35,7 @@ export const RELATED: Record<string, [string, string, string]> = {
   [`${CODING}/apple-carplay-activation`]: [`${CODING}/module-programming`, "/services/vag-specialist", `${CODING}/ecu-coding`],
   // Standalone
   "/services/vag-specialist": [`${CODING}/ecu-coding`, `${CODING}/apple-carplay-activation`, `${AUTO}/key-programming`],
-  "/services/ghost-immobiliser": [`${AUTO}/key-programming`, `${AUTO}/lost-car-keys`, `${AUTO}/vehicle-lockouts`],
+  "/services/ghost-immobiliser": [`${AUTO}/key-programming`, `${AUTO}/car-key-replacement`, `${AUTO}/vehicle-lockouts`],
 };
 
 /** The hub a child page belongs to, or null for hubs and standalone pages. */

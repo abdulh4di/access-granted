@@ -12,9 +12,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Mobile Vehicle Diagnostics Newcastle | Access Granted",
+  title: "Vehicle Diagnostics Newcastle upon Tyne | Access Granted",
   description:
-    "Dealer-level mobile vehicle diagnostics across Newcastle & the North East. We pinpoint electrical, engine and system faults quickly and accurately.",
+    "Dealer-level mobile vehicle diagnostics across Newcastle upon Tyne & the North East. We pinpoint electrical, engine and system faults quickly and accurately.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/advanced-diagnostics",
   },
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     url: "/services/vehicle-coding-diagnostics/advanced-diagnostics",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Mobile Vehicle Diagnostics Newcastle",
+    title: "Vehicle Diagnostics Newcastle upon Tyne",
     description:
-      "Dealer-level mobile vehicle diagnostics across Newcastle & the North East. We pinpoint electrical, engine and system faults quickly and accurately.",
+      "Dealer-level mobile vehicle diagnostics across Newcastle upon Tyne & the North East. We pinpoint electrical, engine and system faults quickly and accurately.",
   },
 };
 
@@ -106,10 +106,10 @@ export default function AdvancedDiagnosticsPage() {
         data={[
           serviceJsonLd(
             "/services/vehicle-coding-diagnostics/advanced-diagnostics",
-            "Advanced Vehicle Diagnostics Newcastle",
+            "Advanced Vehicle Diagnostics Newcastle upon Tyne",
             String(metadata.description),
           ),
-          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/advanced-diagnostics", "Advanced Vehicle Diagnostics Newcastle"),
+          breadcrumbJsonLd("/services/vehicle-coding-diagnostics/advanced-diagnostics", "Advanced Vehicle Diagnostics Newcastle upon Tyne"),
         ]}
       />
       <Navbar />

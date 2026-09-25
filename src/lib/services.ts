@@ -34,6 +34,11 @@ export const SERVICES: Record<string, ServiceInfo> = {
     image: "/assets/images/ag-service-coding.webp",
     desc: "Audi, Volkswagen, SEAT and Škoda coding, retrofitting and troubleshooting.",
   },
+  "/services/auto-locksmith/car-key-replacement": {
+    title: "Car Key Replacement",
+    image: "/assets/images/keycutting.jpg",
+    desc: "Replacement car keys cut and programmed on-site for all makes and models, whether lost, stolen, broken or worn.",
+  },
   "/services/auto-locksmith/lost-car-keys": {
     title: "Lost Car Keys",
     image: "/assets/images/service-lost-car-keys.webp",

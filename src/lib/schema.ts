@@ -10,7 +10,6 @@ const PHONE = "+447777474195";
 const EMAIL = "help@accessgrantednortheast.co.uk";
 
 const SAME_AS = [
-  "https://www.facebook.com/AccessGrantedNortheast/",
   "https://www.instagram.com/accessgranted_northeast/",
   "https://www.tiktok.com/@accsessgranted_northeast",
   "https://www.google.com/maps?cid=7525167148975767354",

@@ -8,12 +8,6 @@ const SOCIALS = [
     external: true,
   },
   {
-    name: "Facebook",
-    href: "https://www.facebook.com/AccessGrantedNortheast/",
-    icon: "/assets/images/ag-social-facebook.svg",
-    external: true,
-  },
-  {
     name: "WhatsApp",
     href: "https://wa.me/447777474195",
     icon: "/assets/images/ag-social-whatsapp.svg",

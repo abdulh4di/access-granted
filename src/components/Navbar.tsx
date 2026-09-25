@@ -152,7 +152,7 @@ export default function Navbar() {
           data-nav-logo
         >
           <img
-            src="/assets/images/ag-logo-northeast.png"
+            src="/assets/images/ag-logo-northeast.webp"
             alt="Access Granted Northeast"
             width={310}
             height={56}

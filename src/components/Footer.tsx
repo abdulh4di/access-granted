@@ -41,7 +41,7 @@ export default function Footer() {
           <div className={styles.body}>
             <div className={styles.brand}>
               <img
-                src="/assets/images/ag-logo-northeast.png"
+                src="/assets/images/ag-logo-northeast.webp"
                 alt="Access Granted Northeast"
                 width={245}
                 height={44}

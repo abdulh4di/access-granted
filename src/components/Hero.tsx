@@ -37,6 +37,8 @@ export default function Hero() {
         <div className={styles.imageTile}>
           <img
             src="/assets/images/ag-hero.webp"
+            srcSet="/assets/images/ag-hero-640.webp 640w, /assets/images/ag-hero-900.webp 900w, /assets/images/ag-hero.webp 1200w"
+            sizes="(max-width: 767px) 440px, 1200px"
             alt="Access Granted auto locksmith service van"
             width={1200}
             height={600}

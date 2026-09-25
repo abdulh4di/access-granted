@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Car Key Programming Newcastle upon Tyne | Access Granted",
   description:
-    "Transponder keys, remote fobs and smart keys programmed on-site across Newcastle upon Tyne & the North East, often cheaper than a main dealer. Free call-out.",
+    "Car key programming, key fob repair and battery replacement on-site across Newcastle upon Tyne & the North East, often cheaper than a dealer. Free call-out.",
   alternates: { canonical: "/services/auto-locksmith/key-programming" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Car Key Programming Newcastle upon Tyne",
     description:
-      "Transponder keys, remote fobs and smart keys programmed on-site across Newcastle upon Tyne & the North East, often cheaper than a main dealer. Free call-out.",
+      "Car key programming, key fob repair and battery replacement on-site across Newcastle upon Tyne & the North East, often cheaper than a dealer. Free call-out.",
   },
 };
 
@@ -39,6 +39,21 @@ const STEPS = [
   {
     title: "Tested & Ready",
     desc: "We confirm locking, unlocking and starting all work before we leave.",
+  },
+];
+
+const KEY_FOB_STEPS = [
+  {
+    title: "Check the Fob",
+    desc: "We find out whether it is a flat battery, worn buttons or a fault with the fob itself.",
+  },
+  {
+    title: "Battery or Repair",
+    desc: "We fit a new battery or repair the fob, and re-sync it to your car if it needs it.",
+  },
+  {
+    title: "Replaced if Needed",
+    desc: "If a key fob cannot be repaired, we supply and program a replacement on-site.",
   },
 ];
 
@@ -89,6 +104,18 @@ const FAQS = [
   {
     q: "How long does programming take?",
     a: "Most jobs take around 20 to 45 minutes, depending on your vehicle’s make, model and security system.",
+  },
+  {
+    q: "Can you replace my car key battery?",
+    a: "Yes. If your remote has stopped locking or unlocking the car, a new battery is often the fix. We can replace it for you on-site.",
+  },
+  {
+    q: "Can you repair a broken key fob?",
+    a: "In many cases, yes. We repair key fobs with worn or unresponsive buttons and other faults. If a fob cannot be repaired, we can supply and program a replacement key fob.",
+  },
+  {
+    q: "Will my key need reprogramming after a battery change?",
+    a: "Usually not, as most keys keep their programming when the battery is changed. If yours needs re-syncing to the car, we can do that on-site.",
   },
   {
     q: "Which areas do you cover?",
@@ -142,6 +169,12 @@ export default function KeyProgrammingPage() {
             </>
           }
           steps={BENEFITS}
+        />
+        <LostKeysSteps
+          eyebrow="Key Fobs"
+          heading="Key Fob Repair & Battery Replacement"
+          subhead="Remote not working? It may only need a new battery or a repair"
+          steps={KEY_FOB_STEPS}
         />
         <ServiceFaq
           subhead="Answers to common questions about key programming — key types, keyless entry and timings."

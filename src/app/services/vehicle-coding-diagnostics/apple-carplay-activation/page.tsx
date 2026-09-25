@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Apple CarPlay Activation Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile Apple CarPlay activation and retrofit coding across Newcastle upon Tyne & the North East. Unlock CarPlay and hidden features on compatible vehicles.",
+    "Mobile Apple CarPlay activation and retrofit coding across Newcastle upon Tyne & the North East. Unlock CarPlay and hidden features. Free call-out.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/apple-carplay-activation",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Apple CarPlay Activation Newcastle upon Tyne",
     description:
-      "Mobile Apple CarPlay activation and retrofit coding across Newcastle upon Tyne & the North East. Unlock CarPlay and hidden features on compatible vehicles.",
+      "Mobile Apple CarPlay activation and retrofit coding across Newcastle upon Tyne & the North East. Unlock CarPlay and hidden features. Free call-out.",
   },
 };
 

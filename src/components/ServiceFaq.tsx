@@ -35,6 +35,13 @@ const DEFAULT_FAQS: FaqItem[] = [
   },
 ];
 
+// Shown on every service page, second in the list. Kept here rather than in each
+// page's own questions so the wording can never differ from page to page.
+const CALL_OUT_FAQ: FaqItem = {
+  q: "Do you charge a call-out fee?",
+  a: "No, our call-out is free. The price of the job depends on your vehicle or lock and what needs doing. Call or message us with the details and we will let you know what to expect.",
+};
+
 interface ServiceFaqProps {
   heading?: string;
   subhead?: string;
@@ -47,7 +54,10 @@ export default function ServiceFaq({
   items = DEFAULT_FAQS,
 }: ServiceFaqProps) {
   const [open, setOpen] = useState(0);
-  const FAQS = items;
+  // Insert the call-out question second, unless a page already asks it.
+  const FAQS = items.some((i) => /call-?out fee/i.test(i.q))
+    ? items
+    : [items[0], CALL_OUT_FAQ, ...items.slice(1)].filter(Boolean);
 
   return (
     <section className={styles.faq} id="faq">

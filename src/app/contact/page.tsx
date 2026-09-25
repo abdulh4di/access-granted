@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Contact a 24/7 Locksmith in Newcastle | Access Granted",
   description:
-    "Locked out or need a quote? Call or message Access Granted 24/7 for emergency car and home locksmith call-outs across Newcastle upon Tyne & the North East.",
+    "Locked out or need a quote? Call or message Access Granted 24/7. Free call-out for emergency car and home locksmith jobs across Newcastle & the North East.",
   alternates: { canonical: "/contact" },
   openGraph: {
     type: "website",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Contact a 24/7 Locksmith in Newcastle",
     description:
-      "Locked out or need a quote? Call or message Access Granted 24/7 for emergency car and home locksmith call-outs across Newcastle upon Tyne & the North East.",
+      "Locked out or need a quote? Call or message Access Granted 24/7. Free call-out for emergency car and home locksmith jobs across Newcastle & the North East.",
   },
 };
 

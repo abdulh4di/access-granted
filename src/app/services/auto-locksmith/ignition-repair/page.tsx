@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Car Ignition Repair Newcastle upon Tyne | Access Granted",
   description:
-    "Key won't turn or ignition jammed? We diagnose and repair or replace faulty ignition barrels on-site across Newcastle & the North East. Call 07777 474195.",
+    "Key won't turn or ignition jammed? We repair or replace faulty ignition barrels on-site across Newcastle & the North East. Free call-out, call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith/ignition-repair" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Car Ignition Repair Newcastle upon Tyne",
     description:
-      "Key won't turn or ignition jammed? We diagnose and repair or replace faulty ignition barrels on-site across Newcastle & the North East. Call 07777 474195.",
+      "Key won't turn or ignition jammed? We repair or replace faulty ignition barrels on-site across Newcastle & the North East. Free call-out, call 07777 474195.",
   },
 };
 

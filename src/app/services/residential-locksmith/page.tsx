@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Home Locksmith Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile home locksmith in Newcastle upon Tyne & the North East: emergency lockouts, lock repairs, lock replacements and key cutting. 24/7, call 07777 474195.",
+    "Mobile home locksmith in Newcastle upon Tyne & the North East: emergency lockouts, lock repairs, replacements and key cutting. Free call-out, call 07777 474195.",
   alternates: { canonical: "/services/residential-locksmith" },
   openGraph: {
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Home Locksmith Newcastle upon Tyne",
     description:
-      "Mobile home locksmith in Newcastle upon Tyne & the North East: emergency lockouts, lock repairs, lock replacements and key cutting. 24/7, call 07777 474195.",
+      "Mobile home locksmith in Newcastle upon Tyne & the North East: emergency lockouts, lock repairs, replacements and key cutting. Free call-out, call 07777 474195.",
   },
 };
 

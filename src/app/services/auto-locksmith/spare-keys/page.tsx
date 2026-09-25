@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Spare Car Keys Newcastle upon Tyne | Access Granted",
   description:
-    "Get a spare car key cut and programmed on-site in Newcastle upon Tyne & the North East. A cheap backup that avoids an expensive lost-key call-out later.",
+    "Get a spare car key cut and programmed on-site in Newcastle upon Tyne & the North East. Free call-out, and a cheap backup that saves a costly emergency later.",
   alternates: { canonical: "/services/auto-locksmith/spare-keys" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Spare Car Keys Newcastle upon Tyne",
     description:
-      "Get a spare car key cut and programmed on-site in Newcastle upon Tyne & the North East. A cheap backup that avoids an expensive lost-key call-out later.",
+      "Get a spare car key cut and programmed on-site in Newcastle upon Tyne & the North East. Free call-out, and a cheap backup that saves a costly emergency later.",
   },
 };
 

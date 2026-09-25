@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Door Lock Repairs Newcastle upon Tyne | Access Granted",
   description:
-    "Sticking, seized or faulty door lock? We repair it on-site across Newcastle & the North East so it works smoothly and securely again. Call 07777 474195.",
+    "Sticking, seized or faulty door lock? We repair it on-site across Newcastle & the North East so it works smoothly again. Free call-out, call 07777 474195.",
   alternates: { canonical: "/services/residential-locksmith/lock-repairs" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Door Lock Repairs Newcastle upon Tyne",
     description:
-      "Sticking, seized or faulty door lock? We repair it on-site across Newcastle & the North East so it works smoothly and securely again. Call 07777 474195.",
+      "Sticking, seized or faulty door lock? We repair it on-site across Newcastle & the North East so it works smoothly again. Free call-out, call 07777 474195.",
   },
 };
 

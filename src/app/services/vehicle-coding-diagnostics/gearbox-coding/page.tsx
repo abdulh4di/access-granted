@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Gearbox Coding Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile gearbox (transmission) coding and adaptation across Newcastle & the North East. We code TCUs for smooth, correct gear changes. Call 07777 474195.",
+    "Mobile gearbox (transmission) coding and adaptation across Newcastle & the North East. We code TCUs for smooth gear changes. Free call-out, call 07777 474195.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/gearbox-coding",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Gearbox Coding Newcastle upon Tyne",
     description:
-      "Mobile gearbox (transmission) coding and adaptation across Newcastle & the North East. We code TCUs for smooth, correct gear changes. Call 07777 474195.",
+      "Mobile gearbox (transmission) coding and adaptation across Newcastle & the North East. We code TCUs for smooth gear changes. Free call-out, call 07777 474195.",
   },
 };
 

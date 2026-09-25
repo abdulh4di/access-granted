@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Access Granted Northeast: Auto Locksmith Newcastle upon Tyne",
   description:
-    "24/7 mobile auto locksmith in Newcastle & the North East. Lost car keys, lockouts, key programming, vehicle coding and home locksmith. Call 07777 474195.",
+    "24/7 mobile auto locksmith in Newcastle & the North East. Lost car keys, lockouts, key programming, vehicle coding and home locksmith. Free call-out.",
   keywords: [
     "auto locksmith Newcastle",
     "car key replacement North East",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Auto Locksmith Newcastle upon Tyne",
     description:
-      "24/7 mobile auto locksmith in Newcastle & the North East. Lost car keys, lockouts, key programming, vehicle coding and home locksmith. Call 07777 474195.",
+      "24/7 mobile auto locksmith in Newcastle & the North East. Lost car keys, lockouts, key programming, vehicle coding and home locksmith. Free call-out.",
   },
   twitter: { card: "summary_large_image", images: [OG_IMAGE.url] },
   icons: { icon: "/favicon.svg" },

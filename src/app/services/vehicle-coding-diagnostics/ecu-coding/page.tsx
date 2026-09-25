@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "ECU Coding Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile ECU coding and reprogramming across Newcastle upon Tyne & the North East. We code new or replacement engine control units and adapt them to your vehicle.",
+    "Mobile ECU coding and reprogramming across Newcastle upon Tyne & the North East. We code new or replacement engine control units. Free call-out.",
   alternates: { canonical: "/services/vehicle-coding-diagnostics/ecu-coding" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "ECU Coding Newcastle upon Tyne",
     description:
-      "Mobile ECU coding and reprogramming across Newcastle upon Tyne & the North East. We code new or replacement engine control units and adapt them to your vehicle.",
+      "Mobile ECU coding and reprogramming across Newcastle upon Tyne & the North East. We code new or replacement engine control units. Free call-out.",
   },
 };
 

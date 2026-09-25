@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Module Programming Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile control module programming and coding across Newcastle upon Tyne & the North East. We code added, replaced or retrofitted modules to suit your vehicle.",
+    "Mobile control module programming and coding across Newcastle upon Tyne & the North East. We code added, replaced or retrofitted modules. Free call-out.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/module-programming",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Module Programming Newcastle upon Tyne",
     description:
-      "Mobile control module programming and coding across Newcastle upon Tyne & the North East. We code added, replaced or retrofitted modules to suit your vehicle.",
+      "Mobile control module programming and coding across Newcastle upon Tyne & the North East. We code added, replaced or retrofitted modules. Free call-out.",
   },
 };
 

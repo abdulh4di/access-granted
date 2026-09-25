@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "VAG Coding Specialist Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile VAG specialist coding for Audi, Volkswagen, SEAT and Škoda across Newcastle & the North East: coding, retrofits and troubleshooting. Call 07777 474195.",
+    "Mobile VAG specialist coding for Audi, VW, SEAT and Škoda across Newcastle & the North East: coding, retrofits and fixes. Free call-out, call 07777 474195.",
   alternates: { canonical: "/services/vag-specialist" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "VAG Coding Specialist Newcastle upon Tyne",
     description:
-      "Mobile VAG specialist coding for Audi, Volkswagen, SEAT and Škoda across Newcastle & the North East: coding, retrofits and troubleshooting. Call 07777 474195.",
+      "Mobile VAG specialist coding for Audi, VW, SEAT and Škoda across Newcastle & the North East: coding, retrofits and fixes. Free call-out, call 07777 474195.",
   },
 };
 

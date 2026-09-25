@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Vehicle Lockouts Newcastle upon Tyne | Access Granted",
   description:
-    "Locked out of your car in Newcastle? We reach you fast and open your vehicle without damage, whether keys are locked in or lost. Call 07777 474195.",
+    "Locked out of your car in Newcastle? We reach you fast and open your vehicle without damage, keys locked in or lost. Free call-out, call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith/vehicle-lockouts" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Vehicle Lockouts Newcastle upon Tyne",
     description:
-      "Locked out of your car in Newcastle? We reach you fast and open your vehicle without damage, whether keys are locked in or lost. Call 07777 474195.",
+      "Locked out of your car in Newcastle? We reach you fast and open your vehicle without damage, keys locked in or lost. Free call-out, call 07777 474195.",
   },
 };
 

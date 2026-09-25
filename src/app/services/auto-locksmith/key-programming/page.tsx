@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Car Key Programming Newcastle upon Tyne | Access Granted",
   description:
-    "Transponder keys, remote fobs and smart keys programmed to your car on-site across Newcastle upon Tyne & the North East, often cheaper than a main dealer.",
+    "Transponder keys, remote fobs and smart keys programmed on-site across Newcastle upon Tyne & the North East, often cheaper than a main dealer. Free call-out.",
   alternates: { canonical: "/services/auto-locksmith/key-programming" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Car Key Programming Newcastle upon Tyne",
     description:
-      "Transponder keys, remote fobs and smart keys programmed to your car on-site across Newcastle upon Tyne & the North East, often cheaper than a main dealer.",
+      "Transponder keys, remote fobs and smart keys programmed on-site across Newcastle upon Tyne & the North East, often cheaper than a main dealer. Free call-out.",
   },
 };
 

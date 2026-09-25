@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Auto Locksmith Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile auto locksmith in Newcastle & the North East: lost car keys, lockouts, spare keys, key programming and ignition repair. 24/7, call 07777 474195.",
+    "Mobile auto locksmith in Newcastle & the North East: lost car keys, lockouts, spare keys, key programming and ignition repair. Free call-out, 24/7.",
   alternates: { canonical: "/services/auto-locksmith" },
   openGraph: {
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Auto Locksmith Newcastle upon Tyne",
     description:
-      "Mobile auto locksmith in Newcastle & the North East: lost car keys, lockouts, spare keys, key programming and ignition repair. 24/7, call 07777 474195.",
+      "Mobile auto locksmith in Newcastle & the North East: lost car keys, lockouts, spare keys, key programming and ignition repair. Free call-out, 24/7.",
   },
 };
 

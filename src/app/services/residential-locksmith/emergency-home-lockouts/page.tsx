@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Emergency Home Lockouts Newcastle upon Tyne | Access Granted",
   description:
-    "Locked out of your home in Newcastle upon Tyne & the North East? We reach you fast and get you back inside without unnecessary damage. Call 07777 474195.",
+    "Locked out of your home in Newcastle upon Tyne & the North East? We reach you fast and get you back inside without damage. Free call-out, call 07777 474195.",
   alternates: {
     canonical: "/services/residential-locksmith/emergency-home-lockouts",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Emergency Home Lockouts Newcastle upon Tyne",
     description:
-      "Locked out of your home in Newcastle upon Tyne & the North East? We reach you fast and get you back inside without unnecessary damage. Call 07777 474195.",
+      "Locked out of your home in Newcastle upon Tyne & the North East? We reach you fast and get you back inside without damage. Free call-out, call 07777 474195.",
   },
 };
 

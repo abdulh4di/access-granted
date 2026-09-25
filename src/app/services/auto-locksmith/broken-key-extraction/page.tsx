@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Broken Key Extraction Newcastle upon Tyne | Access Granted",
   description:
-    "Key snapped in the door, boot or ignition? We remove the broken piece and cut a new key on-site across Newcastle upon Tyne & the North East. Call 07777 474195.",
+    "Key snapped in a door, boot or ignition? We remove the broken piece and cut a new key on-site across Newcastle & the North East. Free call-out.",
   alternates: { canonical: "/services/auto-locksmith/broken-key-extraction" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Broken Key Extraction Newcastle upon Tyne",
     description:
-      "Key snapped in the door, boot or ignition? We remove the broken piece and cut a new key on-site across Newcastle upon Tyne & the North East. Call 07777 474195.",
+      "Key snapped in a door, boot or ignition? We remove the broken piece and cut a new key on-site across Newcastle & the North East. Free call-out.",
   },
 };
 

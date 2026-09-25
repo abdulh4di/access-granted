@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Vehicle Diagnostics Newcastle upon Tyne | Access Granted",
   description:
-    "Dealer-level mobile vehicle diagnostics across Newcastle upon Tyne & the North East. We pinpoint electrical, engine and system faults quickly and accurately.",
+    "Dealer-level mobile vehicle diagnostics across Newcastle upon Tyne & the North East. We pinpoint electrical, engine and system faults accurately. Free call-out.",
   alternates: {
     canonical: "/services/vehicle-coding-diagnostics/advanced-diagnostics",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Vehicle Diagnostics Newcastle upon Tyne",
     description:
-      "Dealer-level mobile vehicle diagnostics across Newcastle upon Tyne & the North East. We pinpoint electrical, engine and system faults quickly and accurately.",
+      "Dealer-level mobile vehicle diagnostics across Newcastle upon Tyne & the North East. We pinpoint electrical, engine and system faults accurately. Free call-out.",
   },
 };
 

@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Lock Replacement Newcastle upon Tyne | Access Granted",
   description:
-    "New locks supplied and fitted across Newcastle upon Tyne & the North East, including anti-snap cylinders and British Standard locks. Call 07777 474195.",
+    "New locks supplied and fitted across Newcastle upon Tyne & the North East, including anti-snap cylinders and British Standard locks. Free call-out.",
   alternates: { canonical: "/services/residential-locksmith/lock-replacements" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Lock Replacement Newcastle upon Tyne",
     description:
-      "New locks supplied and fitted across Newcastle upon Tyne & the North East, including anti-snap cylinders and British Standard locks. Call 07777 474195.",
+      "New locks supplied and fitted across Newcastle upon Tyne & the North East, including anti-snap cylinders and British Standard locks. Free call-out.",
   },
 };
 

@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "House Key Cutting Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile house key cutting across Newcastle upon Tyne & the North East: accurate spare and replacement keys cut on-site for family, tenants and lodgers.",
+    "Mobile house key cutting across Newcastle upon Tyne & the North East: accurate spare and replacement keys cut on-site for family and tenants. Free call-out.",
   alternates: {
     canonical: "/services/residential-locksmith/household-key-cutting",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "House Key Cutting Newcastle upon Tyne",
     description:
-      "Mobile house key cutting across Newcastle upon Tyne & the North East: accurate spare and replacement keys cut on-site for family, tenants and lodgers.",
+      "Mobile house key cutting across Newcastle upon Tyne & the North East: accurate spare and replacement keys cut on-site for family and tenants. Free call-out.",
   },
 };
 

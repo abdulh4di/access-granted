@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Vehicle Coding Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile vehicle coding and diagnostics in Newcastle & the North East: fault codes, ECU and gearbox coding, module programming and Apple CarPlay activation.",
+    "Mobile vehicle coding and diagnostics in Newcastle & the North East: fault codes, ECU and gearbox coding, module programming, CarPlay. Free call-out.",
   alternates: { canonical: "/services/vehicle-coding-diagnostics" },
   openGraph: {
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Vehicle Coding Newcastle upon Tyne",
     description:
-      "Mobile vehicle coding and diagnostics in Newcastle & the North East: fault codes, ECU and gearbox coding, module programming and Apple CarPlay activation.",
+      "Mobile vehicle coding and diagnostics in Newcastle & the North East: fault codes, ECU and gearbox coding, module programming, CarPlay. Free call-out.",
   },
 };
 

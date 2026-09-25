@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Ghost Immobiliser Newcastle upon Tyne | Access Granted",
   description:
-    "Mobile Ghost immobiliser installation in Newcastle upon Tyne & the North East. Stop key cloning and theft with a PIN-based immobiliser fitted at your location.",
+    "Mobile Ghost immobiliser fitting across Newcastle upon Tyne & the North East. Stop key cloning and theft with a PIN immobiliser fitted on-site. Free call-out.",
   alternates: { canonical: "/services/ghost-immobiliser" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Ghost Immobiliser Newcastle upon Tyne",
     description:
-      "Mobile Ghost immobiliser installation in Newcastle upon Tyne & the North East. Stop key cloning and theft with a PIN-based immobiliser fitted at your location.",
+      "Mobile Ghost immobiliser fitting across Newcastle upon Tyne & the North East. Stop key cloning and theft with a PIN immobiliser fitted on-site. Free call-out.",
   },
 };
 

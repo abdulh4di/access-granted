@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Car Key Replacement Newcastle upon Tyne | Access Granted",
   description:
-    "Need a replacement car key? We cut and program new keys on-site for all makes and models across Newcastle upon Tyne & the North East. Call 07777 474195.",
+    "Need a replacement car key? We cut and program new keys on-site for all makes across Newcastle upon Tyne & the North East. Free call-out. Call 07777 474195.",
   alternates: { canonical: "/services/auto-locksmith/car-key-replacement" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Car Key Replacement Newcastle upon Tyne",
     description:
-      "Need a replacement car key? We cut and program new keys on-site for all makes and models across Newcastle upon Tyne & the North East. Call 07777 474195.",
+      "Need a replacement car key? We cut and program new keys on-site for all makes across Newcastle upon Tyne & the North East. Free call-out. Call 07777 474195.",
   },
 };
 

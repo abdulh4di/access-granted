@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Lost Car Keys Newcastle upon Tyne | Access Granted",
   description:
-    "Lost your only car key? We cut and program a new one at your location in Newcastle upon Tyne & the North East, even with no spare. 24/7, call 07777 474195.",
+    "Lost your only car key? We cut and program a new one at your location in Newcastle upon Tyne & the North East, even with no spare. Free call-out, 24/7.",
   alternates: { canonical: "/services/auto-locksmith/lost-car-keys" },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Lost Car Keys Newcastle upon Tyne",
     description:
-      "Lost your only car key? We cut and program a new one at your location in Newcastle upon Tyne & the North East, even with no spare. 24/7, call 07777 474195.",
+      "Lost your only car key? We cut and program a new one at your location in Newcastle upon Tyne & the North East, even with no spare. Free call-out, 24/7.",
   },
 };
 

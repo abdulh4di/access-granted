@@ -54,7 +54,15 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", images: [OG_IMAGE.url] },
   // Google Search Console ownership check (HTML tag method).
   verification: { google: "0BKWBb1fgxaKbMoNKLeX5N_l6uJJKdNIr9PgVaMABhQ" },
-  icons: { icon: "/favicon.svg" },
+  // Square crop of the logo emblem. Google wants a favicon in multiples of 48px.
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

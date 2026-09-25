@@ -52,6 +52,8 @@ export const metadata: Metadata = {
       "24/7 mobile auto locksmith in Newcastle & the North East. Lost car keys, lockouts, key programming, vehicle coding and home locksmith. Free call-out.",
   },
   twitter: { card: "summary_large_image", images: [OG_IMAGE.url] },
+  // Google Search Console ownership check (HTML tag method).
+  verification: { google: "0BKWBb1fgxaKbMoNKLeX5N_l6uJJKdNIr9PgVaMABhQ" },
   icons: { icon: "/favicon.svg" },
 };
 

@@ -1,0 +1,9 @@
+{
+  "title": "ECU Remapping",
+  "position": 70,
+  "media": {
+    "discriminant": "image",
+    "value": "/assets/images/gallery/ecu-remapping/media/value.jpg"
+  },
+  "alt": "ECU bench remapping in progress on diagnostic software"
+}

@@ -4,74 +4,18 @@ import { useCallback, useEffect, useState } from "react";
 import styles from "./GalleryGrid.module.css";
 import SectionReveal from "./SectionReveal";
 
-type GalleryItem = {
+export type GalleryItem = {
   title: string;
-  image: string;
   alt: string;
-};
+} & (
+  | { kind: "image"; src: string }
+  | { kind: "video"; src: string; poster?: string }
+);
 
-const GALLERY: GalleryItem[] = [
-  {
-    title: "BCM Fault Repair",
-    image: "/assets/images/gallery-bcm-fault-repair.webp",
-    alt: "Honda Civic key handover after a body control module communication fault repair",
-  },
-  {
-    title: "Key Programming Tools",
-    image: "/assets/images/gallery-key-programming-tools.webp",
-    alt: "Professional car key programming and repair tools used on-site",
-  },
-  {
-    title: "Mercedes Steering Lock Repair",
-    image: "/assets/images/gallery-mercedes-steering-lock.jpg",
-    alt: "Steering lock emulator device used to fix a Mercedes-Benz steering lock failure",
-  },
-  {
-    title: "Vehicle IMMO Pincode Reading",
-    image: "/assets/images/gallery-immo-pincode-reading.jpg",
-    alt: "Diagnostic tool reading a vehicle's immobiliser pincode via OBD",
-  },
-  {
-    title: "Key Coding & Matching",
-    image: "/assets/images/gallery-key-coding-matching.webp",
-    alt: "Diagnostic tablet coding and matching a replacement car key",
-  },
-  {
-    title: "Mercedes Key Decoding",
-    image: "/assets/images/gallery-mercedes-key-decoding.webp",
-    alt: "Decoding a Mercedes key blank by eye using specialist equipment",
-  },
-  {
-    title: "ECU Remapping",
-    image: "/assets/images/gallery-ecu-remapping.jpg",
-    alt: "ECU bench remapping in progress on diagnostic software",
-  },
-  {
-    title: "Our Workshop",
-    image: "/assets/images/gallery-workshop.webp",
-    alt: "Access Granted Northeast workshop bench with lock pick sets and diagnostic equipment",
-  },
-  {
-    title: "Land Rover KVM Repair",
-    image: "/assets/images/gallery-land-rover-kvm-repair.webp",
-    alt: "Land Rover KVM module label during a non-start key fault repair",
-  },
-  {
-    title: "VAG Diagnostics",
-    image: "/assets/images/gallery-vag-diagnostics.webp",
-    alt: "Diagnostic tool identifying a Volkswagen Group vehicle for key programming",
-  },
-  {
-    title: "Mercedes EIS Programming",
-    image: "/assets/images/gallery-mercedes-eis-programming.webp",
-    alt: "Mercedes-Benz EIS programming software showing key and ignition data",
-  },
-  {
-    title: "Vehicle Lock Picking",
-    image: "/assets/images/gallery-lock-picking.webp",
-    alt: "Non-destructive lock picking and decoding of a vehicle door lock",
-  },
-];
+function cardBackground(item: GalleryItem): React.CSSProperties | undefined {
+  const cover = item.kind === "video" ? item.poster : item.src;
+  return cover ? { backgroundImage: `url(${cover})` } : undefined;
+}
 
 // Below this width the grid is a single column (see .grid media queries in
 // GalleryGrid.module.css), so the desktop/tablet batch size would mean
@@ -82,7 +26,8 @@ interface GalleryGridProps {
   eyebrow?: string;
   heading?: React.ReactNode;
   subhead?: React.ReactNode;
-  items?: GalleryItem[];
+  /** Photos managed in the CMS at /keystatic (Gallery). */
+  items: GalleryItem[];
   /** How many items to show before a "Load more" button appears. */
   initialCount?: number;
   /** How many more items each "Load more" click reveals. */
@@ -105,7 +50,7 @@ export default function GalleryGrid({
       repairs and replacements.
     </>
   ),
-  items = GALLERY,
+  items,
   initialCount = 9,
   batchSize = 9,
   mobileInitialCount = 5,
@@ -153,6 +98,8 @@ export default function GalleryGrid({
     if (selected === null) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
+      // Arrow keys on a focused video seek it — don't also switch items.
+      if (e.target instanceof HTMLVideoElement) return;
       if (e.key === "ArrowRight") step(1);
       if (e.key === "ArrowLeft") step(-1);
     };
@@ -182,14 +129,37 @@ export default function GalleryGrid({
 
         <ul className={styles.grid}>
           {visible.map((item, i) => (
-            <li key={item.title} className={styles.cell} data-reveal-block>
+            <li
+              key={`${i}-${item.src}`}
+              className={styles.cell}
+              data-reveal-block
+            >
               <button
                 type="button"
                 className={styles.card}
-                style={{ backgroundImage: `url(${item.image})` }}
-                aria-label={`View ${item.title} photo`}
+                style={cardBackground(item)}
+                aria-label={`View ${item.title} ${item.kind === "video" ? "video" : "photo"}`}
                 onClick={() => setSelected(i)}
               >
+                {item.kind === "video" && !item.poster && (
+                  // No cover image: show the video's first frame instead.
+                  <video
+                    className={styles.cardVideo}
+                    src={`${item.src}#t=0.1`}
+                    muted
+                    playsInline
+                    preload="metadata"
+                    aria-hidden="true"
+                    tabIndex={-1}
+                  />
+                )}
+                {item.kind === "video" && (
+                  <span className={styles.play} aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path fill="currentColor" d="M8 5.14v13.72L19 12z" />
+                    </svg>
+                  </span>
+                )}
                 <span className={styles.caption}>{item.title}</span>
               </button>
             </li>
@@ -253,11 +223,25 @@ export default function GalleryGrid({
               &times;
             </button>
 
-            <img
-              src={active.image}
-              alt={active.alt}
-              className={styles.modalImage}
-            />
+            {active.kind === "video" ? (
+              // Opening it was a click, so autoplay with sound is allowed.
+              <video
+                key={active.src}
+                src={active.src}
+                poster={active.poster}
+                aria-label={active.alt}
+                className={styles.modalImage}
+                controls
+                autoPlay
+                playsInline
+              />
+            ) : (
+              <img
+                src={active.src}
+                alt={active.alt}
+                className={styles.modalImage}
+              />
+            )}
 
             <span className={styles.modalTitle}>{active.title}</span>
           </div>

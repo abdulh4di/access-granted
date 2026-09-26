@@ -17,6 +17,12 @@ Comprehensive reference for working with Keystatic CMS. Loaded automatically whe
 
 Keystatic is a Git-based CMS — content lives in the repo as Markdown/MDX/Markdoc/JSON/YAML. Editors get a typed UI; the schema is the contract. No database, no API to call, no vendor lock-in.
 
+**Good fit:** small-to-medium marketing sites, blogs, docs and portfolios; projects already deployed from GitHub to Vercel/Netlify; teams that want a CMS without running a database.
+
+**Not a fit:** many editors who shouldn't need GitHub accounts; content that changes very frequently (every save is a commit); multi-tenant SaaS content.
+
+**Brand-new project:** `npm create keystatic@latest` scaffolds a working app (Next.js / Astro / Remix) with the admin UI, a sample collection and a page that reads it. For existing projects, use `/keystatic` instead.
+
 ---
 
 ## Packages
@@ -39,7 +45,14 @@ import { config, collection, singleton, fields } from '@keystatic/core';
 
 export default config({
   storage: { kind: 'local' },        // 'local' | 'github' | 'cloud'
-  ui: { brand: { name: 'My Site' } },
+  ui: {
+    brand: { name: 'My Site' },
+    // Optional: group the admin sidebar. Keys are headings, values are collection/singleton keys.
+    navigation: {
+      Content: ['posts', 'pages'],
+      Site: ['settings'],
+    },
+  },
   collections: { /* ... */ },
   singletons: { /* ... */ },
   // Optional:
@@ -80,6 +93,40 @@ NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG=...
 ```
 
 Copy those into the deploy host's environment.
+
+`repo` also accepts the object form: `repo: { owner: 'owner', name: 'repo' }`.
+
+### GitHub mode — production editing
+
+**Creating the GitHub App.** The simplest path is the in-UI flow above (visit `/keystatic` with GitHub storage configured). Some references also mention a CLI helper, `npx @keystatic/core@latest setup-github-app` — verify it exists for the installed version before relying on it.
+
+**Manual setup** at https://github.com/settings/apps/new (use a **GitHub App**, not an OAuth App):
+
+| Setting | Value |
+|---|---|
+| Homepage URL | Site URL |
+| Callback URL | `https://<site>/api/keystatic/github/oauth/callback` |
+| Setup URL | `https://<site>/keystatic/setup` |
+| Request user authorization (OAuth) during installation | On |
+| Webhook | Off (uncheck "Active") |
+| Repository permissions → Contents | Read & write |
+| Repository permissions → Metadata | Read-only |
+| Repository permissions → Pull requests | Read & write |
+
+Then generate a client secret, install the App on the target repo, and set the four env vars. `KEYSTATIC_SECRET` is any random string (`openssl rand -base64 32`) and must be identical across all server instances.
+
+**How editing flows:**
+1. Editor opens `/keystatic` and signs in with GitHub through the App.
+2. Saves are committed via the GitHub API — to the default branch, or to a branch the editor creates in the UI (`branchPrefix` filters which branches are shown).
+3. Branch work is merged via a pull request opened from the UI.
+4. The deploy host (Vercel/Netlify) sees the commit and rebuilds.
+
+**Access:** every editor needs write access to the repo (collaborator or org member). Editors never touch git directly.
+
+**"Configuration error" on `/keystatic` in production** is almost always one of:
+1. `*_KEYSTATIC_GITHUB_APP_SLUG` missing or not matching the App's URL slug (`PUBLIC_` prefix for Astro, `NEXT_PUBLIC_` for Next.js).
+2. `KEYSTATIC_SECRET` unset, or different between server instances.
+3. The GitHub App isn't installed on the target repo.
 
 ---
 
@@ -197,6 +244,18 @@ fields.conditional(
   {
     true: fields.url({ label: 'External URL' }),
     false: fields.relationship({ label: 'Internal page', collection: 'pages' }),
+  },
+)
+
+// Show extra fields only when toggled on — use fields.empty() for the "off" branch
+fields.conditional(
+  fields.checkbox({ label: 'Show CTA', defaultValue: false }),
+  {
+    true: fields.object({
+      label: fields.text({ label: 'CTA label' }),
+      url: fields.url({ label: 'CTA URL' }),
+    }),
+    false: fields.empty(),
   },
 )
 ```
@@ -542,6 +601,19 @@ home: singleton({
 }),
 ```
 
+Render blocks by switching on `discriminant` — each item is `{ discriminant, value }`:
+
+```tsx
+const home = await reader.singletons.home.read();
+
+{home?.sections.map((section, i) => {
+  switch (section.discriminant) {
+    case 'hero': return <Hero key={i} {...section.value} />;
+    case 'featureGrid': return <FeatureGrid key={i} {...section.value} />;
+  }
+})}
+```
+
 ---
 
 ## Troubleshooting
@@ -555,6 +627,7 @@ home: singleton({
 | Next.js save returns 500 | API route file missing or wrong path | Verify `app/api/keystatic/[...params]/route.ts` exists exactly |
 | GitHub login loops at OAuth callback | App slug env var name wrong (Astro vs Next) | Use `PUBLIC_*` for Astro, `NEXT_PUBLIC_*` for Next.js |
 | Editor sees stale content after GitHub merge | Reader cached the previous tree | Restart the dev server / redeploy |
+| "Configuration error" on `/keystatic` in production | GitHub mode env vars or App install | See the three-point checklist under "GitHub mode — production editing" |
 
 ---
 

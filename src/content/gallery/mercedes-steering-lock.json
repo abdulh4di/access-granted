@@ -1,0 +1,9 @@
+{
+  "title": "Mercedes Steering Lock Repair",
+  "position": 30,
+  "media": {
+    "discriminant": "image",
+    "value": "/assets/images/gallery/mercedes-steering-lock/media/value.jpg"
+  },
+  "alt": "Steering lock emulator device used to fix a Mercedes-Benz steering lock failure"
+}

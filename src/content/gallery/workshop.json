@@ -1,0 +1,9 @@
+{
+  "title": "Our Workshop",
+  "position": 80,
+  "media": {
+    "discriminant": "image",
+    "value": "/assets/images/gallery/workshop/media/value.webp"
+  },
+  "alt": "Access Granted Northeast workshop bench with lock pick sets and diagnostic equipment"
+}

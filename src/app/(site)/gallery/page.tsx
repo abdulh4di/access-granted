@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import ServiceHero from "@/components/ServiceHero";
 import GalleryGrid from "@/components/GalleryGrid";
 import Footer from "@/components/Footer";
+import { getGalleryItems } from "@/lib/keystatic";
 
 export const metadata: Metadata = {
   title: "Locksmith Work Gallery Newcastle | Access Granted",
@@ -23,7 +24,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const items = await getGalleryItems();
+
   return (
     <>
       <span id="top" />
@@ -50,7 +53,7 @@ export default function GalleryPage() {
         />
       </header>
       <main id="main">
-        <GalleryGrid />
+        <GalleryGrid items={items} />
       </main>
       <Footer />
     </>

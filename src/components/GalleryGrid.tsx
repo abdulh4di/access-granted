@@ -4,74 +4,11 @@ import { useCallback, useEffect, useState } from "react";
 import styles from "./GalleryGrid.module.css";
 import SectionReveal from "./SectionReveal";
 
-type GalleryItem = {
+export type GalleryItem = {
   title: string;
   image: string;
   alt: string;
 };
-
-const GALLERY: GalleryItem[] = [
-  {
-    title: "BCM Fault Repair",
-    image: "/assets/images/gallery-bcm-fault-repair.webp",
-    alt: "Honda Civic key handover after a body control module communication fault repair",
-  },
-  {
-    title: "Key Programming Tools",
-    image: "/assets/images/gallery-key-programming-tools.webp",
-    alt: "Professional car key programming and repair tools used on-site",
-  },
-  {
-    title: "Mercedes Steering Lock Repair",
-    image: "/assets/images/gallery-mercedes-steering-lock.jpg",
-    alt: "Steering lock emulator device used to fix a Mercedes-Benz steering lock failure",
-  },
-  {
-    title: "Vehicle IMMO Pincode Reading",
-    image: "/assets/images/gallery-immo-pincode-reading.jpg",
-    alt: "Diagnostic tool reading a vehicle's immobiliser pincode via OBD",
-  },
-  {
-    title: "Key Coding & Matching",
-    image: "/assets/images/gallery-key-coding-matching.webp",
-    alt: "Diagnostic tablet coding and matching a replacement car key",
-  },
-  {
-    title: "Mercedes Key Decoding",
-    image: "/assets/images/gallery-mercedes-key-decoding.webp",
-    alt: "Decoding a Mercedes key blank by eye using specialist equipment",
-  },
-  {
-    title: "ECU Remapping",
-    image: "/assets/images/gallery-ecu-remapping.jpg",
-    alt: "ECU bench remapping in progress on diagnostic software",
-  },
-  {
-    title: "Our Workshop",
-    image: "/assets/images/gallery-workshop.webp",
-    alt: "Access Granted Northeast workshop bench with lock pick sets and diagnostic equipment",
-  },
-  {
-    title: "Land Rover KVM Repair",
-    image: "/assets/images/gallery-land-rover-kvm-repair.webp",
-    alt: "Land Rover KVM module label during a non-start key fault repair",
-  },
-  {
-    title: "VAG Diagnostics",
-    image: "/assets/images/gallery-vag-diagnostics.webp",
-    alt: "Diagnostic tool identifying a Volkswagen Group vehicle for key programming",
-  },
-  {
-    title: "Mercedes EIS Programming",
-    image: "/assets/images/gallery-mercedes-eis-programming.webp",
-    alt: "Mercedes-Benz EIS programming software showing key and ignition data",
-  },
-  {
-    title: "Vehicle Lock Picking",
-    image: "/assets/images/gallery-lock-picking.webp",
-    alt: "Non-destructive lock picking and decoding of a vehicle door lock",
-  },
-];
 
 // Below this width the grid is a single column (see .grid media queries in
 // GalleryGrid.module.css), so the desktop/tablet batch size would mean
@@ -82,7 +19,8 @@ interface GalleryGridProps {
   eyebrow?: string;
   heading?: React.ReactNode;
   subhead?: React.ReactNode;
-  items?: GalleryItem[];
+  /** Photos managed in the CMS at /keystatic (Gallery). */
+  items: GalleryItem[];
   /** How many items to show before a "Load more" button appears. */
   initialCount?: number;
   /** How many more items each "Load more" click reveals. */
@@ -105,7 +43,7 @@ export default function GalleryGrid({
       repairs and replacements.
     </>
   ),
-  items = GALLERY,
+  items,
   initialCount = 9,
   batchSize = 9,
   mobileInitialCount = 5,
@@ -182,7 +120,7 @@ export default function GalleryGrid({
 
         <ul className={styles.grid}>
           {visible.map((item, i) => (
-            <li key={item.title} className={styles.cell} data-reveal-block>
+            <li key={`${i}-${item.image}`} className={styles.cell} data-reveal-block>
               <button
                 type="button"
                 className={styles.card}

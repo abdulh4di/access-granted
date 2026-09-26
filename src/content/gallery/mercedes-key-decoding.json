@@ -1,6 +1,9 @@
 {
   "title": "Mercedes Key Decoding",
   "position": 60,
-  "image": "/assets/images/gallery/mercedes-key-decoding/image.webp",
+  "media": {
+    "discriminant": "image",
+    "value": "/assets/images/gallery/mercedes-key-decoding/media/value.webp"
+  },
   "alt": "Decoding a Mercedes key blank by eye using specialist equipment"
 }

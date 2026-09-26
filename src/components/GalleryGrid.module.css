@@ -76,6 +76,40 @@
     rgba(7, 6, 7, 0.18);
 }
 
+/* First-frame thumbnail for videos without a cover image — cropped the same
+   way as the photo backgrounds, and kept under the ::after tint. */
+.cardVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  pointer-events: none;
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5em;
+  height: 3.5em;
+  padding-left: 0.2em; /* optically centre the triangle */
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-black);
+  transform: translate(-50%, -50%);
+  transition: transform 300ms ease;
+}
+
+.card:hover .play {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
 .caption {
   position: absolute;
   left: 1.5em;

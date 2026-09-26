@@ -1,6 +1,9 @@
 {
   "title": "VAG Diagnostics",
   "position": 100,
-  "image": "/assets/images/gallery/vag-diagnostics/image.webp",
+  "media": {
+    "discriminant": "image",
+    "value": "/assets/images/gallery/vag-diagnostics/media/value.webp"
+  },
   "alt": "Diagnostic tool identifying a Volkswagen Group vehicle for key programming"
 }

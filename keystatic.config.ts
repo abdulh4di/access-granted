@@ -25,9 +25,10 @@ export default config({
     },
   },
   collections: {
-    // One entry per photo (not a list inside one entry): Keystatic names an
-    // entry's image after its slug — /assets/images/gallery/<slug>/image.webp —
-    // so filenames stay descriptive and never shuffle when photos are reordered.
+    // One entry per photo/video (not a list inside one entry): Keystatic files
+    // an entry's uploads under its slug — /assets/images/gallery/<slug>/media/
+    // value.webp, /assets/videos/gallery/<slug>/media/value/file.mp4 — so paths
+    // stay descriptive and never shuffle when items are reordered.
     gallery: collection({
       label: "Gallery",
       slugField: "title",
@@ -49,18 +50,48 @@ export default config({
           defaultValue: 0,
           validation: { isRequired: true },
         }),
-        image: fields.image({
-          label: "Photo",
-          description:
-            "JPG or WebP, ideally under 500 KB. Cards crop to 3:2, favouring the top of the photo; the full image shows when clicked.",
-          directory: "public/assets/images/gallery",
-          publicPath: "/assets/images/gallery/",
-          validation: { isRequired: true },
-        }),
+        media: fields.conditional(
+          fields.select({
+            label: "Type",
+            description: "Choose Photo or Video, then upload the file below.",
+            options: [
+              { label: "Photo", value: "image" },
+              { label: "Video", value: "video" },
+            ],
+            defaultValue: "image",
+          }),
+          {
+            image: fields.image({
+              label: "Photo",
+              description:
+                "JPG or WebP, ideally under 500 KB. Cards crop to 3:2, favouring the top of the photo; the full image shows when clicked.",
+              directory: "public/assets/images/gallery",
+              publicPath: "/assets/images/gallery/",
+              validation: { isRequired: true },
+            }),
+            video: fields.object({
+              file: fields.file({
+                label: "Video",
+                description:
+                  "MP4 only (iPhone: Settings → Camera → Formats → Most Compatible). Keep clips short, ideally under 20 MB.",
+                directory: "public/assets/videos/gallery",
+                publicPath: "/assets/videos/gallery/",
+                validation: { isRequired: true },
+              }),
+              poster: fields.image({
+                label: "Cover image (optional)",
+                description:
+                  "Shown on the card before the video plays. Leave empty to use the video's first frame.",
+                directory: "public/assets/images/gallery",
+                publicPath: "/assets/images/gallery/",
+              }),
+            }),
+          },
+        ),
         alt: fields.text({
           label: "Alt text",
           description:
-            "Describe what the photo shows, for screen readers and Google Images.",
+            "Describe what the photo or video shows, for screen readers and search engines.",
           multiline: true,
           validation: { length: { min: 1, max: 200 } },
         }),

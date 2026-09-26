@@ -6,9 +6,16 @@ import SectionReveal from "./SectionReveal";
 
 export type GalleryItem = {
   title: string;
-  image: string;
   alt: string;
-};
+} & (
+  | { kind: "image"; src: string }
+  | { kind: "video"; src: string; poster?: string }
+);
+
+function cardBackground(item: GalleryItem): React.CSSProperties | undefined {
+  const cover = item.kind === "video" ? item.poster : item.src;
+  return cover ? { backgroundImage: `url(${cover})` } : undefined;
+}
 
 // Below this width the grid is a single column (see .grid media queries in
 // GalleryGrid.module.css), so the desktop/tablet batch size would mean
@@ -91,6 +98,8 @@ export default function GalleryGrid({
     if (selected === null) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
+      // Arrow keys on a focused video seek it — don't also switch items.
+      if (e.target instanceof HTMLVideoElement) return;
       if (e.key === "ArrowRight") step(1);
       if (e.key === "ArrowLeft") step(-1);
     };
@@ -120,14 +129,37 @@ export default function GalleryGrid({
 
         <ul className={styles.grid}>
           {visible.map((item, i) => (
-            <li key={`${i}-${item.image}`} className={styles.cell} data-reveal-block>
+            <li
+              key={`${i}-${item.src}`}
+              className={styles.cell}
+              data-reveal-block
+            >
               <button
                 type="button"
                 className={styles.card}
-                style={{ backgroundImage: `url(${item.image})` }}
-                aria-label={`View ${item.title} photo`}
+                style={cardBackground(item)}
+                aria-label={`View ${item.title} ${item.kind === "video" ? "video" : "photo"}`}
                 onClick={() => setSelected(i)}
               >
+                {item.kind === "video" && !item.poster && (
+                  // No cover image: show the video's first frame instead.
+                  <video
+                    className={styles.cardVideo}
+                    src={`${item.src}#t=0.1`}
+                    muted
+                    playsInline
+                    preload="metadata"
+                    aria-hidden="true"
+                    tabIndex={-1}
+                  />
+                )}
+                {item.kind === "video" && (
+                  <span className={styles.play} aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path fill="currentColor" d="M8 5.14v13.72L19 12z" />
+                    </svg>
+                  </span>
+                )}
                 <span className={styles.caption}>{item.title}</span>
               </button>
             </li>
@@ -191,11 +223,25 @@ export default function GalleryGrid({
               &times;
             </button>
 
-            <img
-              src={active.image}
-              alt={active.alt}
-              className={styles.modalImage}
-            />
+            {active.kind === "video" ? (
+              // Opening it was a click, so autoplay with sound is allowed.
+              <video
+                key={active.src}
+                src={active.src}
+                poster={active.poster}
+                aria-label={active.alt}
+                className={styles.modalImage}
+                controls
+                autoPlay
+                playsInline
+              />
+            ) : (
+              <img
+                src={active.src}
+                alt={active.alt}
+                className={styles.modalImage}
+              />
+            )}
 
             <span className={styles.modalTitle}>{active.title}</span>
           </div>

@@ -1,9 +1,0 @@
-{
-  "title": "Test Image",
-  "position": 1,
-  "media": {
-    "discriminant": "image",
-    "value": "/assets/images/gallery/test-image/media/value.svg"
-  },
-  "alt": "image to test photo"
-}

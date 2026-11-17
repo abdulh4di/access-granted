@@ -12,18 +12,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Vehicle Lockouts Newcastle upon Tyne | Access Granted",
+  title: "Emergency Auto Locksmith Newcastle upon Tyne | 24/7 Lockouts",
   description:
-    "Locked out of your car in Newcastle? We reach you fast and open your vehicle without damage, keys locked in or lost. Free call-out, call 07777 474195.",
+    "24/7 emergency auto locksmith in Newcastle upon Tyne. Locked out? We aim to reach you in around 30 minutes and open it without damage. Free call-out.",
   alternates: { canonical: "/services/auto-locksmith/vehicle-lockouts" },
   openGraph: {
     type: "website",
     url: "/services/auto-locksmith/vehicle-lockouts",
     siteName: "Access Granted Northeast",
     images: [OG_IMAGE],
-    title: "Vehicle Lockouts Newcastle upon Tyne",
+    title: "Emergency Auto Locksmith Newcastle upon Tyne",
     description:
-      "Locked out of your car in Newcastle? We reach you fast and open your vehicle without damage, keys locked in or lost. Free call-out, call 07777 474195.",
+      "24/7 emergency auto locksmith in Newcastle upon Tyne. Locked out? We aim to reach you in around 30 minutes and open it without damage. Free call-out.",
   },
 };
 
@@ -75,6 +75,10 @@ const BENEFITS = [
 
 const FAQS = [
   {
+    q: "Do you offer a 24-hour emergency auto locksmith service in Newcastle?",
+    a: "Yes. Our emergency auto locksmith service runs 24/7, day or night, including weekends, across Newcastle upon Tyne, Gateshead and the North East. If you are locked out of your car, call us directly and tell us where you are.",
+  },
+  {
     q: "Can you open my car without breaking anything?",
     a: "In the vast majority of cases, yes. We use non-destructive entry techniques to open your vehicle without damaging the lock, door or paintwork.",
   },
@@ -85,6 +89,14 @@ const FAQS = [
   {
     q: "My keys are locked in the boot — can you still help?",
     a: "Yes. We can gain safe entry to the vehicle and retrieve keys locked in the cabin or boot in most cases.",
+  },
+  {
+    q: "What if I have lost my keys as well as being locked out?",
+    a: "We can still help. Once we have opened the car, we can cut and program a new key on the spot, and remove the lost key from your car's system so it can no longer be used. Most key jobs take around 20 to 60 minutes.",
+  },
+  {
+    q: "What should I do while I wait for you?",
+    a: "Stay somewhere safe near the car, keep your phone switched on and share the exact location, such as the street, car park or a nearby landmark. If a child or an animal is locked inside and in distress, call 999 straight away.",
   },
   {
     q: "Do you cover all makes and models?",
@@ -104,7 +116,7 @@ export default function VehicleLockoutsPage() {
         data={[
           serviceJsonLd(
             "/services/auto-locksmith/vehicle-lockouts",
-            "Vehicle Lockouts Newcastle upon Tyne",
+            "Emergency Auto Locksmith & Vehicle Lockouts Newcastle upon Tyne",
             String(metadata.description),
           ),
           breadcrumbJsonLd("/services/auto-locksmith/vehicle-lockouts", "Vehicle Lockouts Newcastle upon Tyne"),
@@ -118,10 +130,11 @@ export default function VehicleLockoutsPage() {
           imageAlt="Auto locksmith opening a locked car door"
           description={
             <>
-              Locked out of your car? We open your vehicle using non-destructive
-              entry techniques, wherever you are in Newcastle and the North East,
-              and we aim to reach local emergencies within around 30 minutes. The
-              call-out is free, 24/7.
+              Locked out of your car? Our emergency auto locksmith service runs
+              24/7 across Newcastle upon Tyne, Gateshead and the North East. We
+              open your vehicle using non-destructive entry techniques and aim to
+              reach local emergencies within around 30 minutes. The call-out is
+              free.
             </>
           }
         />

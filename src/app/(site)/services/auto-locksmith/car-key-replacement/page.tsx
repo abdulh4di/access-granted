@@ -87,6 +87,14 @@ const REPLACEMENT_FAQS = [
     a: "No. Even if you have lost every key, we can create and program a new one on-site.",
   },
   {
+    q: "Can you replace my car key today?",
+    a: "Usually, yes. We work 24/7 and come to you anywhere in Newcastle upon Tyne and the North East, and most key jobs take around 20 to 60 minutes once we arrive. Call with your vehicle details and location and we will tell you when we can get to you.",
+  },
+  {
+    q: "What should I have ready when I call?",
+    a: "Your car's make, model and year, the registration if you have it, where the car is, and whether you still have a working key. That tells us which key and programming your vehicle needs before we set off.",
+  },
+  {
     q: "Is it cheaper than going to the main dealer?",
     a: "Usually, yes. Our mobile service and specialist equipment mean we can replace keys for considerably less than a main dealer, and we come to you.",
   },
@@ -130,8 +138,9 @@ export default function CarKeyReplacementPage() {
           description={
             <>
               We replace lost, stolen, broken or worn out car keys for all makes and
-              models, cutting and programming the new key at your location. Most
-              jobs take around 20 to 60 minutes, and the call-out is free.
+              models across Newcastle upon Tyne, Gateshead and the North East,
+              cutting and programming the new key at your location. Most jobs take
+              around 20 to 60 minutes, and the call-out is free, 24/7.
             </>
           }
         />

@@ -48,7 +48,9 @@ const ICONS = {
   },
 };
 
-const STEPS = [
+type Step = { icon: keyof typeof ICONS; title: string; desc: string };
+
+const STEPS: Step[] = [
   {
     icon: "phone" as const,
     title: "Contact Us",
@@ -71,7 +73,7 @@ const STEPS = [
   },
 ];
 
-export default function HowItWorks() {
+export default function HowItWorks({ steps = STEPS }: { steps?: Step[] }) {
   return (
     <section className={styles.how}>
       <div className={`container ${styles.inner}`}>
@@ -81,7 +83,7 @@ export default function HowItWorks() {
         </header>
 
         <ul className={styles.grid}>
-          {STEPS.map((s) => (
+          {steps.map((s) => (
             <li key={s.title} className={styles.card} data-reveal-block>
               <span className={styles.icon}>
                 <svg
